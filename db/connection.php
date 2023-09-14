@@ -6,3 +6,4 @@
   else{
     print "<script>alert('Conectado no banco de dados MySQL!')</script>";
   }
+?>
