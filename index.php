@@ -14,13 +14,13 @@
 
 <body>
     <?php
-    include('./components/navbar/index.php')
+    include('./includes/navbar.php')
     ?>
     <div class="conteudo medio">
         <h1>O que deseja olhar?</h1>
         <div class="lista">
             <p></p>
-            <span>Clientes? <a href="">Clique aqui</a></span>
+            <span>Clientes? <a href="./pages/Cliente/create.php">Clique aqui</a></span>
             <p></p>
             <span>Obras? <a href="">Clique aqui</a></span>
             <p></p>
