@@ -1,4 +1,22 @@
 Insert into
+    Estado (CodigoUf, Nome, Uf, Regiao)
+values (12, 'Acre', 'AC', 1), (27, 'Alagoas', 'AL', 2), (16, 'Amapá', 'AP', 1), (13, 'Amazonas', 'AM', 1), (29, 'Bahia', 'BA', 2), (23, 'Ceará', 'CE', 2), (53, 'Distrito Federal', 'DF', 5), (32, 'Espírito Santo', 'ES', 3), (52, 'Goiás', 'GO', 5), (21, 'Maranhão', 'MA', 2), (51, 'Mato Grosso', 'MT', 5), (
+        50,
+        'Mato Grosso do Sul',
+        'MS',
+        5
+    ), (31, 'Minas Gerais', 'MG', 3), (15, 'Pará', 'PA', 1), (25, 'Paraíba', 'PB', 2), (41, 'Paraná', 'PR', 4), (26, 'Pernambuco', 'PE', 2), (22, 'Piauí', 'PI', 2), (33, 'Rio de Janeiro', 'RJ', 3), (
+        24,
+        'Rio Grande do Norte',
+        'RN',
+        2
+    ), (
+        43,
+        'Rio Grande do Sul',
+        'RS',
+        4
+    ), (11, 'Rondônia', 'RO', 1), (14, 'Roraima', 'RR', 1), (42, 'Santa Catarina', 'SC', 4), (35, 'São Paulo', 'SP', 3), (28, 'Sergipe', 'SE', 2), (17, 'Tocantins', 'TO', 1);
+Insert into
     Municipio (Codigo, Nome, Uf)
 values (
         '1100015',
@@ -4998,3 +5016,4306 @@ values (
         'MG'
     ), (
         '3165404',
+'Sapucaí-Mirim',
+'MG'
+), ('3165503', 'Sardoá', 'MG'), ('3165537', 'Sarzedo', 'MG'), ('3165552', 'Setubinha', 'MG'), ('3165560', 'Sem-Peixe', 'MG'), (
+    '3165578',
+    'Senador Amaral',
+    'MG'
+), (
+    '3165602',
+    'Senador Cortes',
+    'MG'
+), (
+    '3165701',
+    'Senador Firmino',
+    'MG'
+), (
+    '3165800',
+    'Senador José Bento',
+    'MG'
+), (
+    '3165909',
+    'Senador Modestino Gonçalves',
+    'MG'
+), (
+    '3166006',
+    'Senhora de Oliveira',
+    'MG'
+), (
+    '3166105',
+    'Senhora do Porto',
+    'MG'
+), (
+    '3166204',
+    'Senhora dos Remédios',
+    'MG'
+), ('3166303', 'Sericita', 'MG'), ('3166402', 'Seritinga', 'MG'), (
+    '3166501',
+    'Serra Azul de Minas',
+    'MG'
+), (
+    '3166600',
+    'Serra da Saudade',
+    'MG'
+), (
+    '3166709',
+    'Serra dos Aimorés',
+    'MG'
+), (
+    '3166808',
+    'Serra do Salitre',
+    'MG'
+), ('3166907', 'Serrania', 'MG'), (
+    '3166956',
+    'Serranópolis de Minas',
+    'MG'
+), ('3167004', 'Serranos', 'MG'), ('3167103', 'Serro', 'MG'), ('3167202', 'Sete Lagoas', 'MG'), ('3167301', 'Silveirânia', 'MG'), (
+    '3167400',
+    'Silvianópolis',
+    'MG'
+), (
+    '3167509',
+    'Simão Pereira',
+    'MG'
+), ('3167608', 'Simonésia', 'MG'), ('3167707', 'Sobrália', 'MG'), (
+    '3167806',
+    'Soledade de Minas',
+    'MG'
+), ('3167905', 'Tabuleiro', 'MG'), ('3168002', 'Taiobeiras', 'MG'), ('3168051', 'Taparuba', 'MG'), ('3168101', 'Tapira', 'MG'), ('3168200', 'Tapiraí', 'MG'), (
+    '3168309',
+    'Taquaraçu de Minas',
+    'MG'
+), ('3168408', 'Tarumirim', 'MG'), ('3168507', 'Teixeiras', 'MG'), (
+    '3168606',
+    'Teófilo Otoni',
+    'MG'
+), ('3168705', 'Timóteo', 'MG'), ('3168804', 'Tiradentes', 'MG'), ('3168903', 'Tiros', 'MG'), ('3169000', 'Tocantins', 'MG'), (
+    '3169059',
+    'Tocos do Moji',
+    'MG'
+), ('3169109', 'Toledo', 'MG'), ('3169208', 'Tombos', 'MG'), (
+    '3169307',
+    'Três Corações',
+    'MG'
+), ('3169356', 'Três Marias', 'MG'), ('3169406', 'Três Pontas', 'MG'), ('3169505', 'Tumiritinga', 'MG'), ('3169604', 'Tupaciguara', 'MG'), ('3169703', 'Turmalina', 'MG'), ('3169802', 'Turvolândia', 'MG'), ('3169901', 'Ubá', 'MG'), ('3170008', 'Ubaí', 'MG'), ('3170057', 'Ubaporanga', 'MG'), ('3170107', 'Uberaba', 'MG'), ('3170206', 'Uberlândia', 'MG'), ('3170305', 'Umburatiba', 'MG'), ('3170404', 'Unaí', 'MG'), (
+    '3170438',
+    'União de Minas',
+    'MG'
+), (
+    '3170479',
+    'Uruana de Minas',
+    'MG'
+), ('3170503', 'Urucânia', 'MG'), ('3170529', 'Urucuia', 'MG'), (
+    '3170578',
+    'Vargem Alegre',
+    'MG'
+), (
+    '3170602',
+    'Vargem Bonita',
+    'MG'
+), (
+    '3170651',
+    'Vargem Grande do Rio Pardo',
+    'MG'
+), ('3170701', 'Varginha', 'MG'), (
+    '3170750',
+    'Varjão de Minas',
+    'MG'
+), (
+    '3170800',
+    'Várzea da Palma',
+    'MG'
+), ('3170909', 'Varzelândia', 'MG'), ('3171006', 'Vazante', 'MG'), ('3171030', 'Verdelândia', 'MG'), ('3171071', 'Veredinha', 'MG'), ('3171105', 'Veríssimo', 'MG'), (
+    '3171154',
+    'Vermelho Novo',
+    'MG'
+), ('3171204', 'Vespasiano', 'MG'), ('3171303', 'Viçosa', 'MG'), ('3171402', 'Vieiras', 'MG'), (
+    '3171501',
+    'Mathias Lobato',
+    'MG'
+), (
+    '3171600',
+    'Virgem da Lapa',
+    'MG'
+), ('3171709', 'Virgínia', 'MG'), (
+    '3171808',
+    'Virginópolis',
+    'MG'
+), ('3171907', 'Virgolândia', 'MG'), (
+    '3172004',
+    'Visconde do Rio Branco',
+    'MG'
+), (
+    '3172103',
+    'Volta Grande',
+    'MG'
+), (
+    '3172202',
+    'Wenceslau Braz',
+    'MG'
+), (
+    '3200102',
+    'Afonso Cláudio',
+    'ES'
+), (
+    '3200136',
+    'Águia Branca',
+    'ES'
+), (
+    '3200169',
+    'Água Doce do Norte',
+    'ES'
+), ('3200201', 'Alegre', 'ES'), (
+    '3200300',
+    'Alfredo Chaves',
+    'ES'
+), (
+    '3200359',
+    'Alto Rio Novo',
+    'ES'
+), ('3200409', 'Anchieta', 'ES'), ('3200508', 'Apiacá', 'ES'), ('3200607', 'Aracruz', 'ES'), (
+    '3200706',
+    'Atilio Vivacqua',
+    'ES'
+), (
+    '3200805',
+    'Baixo Guandu',
+    'ES'
+), (
+    '3200904',
+    'Barra de São Francisco',
+    'ES'
+), (
+    '3201001',
+    'Boa Esperança',
+    'ES'
+), (
+    '3201100',
+    'Bom Jesus do Norte',
+    'ES'
+), ('3201159', 'Brejetuba', 'ES'), (
+    '3201209',
+    'Cachoeiro de Itapemirim',
+    'ES'
+), ('3201308', 'Cariacica', 'ES'), ('3201407', 'Castelo', 'ES'), ('3201506', 'Colatina', 'ES'), (
+    '3201605',
+    'Conceição da Barra',
+    'ES'
+), (
+    '3201704',
+    'Conceição do Castelo',
+    'ES'
+), (
+    '3201803',
+    'Divino de São Lourenço',
+    'ES'
+), (
+    '3201902',
+    'Domingos Martins',
+    'ES'
+), (
+    '3202009',
+    'Dores do Rio Preto',
+    'ES'
+), ('3202108', 'Ecoporanga', 'ES'), ('3202207', 'Fundão', 'ES'), (
+    '3202256',
+    'Governador Lindenberg',
+    'ES'
+), ('3202306', 'Guaçuí', 'ES'), ('3202405', 'Guarapari', 'ES'), ('3202454', 'Ibatiba', 'ES'), ('3202504', 'Ibiraçu', 'ES'), ('3202553', 'Ibitirama', 'ES'), ('3202603', 'Iconha', 'ES'), ('3202652', 'Irupi', 'ES'), ('3202702', 'Itaguaçu', 'ES'), ('3202801', 'Itapemirim', 'ES'), ('3202900', 'Itarana', 'ES'), ('3203007', 'Iúna', 'ES'), ('3203056', 'Jaguaré', 'ES'), (
+    '3203106',
+    'Jerônimo Monteiro',
+    'ES'
+), ('3203130', 'João Neiva', 'ES'), (
+    '3203163',
+    'Laranja da Terra',
+    'ES'
+), ('3203205', 'Linhares', 'ES'), (
+    '3203304',
+    'Mantenópolis',
+    'ES'
+), ('3203320', 'Marataízes', 'ES'), (
+    '3203346',
+    'Marechal Floriano',
+    'ES'
+), ('3203353', 'Marilândia', 'ES'), (
+    '3203403',
+    'Mimoso do Sul',
+    'ES'
+), ('3203502', 'Montanha', 'ES'), ('3203601', 'Mucurici', 'ES'), (
+    '3203700',
+    'Muniz Freire',
+    'ES'
+), ('3203809', 'Muqui', 'ES'), (
+    '3203908',
+    'Nova Venécia',
+    'ES'
+), ('3204005', 'Pancas', 'ES'), (
+    '3204054',
+    'Pedro Canário',
+    'ES'
+), ('3204104', 'Pinheiros', 'ES'), ('3204203', 'Piúma', 'ES'), ('3204252', 'Ponto Belo', 'ES'), (
+    '3204302',
+    'Presidente Kennedy',
+    'ES'
+), ('3204351', 'Rio Bananal', 'ES'), (
+    '3204401',
+    'Rio Novo do Sul',
+    'ES'
+), (
+    '3204500',
+    'Santa Leopoldina',
+    'ES'
+), (
+    '3204559',
+    'Santa Maria de Jetibá',
+    'ES'
+), (
+    '3204609',
+    'Santa Teresa',
+    'ES'
+), (
+    '3204658',
+    'São Domingos do Norte',
+    'ES'
+), (
+    '3204708',
+    'São Gabriel da Palha',
+    'ES'
+), (
+    '3204807',
+    'São José do Calçado',
+    'ES'
+), ('3204906', 'São Mateus', 'ES'), (
+    '3204955',
+    'São Roque do Canaã',
+    'ES'
+), ('3205002', 'Serra', 'ES'), ('3205010', 'Sooretama', 'ES'), ('3205036', 'Vargem Alta', 'ES'), (
+    '3205069',
+    'Venda Nova do Imigrante',
+    'ES'
+), ('3205101', 'Viana', 'ES'), ('3205150', 'Vila Pavão', 'ES'), (
+    '3205176',
+    'Vila Valério',
+    'ES'
+), ('3205200', 'Vila Velha', 'ES'), ('3205309', 'Vitória', 'ES'), (
+    '3300100',
+    'Angra dos Reis',
+    'RJ'
+), ('3300159', 'Aperibé', 'RJ'), ('3300209', 'Araruama', 'RJ'), ('3300225', 'Areal', 'RJ'), (
+    '3300233',
+    'Armação dos Búzios',
+    'RJ'
+), (
+    '3300258',
+    'Arraial do Cabo',
+    'RJ'
+), (
+    '3300308',
+    'Barra do Piraí',
+    'RJ'
+), ('3300407', 'Barra Mansa', 'RJ'), (
+    '3300456',
+    'Belford Roxo',
+    'RJ'
+), ('3300506', 'Bom Jardim', 'RJ'), (
+    '3300605',
+    'Bom Jesus do Itabapoana',
+    'RJ'
+), ('3300704', 'Cabo Frio', 'RJ'), (
+    '3300803',
+    'Cachoeiras de Macacu',
+    'RJ'
+), ('3300902', 'Cambuci', 'RJ'), ('3300936', 'Carapebus', 'RJ'), (
+    '3300951',
+    'Comendador Levy Gasparian',
+    'RJ'
+), (
+    '3301009',
+    'Campos dos Goytacazes',
+    'RJ'
+), ('3301108', 'Cantagalo', 'RJ'), (
+    '3301157',
+    'Cardoso Moreira',
+    'RJ'
+), ('3301207', 'Carmo', 'RJ'), (
+    '3301306',
+    'Casimiro de Abreu',
+    'RJ'
+), (
+    '3301405',
+    'Conceição de Macabu',
+    'RJ'
+), ('3301504', 'Cordeiro', 'RJ'), ('3301603', 'Duas Barras', 'RJ'), (
+    '3301702',
+    'Duque de Caxias',
+    'RJ'
+), (
+    '3301801',
+    'Engenheiro Paulo de Frontin',
+    'RJ'
+), ('3301850', 'Guapimirim', 'RJ'), (
+    '3301876',
+    'Iguaba Grande',
+    'RJ'
+), ('3301900', 'Itaboraí', 'RJ'), ('3302007', 'Itaguaí', 'RJ'), ('3302056', 'Italva', 'RJ'), ('3302106', 'Itaocara', 'RJ'), ('3302205', 'Itaperuna', 'RJ'), ('3302254', 'Itatiaia', 'RJ'), ('3302270', 'Japeri', 'RJ'), (
+    '3302304',
+    'Laje do Muriaé',
+    'RJ'
+), ('3302403', 'Macaé', 'RJ'), ('3302452', 'Macuco', 'RJ'), ('3302502', 'Magé', 'RJ'), ('3302601', 'Mangaratiba', 'RJ'), ('3302700', 'Maricá', 'RJ'), ('3302809', 'Mendes', 'RJ'), ('3302858', 'Mesquita', 'RJ'), (
+    '3302908',
+    'Miguel Pereira',
+    'RJ'
+), ('3303005', 'Miracema', 'RJ'), ('3303104', 'Natividade', 'RJ'), ('3303203', 'Nilópolis', 'RJ'), ('3303302', 'Niterói', 'RJ'), (
+    '3303401',
+    'Nova Friburgo',
+    'RJ'
+), ('3303500', 'Nova Iguaçu', 'RJ'), ('3303609', 'Paracambi', 'RJ'), (
+    '3303708',
+    'Paraíba do Sul',
+    'RJ'
+), ('3303807', 'Paraty', 'RJ'), (
+    '3303856',
+    'Paty do Alferes',
+    'RJ'
+), ('3303906', 'Petrópolis', 'RJ'), ('3303955', 'Pinheiral', 'RJ'), ('3304003', 'Piraí', 'RJ'), ('3304102', 'Porciúncula', 'RJ'), ('3304110', 'Porto Real', 'RJ'), ('3304128', 'Quatis', 'RJ'), ('3304144', 'Queimados', 'RJ'), ('3304151', 'Quissamã', 'RJ'), ('3304201', 'Resende', 'RJ'), ('3304300', 'Rio Bonito', 'RJ'), ('3304409', 'Rio Claro', 'RJ'), (
+    '3304508',
+    'Rio das Flores',
+    'RJ'
+), (
+    '3304524',
+    'Rio das Ostras',
+    'RJ'
+), (
+    '3304557',
+    'Rio de Janeiro',
+    'RJ'
+), (
+    '3304607',
+    'Santa Maria Madalena',
+    'RJ'
+), (
+    '3304706',
+    'Santo Antônio de Pádua',
+    'RJ'
+), (
+    '3304755',
+    'São Francisco de Itabapoana',
+    'RJ'
+), ('3304805', 'São Fidélis', 'RJ'), ('3304904', 'São Gonçalo', 'RJ'), (
+    '3305000',
+    'São João da Barra',
+    'RJ'
+), (
+    '3305109',
+    'São João de Meriti',
+    'RJ'
+), (
+    '3305133',
+    'São José de Ubá',
+    'RJ'
+), (
+    '3305158',
+    'São José do Vale do Rio Preto',
+    'RJ'
+), (
+    '3305208',
+    'São Pedro da Aldeia',
+    'RJ'
+), (
+    '3305307',
+    'São Sebastião do Alto',
+    'RJ'
+), ('3305406', 'Sapucaia', 'RJ'), ('3305505', 'Saquarema', 'RJ'), ('3305554', 'Seropédica', 'RJ'), (
+    '3305604',
+    'Silva Jardim',
+    'RJ'
+), ('3305703', 'Sumidouro', 'RJ'), ('3305752', 'Tanguá', 'RJ'), ('3305802', 'Teresópolis', 'RJ'), (
+    '3305901',
+    'Trajano de Moraes',
+    'RJ'
+), ('3306008', 'Três Rios', 'RJ'), ('3306107', 'Valença', 'RJ'), ('3306156', 'Varre-Sai', 'RJ'), ('3306206', 'Vassouras', 'RJ'), (
+    '3306305',
+    'Volta Redonda',
+    'RJ'
+), ('3500105', 'Adamantina', 'SP'), ('3500204', 'Adolfo', 'SP'), ('3500303', 'Aguaí', 'SP'), (
+    '3500402',
+    'Águas da Prata',
+    'SP'
+), (
+    '3500501',
+    'Águas de Lindóia',
+    'SP'
+), (
+    '3500550',
+    'Águas de Santa Bárbara',
+    'SP'
+), (
+    '3500600',
+    'Águas de São Pedro',
+    'SP'
+), ('3500709', 'Agudos', 'SP'), ('3500758', 'Alambari', 'SP'), (
+    '3500808',
+    'Alfredo Marcondes',
+    'SP'
+), ('3500907', 'Altair', 'SP'), ('3501004', 'Altinópolis', 'SP'), ('3501103', 'Alto Alegre', 'SP'), ('3501152', 'Alumínio', 'SP'), (
+    '3501202',
+    'Álvares Florence',
+    'SP'
+), (
+    '3501301',
+    'Álvares Machado',
+    'SP'
+), (
+    '3501400',
+    'Álvaro de Carvalho',
+    'SP'
+), ('3501509', 'Alvinlândia', 'SP'), ('3501608', 'Americana', 'SP'), (
+    '3501707',
+    'Américo Brasiliense',
+    'SP'
+), (
+    '3501806',
+    'Américo de Campos',
+    'SP'
+), ('3501905', 'Amparo', 'SP'), ('3502002', 'Analândia', 'SP'), ('3502101', 'Andradina', 'SP'), ('3502200', 'Angatuba', 'SP'), ('3502309', 'Anhembi', 'SP'), ('3502408', 'Anhumas', 'SP'), ('3502507', 'Aparecida', 'SP'), (
+    '3502606',
+    'Aparecida D''Oeste',
+    'SP'
+), ('3502705', 'Apiaí', 'SP'), (
+    '3502754',
+    'Araçariguama',
+    'SP'
+), ('3502804', 'Araçatuba', 'SP'), (
+    '3502903',
+    'Araçoiaba da Serra',
+    'SP'
+), ('3503000', 'Aramina', 'SP'), ('3503109', 'Arandu', 'SP'), ('3503158', 'Arapeí', 'SP'), ('3503208', 'Araraquara', 'SP'), ('3503307', 'Araras', 'SP'), ('3503356', 'Arco-Íris', 'SP'), ('3503406', 'Arealva', 'SP'), ('3503505', 'Areias', 'SP'), ('3503604', 'Areiópolis', 'SP'), ('3503703', 'Ariranha', 'SP'), (
+    '3503802',
+    'Artur Nogueira',
+    'SP'
+), ('3503901', 'Arujá', 'SP'), ('3503950', 'Aspásia', 'SP'), ('3504008', 'Assis', 'SP'), ('3504107', 'Atibaia', 'SP'), ('3504206', 'Auriflama', 'SP'), ('3504305', 'Avaí', 'SP'), ('3504404', 'Avanhandava', 'SP'), ('3504503', 'Avaré', 'SP'), (
+    '3504602',
+    'Bady Bassitt',
+    'SP'
+), ('3504701', 'Balbinos', 'SP'), ('3504800', 'Bálsamo', 'SP'), ('3504909', 'Bananal', 'SP'), (
+    '3505005',
+    'Barão de Antonina',
+    'SP'
+), ('3505104', 'Barbosa', 'SP'), ('3505203', 'Bariri', 'SP'), (
+    '3505302',
+    'Barra Bonita',
+    'SP'
+), (
+    '3505351',
+    'Barra do Chapéu',
+    'SP'
+), (
+    '3505401',
+    'Barra do Turvo',
+    'SP'
+), ('3505500', 'Barretos', 'SP'), ('3505609', 'Barrinha', 'SP'), ('3505708', 'Barueri', 'SP'), ('3505807', 'Bastos', 'SP'), ('3505906', 'Batatais', 'SP'), ('3506003', 'Bauru', 'SP'), ('3506102', 'Bebedouro', 'SP'), (
+    '3506201',
+    'Bento de Abreu',
+    'SP'
+), (
+    '3506300',
+    'Bernardino de Campos',
+    'SP'
+), ('3506359', 'Bertioga', 'SP'), ('3506409', 'Bilac', 'SP'), ('3506508', 'Birigui', 'SP'), (
+    '3506607',
+    'Biritiba-Mirim',
+    'SP'
+), (
+    '3506706',
+    'Boa Esperança do Sul',
+    'SP'
+), ('3506805', 'Bocaina', 'SP'), ('3506904', 'Bofete', 'SP'), ('3507001', 'Boituva', 'SP'), (
+    '3507100',
+    'Bom Jesus dos Perdões',
+    'SP'
+), (
+    '3507159',
+    'Bom Sucesso de Itararé',
+    'SP'
+), ('3507209', 'Borá', 'SP'), ('3507308', 'Boracéia', 'SP'), ('3507407', 'Borborema', 'SP'), ('3507456', 'Borebi', 'SP'), ('3507506', 'Botucatu', 'SP'), (
+    '3507605',
+    'Bragança Paulista',
+    'SP'
+), ('3507704', 'Braúna', 'SP'), (
+    '3507753',
+    'Brejo Alegre',
+    'SP'
+), ('3507803', 'Brodowski', 'SP'), ('3507902', 'Brotas', 'SP'), ('3508009', 'Buri', 'SP'), ('3508108', 'Buritama', 'SP'), ('3508207', 'Buritizal', 'SP'), (
+    '3508306',
+    'Cabrália Paulista',
+    'SP'
+), ('3508405', 'Cabreúva', 'SP'), ('3508504', 'Caçapava', 'SP'), (
+    '3508603',
+    'Cachoeira Paulista',
+    'SP'
+), ('3508702', 'Caconde', 'SP'), ('3508801', 'Cafelândia', 'SP'), ('3508900', 'Caiabu', 'SP'), ('3509007', 'Caieiras', 'SP'), ('3509106', 'Caiuá', 'SP'), ('3509205', 'Cajamar', 'SP'), ('3509254', 'Cajati', 'SP'), ('3509304', 'Cajobi', 'SP'), ('3509403', 'Cajuru', 'SP'), (
+    '3509452',
+    'Campina do Monte Alegre',
+    'SP'
+), ('3509502', 'Campinas', 'SP'), (
+    '3509601',
+    'Campo Limpo Paulista',
+    'SP'
+), (
+    '3509700',
+    'Campos do Jordão',
+    'SP'
+), (
+    '3509809',
+    'Campos Novos Paulista',
+    'SP'
+), ('3509908', 'Cananéia', 'SP'), ('3509957', 'Canas', 'SP'), (
+    '3510005',
+    'Cândido Mota',
+    'SP'
+), (
+    '3510104',
+    'Cândido Rodrigues',
+    'SP'
+), ('3510153', 'Canitar', 'SP'), (
+    '3510203',
+    'Capão Bonito',
+    'SP'
+), (
+    '3510302',
+    'Capela do Alto',
+    'SP'
+), ('3510401', 'Capivari', 'SP'), (
+    '3510500',
+    'Caraguatatuba',
+    'SP'
+), ('3510609', 'Carapicuíba', 'SP'), ('3510708', 'Cardoso', 'SP'), ('3510807', 'Casa Branca', 'SP'), (
+    '3510906',
+    'Cássia dos Coqueiros',
+    'SP'
+), ('3511003', 'Castilho', 'SP'), ('3511102', 'Catanduva', 'SP'), ('3511201', 'Catiguá', 'SP'), ('3511300', 'Cedral', 'SP'), (
+    '3511409',
+    'Cerqueira César',
+    'SP'
+), ('3511508', 'Cerquilho', 'SP'), (
+    '3511607',
+    'Cesário Lange',
+    'SP'
+), ('3511706', 'Charqueada', 'SP'), ('3511904', 'Clementina', 'SP'), ('3512001', 'Colina', 'SP'), ('3512100', 'Colômbia', 'SP'), ('3512209', 'Conchal', 'SP'), ('3512308', 'Conchas', 'SP'), (
+    '3512407',
+    'Cordeirópolis',
+    'SP'
+), ('3512506', 'Coroados', 'SP'), (
+    '3512605',
+    'Coronel Macedo',
+    'SP'
+), ('3512704', 'Corumbataí', 'SP'), ('3512803', 'Cosmópolis', 'SP'), ('3512902', 'Cosmorama', 'SP'), ('3513009', 'Cotia', 'SP'), ('3513108', 'Cravinhos', 'SP'), (
+    '3513207',
+    'Cristais Paulista',
+    'SP'
+), ('3513306', 'Cruzália', 'SP'), ('3513405', 'Cruzeiro', 'SP'), ('3513504', 'Cubatão', 'SP'), ('3513603', 'Cunha', 'SP'), ('3513702', 'Descalvado', 'SP'), ('3513801', 'Diadema', 'SP'), ('3513850', 'Dirce Reis', 'SP'), (
+    '3513900',
+    'Divinolândia',
+    'SP'
+), ('3514007', 'Dobrada', 'SP'), (
+    '3514106',
+    'Dois Córregos',
+    'SP'
+), (
+    '3514205',
+    'Dolcinópolis',
+    'SP'
+), ('3514304', 'Dourado', 'SP'), ('3514403', 'Dracena', 'SP'), ('3514502', 'Duartina', 'SP'), ('3514601', 'Dumont', 'SP'), ('3514700', 'Echaporã', 'SP'), ('3514809', 'Eldorado', 'SP'), (
+    '3514908',
+    'Elias Fausto',
+    'SP'
+), ('3514924', 'Elisiário', 'SP'), ('3514957', 'Embaúba', 'SP'), (
+    '3515004',
+    'Embu das Artes',
+    'SP'
+), ('3515103', 'Embu-Guaçu', 'SP'), (
+    '3515129',
+    'Emilianópolis',
+    'SP'
+), (
+    '3515152',
+    'Engenheiro Coelho',
+    'SP'
+), (
+    '3515186',
+    'Espírito Santo do Pinhal',
+    'SP'
+), (
+    '3515194',
+    'Espírito Santo do Turvo',
+    'SP'
+), (
+    '3515202',
+    'Estrela D''Oeste',
+    'SP'
+), (
+    '3515301',
+    'Estrela do Norte',
+    'SP'
+), (
+    '3515350',
+    'Euclides da Cunha Paulista',
+    'SP'
+), ('3515400', 'Fartura', 'SP'), (
+    '3515509',
+    'Fernandópolis',
+    'SP'
+), (
+    '3515608',
+    'Fernando Prestes',
+    'SP'
+), ('3515657', 'Fernão', 'SP'), (
+    '3515707',
+    'Ferraz de Vasconcelos',
+    'SP'
+), ('3515806', 'Flora Rica', 'SP'), ('3515905', 'Floreal', 'SP'), (
+    '3516002',
+    'Flórida Paulista',
+    'SP'
+), ('3516101', 'Florínia', 'SP'), ('3516200', 'Franca', 'SP'), (
+    '3516309',
+    'Francisco Morato',
+    'SP'
+), (
+    '3516408',
+    'Franco da Rocha',
+    'SP'
+), (
+    '3516507',
+    'Gabriel Monteiro',
+    'SP'
+), ('3516606', 'Gália', 'SP'), ('3516705', 'Garça', 'SP'), (
+    '3516804',
+    'Gastão Vidigal',
+    'SP'
+), (
+    '3516853',
+    'Gavião Peixoto',
+    'SP'
+), (
+    '3516903',
+    'General Salgado',
+    'SP'
+), ('3517000', 'Getulina', 'SP'), ('3517109', 'Glicério', 'SP'), ('3517208', 'Guaiçara', 'SP'), ('3517307', 'Guaimbê', 'SP'), ('3517406', 'Guaíra', 'SP'), ('3517505', 'Guapiaçu', 'SP'), ('3517604', 'Guapiara', 'SP'), ('3517703', 'Guará', 'SP'), ('3517802', 'Guaraçaí', 'SP'), ('3517901', 'Guaraci', 'SP'), (
+    '3518008',
+    'Guarani D''Oeste',
+    'SP'
+), ('3518107', 'Guarantã', 'SP'), ('3518206', 'Guararapes', 'SP'), ('3518305', 'Guararema', 'SP'), (
+    '3518404',
+    'Guaratinguetá',
+    'SP'
+), ('3518503', 'Guareí', 'SP'), ('3518602', 'Guariba', 'SP'), ('3518701', 'Guarujá', 'SP'), ('3518800', 'Guarulhos', 'SP'), ('3518859', 'Guatapará', 'SP'), ('3518909', 'Guzolândia', 'SP'), ('3519006', 'Herculândia', 'SP'), ('3519055', 'Holambra', 'SP'), ('3519071', 'Hortolândia', 'SP'), ('3519105', 'Iacanga', 'SP'), ('3519204', 'Iacri', 'SP'), ('3519253', 'Iaras', 'SP'), ('3519303', 'Ibaté', 'SP'), ('3519402', 'Ibirá', 'SP'), ('3519501', 'Ibirarema', 'SP'), ('3519600', 'Ibitinga', 'SP'), ('3519709', 'Ibiúna', 'SP'), ('3519808', 'Icém', 'SP'), ('3519907', 'Iepê', 'SP'), (
+    '3520004',
+    'Igaraçu do Tietê',
+    'SP'
+), ('3520103', 'Igarapava', 'SP'), ('3520202', 'Igaratá', 'SP'), ('3520301', 'Iguape', 'SP'), ('3520400', 'Ilhabela', 'SP'), (
+    '3520426',
+    'Ilha Comprida',
+    'SP'
+), (
+    '3520442',
+    'Ilha Solteira',
+    'SP'
+), ('3520509', 'Indaiatuba', 'SP'), ('3520608', 'Indiana', 'SP'), ('3520707', 'Indiaporã', 'SP'), (
+    '3520806',
+    'Inúbia Paulista',
+    'SP'
+), ('3520905', 'Ipaussu', 'SP'), ('3521002', 'Iperó', 'SP'), ('3521101', 'Ipeúna', 'SP'), ('3521150', 'Ipiguá', 'SP'), ('3521200', 'Iporanga', 'SP'), ('3521309', 'Ipuã', 'SP'), (
+    '3521408',
+    'Iracemápolis',
+    'SP'
+), ('3521507', 'Irapuã', 'SP'), ('3521606', 'Irapuru', 'SP'), ('3521705', 'Itaberá', 'SP'), ('3521804', 'Itaí', 'SP'), ('3521903', 'Itajobi', 'SP'), ('3522000', 'Itaju', 'SP'), ('3522109', 'Itanhaém', 'SP'), ('3522158', 'Itaóca', 'SP'), (
+    '3522208',
+    'Itapecerica da Serra',
+    'SP'
+), (
+    '3522307',
+    'Itapetininga',
+    'SP'
+), ('3522406', 'Itapeva', 'SP'), ('3522505', 'Itapevi', 'SP'), ('3522604', 'Itapira', 'SP'), (
+    '3522653',
+    'Itapirapuã Paulista',
+    'SP'
+), ('3522703', 'Itápolis', 'SP'), ('3522802', 'Itaporanga', 'SP'), ('3522901', 'Itapuí', 'SP'), ('3523008', 'Itapura', 'SP'), (
+    '3523107',
+    'Itaquaquecetuba',
+    'SP'
+), ('3523206', 'Itararé', 'SP'), ('3523305', 'Itariri', 'SP'), ('3523404', 'Itatiba', 'SP'), ('3523503', 'Itatinga', 'SP'), ('3523602', 'Itirapina', 'SP'), ('3523701', 'Itirapuã', 'SP'), ('3523800', 'Itobi', 'SP'), ('3523909', 'Itu', 'SP'), ('3524006', 'Itupeva', 'SP'), ('3524105', 'Ituverava', 'SP'), ('3524204', 'Jaborandi', 'SP'), ('3524303', 'Jaboticabal', 'SP'), ('3524402', 'Jacareí', 'SP'), ('3524501', 'Jaci', 'SP'), ('3524600', 'Jacupiranga', 'SP'), ('3524709', 'Jaguariúna', 'SP'), ('3524808', 'Jales', 'SP'), ('3524907', 'Jambeiro', 'SP'), ('3525003', 'Jandira', 'SP'), (
+    '3525102',
+    'Jardinópolis',
+    'SP'
+), ('3525201', 'Jarinu', 'SP'), ('3525300', 'Jaú', 'SP'), ('3525409', 'Jeriquara', 'SP'), ('3525508', 'Joanópolis', 'SP'), (
+    '3525607',
+    'João Ramalho',
+    'SP'
+), (
+    '3525706',
+    'José Bonifácio',
+    'SP'
+), (
+    '3525805',
+    'Júlio Mesquita',
+    'SP'
+), ('3525854', 'Jumirim', 'SP'), ('3525904', 'Jundiaí', 'SP'), (
+    '3526001',
+    'Junqueirópolis',
+    'SP'
+), ('3526100', 'Juquiá', 'SP'), ('3526209', 'Juquitiba', 'SP'), ('3526308', 'Lagoinha', 'SP'), (
+    '3526407',
+    'Laranjal Paulista',
+    'SP'
+), ('3526506', 'Lavínia', 'SP'), ('3526605', 'Lavrinhas', 'SP'), ('3526704', 'Leme', 'SP'), (
+    '3526803',
+    'Lençóis Paulista',
+    'SP'
+), ('3526902', 'Limeira', 'SP'), ('3527009', 'Lindóia', 'SP'), ('3527108', 'Lins', 'SP'), ('3527207', 'Lorena', 'SP'), ('3527256', 'Lourdes', 'SP'), ('3527306', 'Louveira', 'SP'), ('3527405', 'Lucélia', 'SP'), (
+    '3527504',
+    'Lucianópolis',
+    'SP'
+), (
+    '3527603',
+    'Luís Antônio',
+    'SP'
+), ('3527702', 'Luiziânia', 'SP'), ('3527801', 'Lupércio', 'SP'), ('3527900', 'Lutécia', 'SP'), ('3528007', 'Macatuba', 'SP'), ('3528106', 'Macaubal', 'SP'), ('3528205', 'Macedônia', 'SP'), ('3528304', 'Magda', 'SP'), ('3528403', 'Mairinque', 'SP'), ('3528502', 'Mairiporã', 'SP'), ('3528601', 'Manduri', 'SP'), (
+    '3528700',
+    'Marabá Paulista',
+    'SP'
+), ('3528809', 'Maracaí', 'SP'), ('3528858', 'Marapoama', 'SP'), ('3528908', 'Mariápolis', 'SP'), ('3529005', 'Marília', 'SP'), ('3529104', 'Marinópolis', 'SP'), (
+    '3529203',
+    'Martinópolis',
+    'SP'
+), ('3529302', 'Matão', 'SP'), ('3529401', 'Mauá', 'SP'), ('3529500', 'Mendonça', 'SP'), ('3529609', 'Meridiano', 'SP'), ('3529658', 'Mesópolis', 'SP'), (
+    '3529708',
+    'Miguelópolis',
+    'SP'
+), (
+    '3529807',
+    'Mineiros do Tietê',
+    'SP'
+), ('3529906', 'Miracatu', 'SP'), (
+    '3530003',
+    'Mira Estrela',
+    'SP'
+), (
+    '3530102',
+    'Mirandópolis',
+    'SP'
+), (
+    '3530201',
+    'Mirante do Paranapanema',
+    'SP'
+), ('3530300', 'Mirassol', 'SP'), (
+    '3530409',
+    'Mirassolândia',
+    'SP'
+), ('3530508', 'Mococa', 'SP'), (
+    '3530607',
+    'Mogi das Cruzes',
+    'SP'
+), ('3530706', 'Mogi Guaçu', 'SP'), ('3530805', 'Moji Mirim', 'SP'), ('3530904', 'Mombuca', 'SP'), ('3531001', 'Monções', 'SP'), ('3531100', 'Mongaguá', 'SP'), (
+    '3531209',
+    'Monte Alegre do Sul',
+    'SP'
+), ('3531308', 'Monte Alto', 'SP'), (
+    '3531407',
+    'Monte Aprazível',
+    'SP'
+), (
+    '3531506',
+    'Monte Azul Paulista',
+    'SP'
+), (
+    '3531605',
+    'Monte Castelo',
+    'SP'
+), (
+    '3531704',
+    'Monteiro Lobato',
+    'SP'
+), ('3531803', 'Monte Mor', 'SP'), ('3531902', 'Morro Agudo', 'SP'), ('3532009', 'Morungaba', 'SP'), ('3532058', 'Motuca', 'SP'), (
+    '3532108',
+    'Murutinga do Sul',
+    'SP'
+), ('3532157', 'Nantes', 'SP'), ('3532207', 'Narandiba', 'SP'), (
+    '3532306',
+    'Natividade da Serra',
+    'SP'
+), (
+    '3532405',
+    'Nazaré Paulista',
+    'SP'
+), (
+    '3532504',
+    'Neves Paulista',
+    'SP'
+), ('3532603', 'Nhandeara', 'SP'), ('3532702', 'Nipoã', 'SP'), (
+    '3532801',
+    'Nova Aliança',
+    'SP'
+), (
+    '3532827',
+    'Nova Campina',
+    'SP'
+), (
+    '3532843',
+    'Nova Canaã Paulista',
+    'SP'
+), (
+    '3532868',
+    'Nova Castilho',
+    'SP'
+), ('3532900', 'Nova Europa', 'SP'), (
+    '3533007',
+    'Nova Granada',
+    'SP'
+), (
+    '3533106',
+    'Nova Guataporanga',
+    'SP'
+), (
+    '3533205',
+    'Nova Independência',
+    'SP'
+), ('3533254', 'Novais', 'SP'), (
+    '3533304',
+    'Nova Luzitânia',
+    'SP'
+), ('3533403', 'Nova Odessa', 'SP'), (
+    '3533502',
+    'Novo Horizonte',
+    'SP'
+), ('3533601', 'Nuporanga', 'SP'), ('3533700', 'Ocauçu', 'SP'), ('3533809', 'Óleo', 'SP'), ('3533908', 'Olímpia', 'SP'), ('3534005', 'Onda Verde', 'SP'), ('3534104', 'Oriente', 'SP'), ('3534203', 'Orindiúva', 'SP'), ('3534302', 'Orlândia', 'SP'), ('3534401', 'Osasco', 'SP'), (
+    '3534500',
+    'Oscar Bressane',
+    'SP'
+), (
+    '3534609',
+    'Osvaldo Cruz',
+    'SP'
+), ('3534708', 'Ourinhos', 'SP'), ('3534757', 'Ouroeste', 'SP'), ('3534807', 'Ouro Verde', 'SP'), ('3534906', 'Pacaembu', 'SP'), ('3535002', 'Palestina', 'SP'), (
+    '3535101',
+    'Palmares Paulista',
+    'SP'
+), (
+    '3535200',
+    'Palmeira D''Oeste',
+    'SP'
+), ('3535309', 'Palmital', 'SP'), ('3535408', 'Panorama', 'SP'), (
+    '3535507',
+    'Paraguaçu Paulista',
+    'SP'
+), ('3535606', 'Paraibuna', 'SP'), ('3535705', 'Paraíso', 'SP'), (
+    '3535804',
+    'Paranapanema',
+    'SP'
+), ('3535903', 'Paranapuã', 'SP'), ('3536000', 'Parapuã', 'SP'), ('3536109', 'Pardinho', 'SP'), (
+    '3536208',
+    'Pariquera-Açu',
+    'SP'
+), ('3536257', 'Parisi', 'SP'), (
+    '3536307',
+    'Patrocínio Paulista',
+    'SP'
+), ('3536406', 'Paulicéia', 'SP'), ('3536505', 'Paulínia', 'SP'), ('3536570', 'Paulistânia', 'SP'), (
+    '3536604',
+    'Paulo de Faria',
+    'SP'
+), ('3536703', 'Pederneiras', 'SP'), ('3536802', 'Pedra Bela', 'SP'), (
+    '3536901',
+    'Pedranópolis',
+    'SP'
+), ('3537008', 'Pedregulho', 'SP'), ('3537107', 'Pedreira', 'SP'), (
+    '3537156',
+    'Pedrinhas Paulista',
+    'SP'
+), (
+    '3537206',
+    'Pedro de Toledo',
+    'SP'
+), ('3537305', 'Penápolis', 'SP'), (
+    '3537404',
+    'Pereira Barreto',
+    'SP'
+), ('3537503', 'Pereiras', 'SP'), ('3537602', 'Peruíbe', 'SP'), ('3537701', 'Piacatu', 'SP'), ('3537800', 'Piedade', 'SP'), (
+    '3537909',
+    'Pilar do Sul',
+    'SP'
+), (
+    '3538006',
+    'Pindamonhangaba',
+    'SP'
+), ('3538105', 'Pindorama', 'SP'), ('3538204', 'Pinhalzinho', 'SP'), ('3538303', 'Piquerobi', 'SP'), ('3538501', 'Piquete', 'SP'), ('3538600', 'Piracaia', 'SP'), ('3538709', 'Piracicaba', 'SP'), ('3538808', 'Piraju', 'SP'), ('3538907', 'Pirajuí', 'SP'), ('3539004', 'Pirangi', 'SP'), (
+    '3539103',
+    'Pirapora do Bom Jesus',
+    'SP'
+), ('3539202', 'Pirapozinho', 'SP'), (
+    '3539301',
+    'Pirassununga',
+    'SP'
+), ('3539400', 'Piratininga', 'SP'), (
+    '3539509',
+    'Pitangueiras',
+    'SP'
+), ('3539608', 'Planalto', 'SP'), ('3539707', 'Platina', 'SP'), ('3539806', 'Poá', 'SP'), ('3539905', 'Poloni', 'SP'), ('3540002', 'Pompéia', 'SP'), ('3540101', 'Pongaí', 'SP'), ('3540200', 'Pontal', 'SP'), ('3540259', 'Pontalinda', 'SP'), (
+    '3540309',
+    'Pontes Gestal',
+    'SP'
+), ('3540408', 'Populina', 'SP'), ('3540507', 'Porangaba', 'SP'), ('3540606', 'Porto Feliz', 'SP'), (
+    '3540705',
+    'Porto Ferreira',
+    'SP'
+), ('3540754', 'Potim', 'SP'), ('3540804', 'Potirendaba', 'SP'), ('3540853', 'Pracinha', 'SP'), ('3540903', 'Pradópolis', 'SP'), (
+    '3541000',
+    'Praia Grande',
+    'SP'
+), ('3541059', 'Pratânia', 'SP'), (
+    '3541109',
+    'Presidente Alves',
+    'SP'
+), (
+    '3541208',
+    'Presidente Bernardes',
+    'SP'
+), (
+    '3541307',
+    'Presidente Epitácio',
+    'SP'
+), (
+    '3541406',
+    'Presidente Prudente',
+    'SP'
+), (
+    '3541505',
+    'Presidente Venceslau',
+    'SP'
+), ('3541604', 'Promissão', 'SP'), ('3541653', 'Quadra', 'SP'), ('3541703', 'Quatá', 'SP'), ('3541802', 'Queiroz', 'SP'), ('3541901', 'Queluz', 'SP'), ('3542008', 'Quintana', 'SP'), ('3542107', 'Rafard', 'SP'), ('3542206', 'Rancharia', 'SP'), (
+    '3542305',
+    'Redenção da Serra',
+    'SP'
+), (
+    '3542404',
+    'Regente Feijó',
+    'SP'
+), ('3542503', 'Reginópolis', 'SP'), ('3542602', 'Registro', 'SP'), ('3542701', 'Restinga', 'SP'), ('3542800', 'Ribeira', 'SP'), (
+    '3542909',
+    'Ribeirão Bonito',
+    'SP'
+), (
+    '3543006',
+    'Ribeirão Branco',
+    'SP'
+), (
+    '3543105',
+    'Ribeirão Corrente',
+    'SP'
+), (
+    '3543204',
+    'Ribeirão do Sul',
+    'SP'
+), (
+    '3543238',
+    'Ribeirão dos Índios',
+    'SP'
+), (
+    '3543253',
+    'Ribeirão Grande',
+    'SP'
+), (
+    '3543303',
+    'Ribeirão Pires',
+    'SP'
+), (
+    '3543402',
+    'Ribeirão Preto',
+    'SP'
+), ('3543501', 'Riversul', 'SP'), ('3543600', 'Rifaina', 'SP'), ('3543709', 'Rincão', 'SP'), ('3543808', 'Rinópolis', 'SP'), ('3543907', 'Rio Claro', 'SP'), (
+    '3544004',
+    'Rio das Pedras',
+    'SP'
+), (
+    '3544103',
+    'Rio Grande da Serra',
+    'SP'
+), ('3544202', 'Riolândia', 'SP'), ('3544251', 'Rosana', 'SP'), ('3544301', 'Roseira', 'SP'), ('3544400', 'Rubiácea', 'SP'), ('3544509', 'Rubinéia', 'SP'), ('3544608', 'Sabino', 'SP'), ('3544707', 'Sagres', 'SP'), ('3544806', 'Sales', 'SP'), (
+    '3544905',
+    'Sales Oliveira',
+    'SP'
+), ('3545001', 'Salesópolis', 'SP'), ('3545100', 'Salmourão', 'SP'), ('3545159', 'Saltinho', 'SP'), ('3545209', 'Salto', 'SP'), (
+    '3545308',
+    'Salto de Pirapora',
+    'SP'
+), (
+    '3545407',
+    'Salto Grande',
+    'SP'
+), ('3545506', 'Sandovalina', 'SP'), (
+    '3545605',
+    'Santa Adélia',
+    'SP'
+), (
+    '3545704',
+    'Santa Albertina',
+    'SP'
+), (
+    '3545803',
+    'Santa Bárbara D''Oeste',
+    'SP'
+), (
+    '3546009',
+    'Santa Branca',
+    'SP'
+), (
+    '3546108',
+    'Santa Clara D''Oeste',
+    'SP'
+), (
+    '3546207',
+    'Santa Cruz da Conceição',
+    'SP'
+), (
+    '3546256',
+    'Santa Cruz da Esperança',
+    'SP'
+), (
+    '3546306',
+    'Santa Cruz das Palmeiras',
+    'SP'
+), (
+    '3546405',
+    'Santa Cruz do Rio Pardo',
+    'SP'
+), (
+    '3546504',
+    'Santa Ernestina',
+    'SP'
+), (
+    '3546603',
+    'Santa Fé do Sul',
+    'SP'
+), (
+    '3546702',
+    'Santa Gertrudes',
+    'SP'
+), (
+    '3546801',
+    'Santa Isabel',
+    'SP'
+), ('3546900', 'Santa Lúcia', 'SP'), (
+    '3547007',
+    'Santa Maria da Serra',
+    'SP'
+), (
+    '3547106',
+    'Santa Mercedes',
+    'SP'
+), (
+    '3547205',
+    'Santana da Ponte Pensa',
+    'SP'
+), (
+    '3547304',
+    'Santana de Parnaíba',
+    'SP'
+), (
+    '3547403',
+    'Santa Rita D''Oeste',
+    'SP'
+), (
+    '3547502',
+    'Santa Rita do Passa Quatro',
+    'SP'
+), (
+    '3547601',
+    'Santa Rosa de Viterbo',
+    'SP'
+), (
+    '3547650',
+    'Santa Salete',
+    'SP'
+), (
+    '3547700',
+    'Santo Anastácio',
+    'SP'
+), ('3547809', 'Santo André', 'SP'), (
+    '3547908',
+    'Santo Antônio da Alegria',
+    'SP'
+), (
+    '3548005',
+    'Santo Antônio de Posse',
+    'SP'
+), (
+    '3548054',
+    'Santo Antônio do Aracanguá',
+    'SP'
+), (
+    '3548104',
+    'Santo Antônio do Jardim',
+    'SP'
+), (
+    '3548203',
+    'Santo Antônio do Pinhal',
+    'SP'
+), (
+    '3548302',
+    'Santo Expedito',
+    'SP'
+), (
+    '3548401',
+    'Santópolis do Aguapeí',
+    'SP'
+), ('3548500', 'Santos', 'SP'), (
+    '3548609',
+    'São Bento do Sapucaí',
+    'SP'
+), (
+    '3548708',
+    'São Bernardo do Campo',
+    'SP'
+), (
+    '3548807',
+    'São Caetano do Sul',
+    'SP'
+), ('3548906', 'São Carlos', 'SP'), (
+    '3549003',
+    'São Francisco',
+    'SP'
+), (
+    '3549102',
+    'São João da Boa Vista',
+    'SP'
+), (
+    '3549201',
+    'São João das Duas Pontes',
+    'SP'
+), (
+    '3549250',
+    'São João de Iracema',
+    'SP'
+), (
+    '3549300',
+    'São João do Pau D''Alho',
+    'SP'
+), (
+    '3549409',
+    'São Joaquim da Barra',
+    'SP'
+), (
+    '3549508',
+    'São José da Bela Vista',
+    'SP'
+), (
+    '3549607',
+    'São José do Barreiro',
+    'SP'
+), (
+    '3549706',
+    'São José do Rio Pardo',
+    'SP'
+), (
+    '3549805',
+    'São José do Rio Preto',
+    'SP'
+), (
+    '3549904',
+    'São José dos Campos',
+    'SP'
+), (
+    '3549953',
+    'São Lourenço da Serra',
+    'SP'
+), (
+    '3550001',
+    'São Luís do Paraitinga',
+    'SP'
+), ('3550100', 'São Manuel', 'SP'), (
+    '3550209',
+    'São Miguel Arcanjo',
+    'SP'
+), ('3550308', 'São Paulo', 'SP'), ('3550407', 'São Pedro', 'SP'), (
+    '3550506',
+    'São Pedro do Turvo',
+    'SP'
+), ('3550605', 'São Roque', 'SP'), (
+    '3550704',
+    'São Sebastião',
+    'SP'
+), (
+    '3550803',
+    'São Sebastião da Grama',
+    'SP'
+), ('3550902', 'São Simão', 'SP'), ('3551009', 'São Vicente', 'SP'), ('3551108', 'Sarapuí', 'SP'), ('3551207', 'Sarutaiá', 'SP'), (
+    '3551306',
+    'Sebastianópolis do Sul',
+    'SP'
+), ('3551405', 'Serra Azul', 'SP'), ('3551504', 'Serrana', 'SP'), ('3551603', 'Serra Negra', 'SP'), ('3551702', 'Sertãozinho', 'SP'), ('3551801', 'Sete Barras', 'SP'), ('3551900', 'Severínia', 'SP'), ('3552007', 'Silveiras', 'SP'), ('3552106', 'Socorro', 'SP'), ('3552205', 'Sorocaba', 'SP'), (
+    '3552304',
+    'Sud Mennucci',
+    'SP'
+), ('3552403', 'Sumaré', 'SP'), ('3552502', 'Suzano', 'SP'), ('3552551', 'Suzanápolis', 'SP'), ('3552601', 'Tabapuã', 'SP'), ('3552700', 'Tabatinga', 'SP'), (
+    '3552809',
+    'Taboão da Serra',
+    'SP'
+), ('3552908', 'Taciba', 'SP'), ('3553005', 'Taguaí', 'SP'), ('3553104', 'Taiaçu', 'SP'), ('3553203', 'Taiúva', 'SP'), ('3553302', 'Tambaú', 'SP'), ('3553401', 'Tanabi', 'SP'), ('3553500', 'Tapiraí', 'SP'), ('3553609', 'Tapiratiba', 'SP'), ('3553658', 'Taquaral', 'SP'), (
+    '3553708',
+    'Taquaritinga',
+    'SP'
+), ('3553807', 'Taquarituba', 'SP'), ('3553856', 'Taquarivaí', 'SP'), ('3553906', 'Tarabai', 'SP'), ('3553955', 'Tarumã', 'SP'), ('3554003', 'Tatuí', 'SP'), ('3554102', 'Taubaté', 'SP'), ('3554201', 'Tejupá', 'SP'), (
+    '3554300',
+    'Teodoro Sampaio',
+    'SP'
+), ('3554409', 'Terra Roxa', 'SP'), ('3554508', 'Tietê', 'SP'), ('3554607', 'Timburi', 'SP'), (
+    '3554656',
+    'Torre de Pedra',
+    'SP'
+), ('3554706', 'Torrinha', 'SP'), ('3554755', 'Trabiju', 'SP'), ('3554805', 'Tremembé', 'SP'), (
+    '3554904',
+    'Três Fronteiras',
+    'SP'
+), ('3554953', 'Tuiuti', 'SP'), ('3555000', 'Tupã', 'SP'), (
+    '3555109',
+    'Tupi Paulista',
+    'SP'
+), ('3555208', 'Turiúba', 'SP'), ('3555307', 'Turmalina', 'SP'), ('3555356', 'Ubarana', 'SP'), ('3555406', 'Ubatuba', 'SP'), ('3555505', 'Ubirajara', 'SP'), ('3555604', 'Uchoa', 'SP'), (
+    '3555703',
+    'União Paulista',
+    'SP'
+), ('3555802', 'Urânia', 'SP'), ('3555901', 'Uru', 'SP'), ('3556008', 'Urupês', 'SP'), (
+    '3556107',
+    'Valentim Gentil',
+    'SP'
+), ('3556206', 'Valinhos', 'SP'), ('3556305', 'Valparaíso', 'SP'), ('3556354', 'Vargem', 'SP'), (
+    '3556404',
+    'Vargem Grande do Sul',
+    'SP'
+), (
+    '3556453',
+    'Vargem Grande Paulista',
+    'SP'
+), (
+    '3556503',
+    'Várzea Paulista',
+    'SP'
+), ('3556602', 'Vera Cruz', 'SP'), ('3556701', 'Vinhedo', 'SP'), ('3556800', 'Viradouro', 'SP'), (
+    '3556909',
+    'Vista Alegre do Alto',
+    'SP'
+), (
+    '3556958',
+    'Vitória Brasil',
+    'SP'
+), ('3557006', 'Votorantim', 'SP'), ('3557105', 'Votuporanga', 'SP'), ('3557154', 'Zacarias', 'SP'), ('3557204', 'Chavantes', 'SP'), (
+    '3557303',
+    'Estiva Gerbi',
+    'SP'
+), ('4100103', 'Abatiá', 'PR'), (
+    '4100202',
+    'Adrianópolis',
+    'PR'
+), (
+    '4100301',
+    'Agudos do Sul',
+    'PR'
+), (
+    '4100400',
+    'Almirante Tamandaré',
+    'PR'
+), (
+    '4100459',
+    'Altamira do Paraná',
+    'PR'
+), ('4100509', 'Altônia', 'PR'), ('4100608', 'Alto Paraná', 'PR'), (
+    '4100707',
+    'Alto Piquiri',
+    'PR'
+), (
+    '4100806',
+    'Alvorada do Sul',
+    'PR'
+), ('4100905', 'Amaporã', 'PR'), ('4101002', 'Ampére', 'PR'), ('4101051', 'Anahy', 'PR'), ('4101101', 'Andirá', 'PR'), ('4101150', 'Ângulo', 'PR'), ('4101200', 'Antonina', 'PR'), (
+    '4101309',
+    'Antônio Olinto',
+    'PR'
+), ('4101408', 'Apucarana', 'PR'), ('4101507', 'Arapongas', 'PR'), ('4101606', 'Arapoti', 'PR'), ('4101655', 'Arapuã', 'PR'), ('4101705', 'Araruna', 'PR'), ('4101804', 'Araucária', 'PR'), (
+    '4101853',
+    'Ariranha do Ivaí',
+    'PR'
+), ('4101903', 'Assaí', 'PR'), (
+    '4102000',
+    'Assis Chateaubriand',
+    'PR'
+), ('4102109', 'Astorga', 'PR'), ('4102208', 'Atalaia', 'PR'), ('4102307', 'Balsa Nova', 'PR'), (
+    '4102406',
+    'Bandeirantes',
+    'PR'
+), (
+    '4102505',
+    'Barbosa Ferraz',
+    'PR'
+), ('4102604', 'Barracão', 'PR'), (
+    '4102703',
+    'Barra do Jacaré',
+    'PR'
+), (
+    '4102752',
+    'Bela Vista da Caroba',
+    'PR'
+), (
+    '4102802',
+    'Bela Vista do Paraíso',
+    'PR'
+), ('4102901', 'Bituruna', 'PR'), (
+    '4103008',
+    'Boa Esperança',
+    'PR'
+), (
+    '4103024',
+    'Boa Esperança do Iguaçu',
+    'PR'
+), (
+    '4103040',
+    'Boa Ventura de São Roque',
+    'PR'
+), (
+    '4103057',
+    'Boa Vista da Aparecida',
+    'PR'
+), (
+    '4103107',
+    'Bocaiúva do Sul',
+    'PR'
+), (
+    '4103156',
+    'Bom Jesus do Sul',
+    'PR'
+), ('4103206', 'Bom Sucesso', 'PR'), (
+    '4103222',
+    'Bom Sucesso do Sul',
+    'PR'
+), (
+    '4103305',
+    'Borrazópolis',
+    'PR'
+), ('4103354', 'Braganey', 'PR'), (
+    '4103370',
+    'Brasilândia do Sul',
+    'PR'
+), ('4103404', 'Cafeara', 'PR'), ('4103453', 'Cafelândia', 'PR'), (
+    '4103479',
+    'Cafezal do Sul',
+    'PR'
+), ('4103503', 'Califórnia', 'PR'), ('4103602', 'Cambará', 'PR'), ('4103701', 'Cambé', 'PR'), ('4103800', 'Cambira', 'PR'), (
+    '4103909',
+    'Campina da Lagoa',
+    'PR'
+), (
+    '4103958',
+    'Campina do Simão',
+    'PR'
+), (
+    '4104006',
+    'Campina Grande do Sul',
+    'PR'
+), (
+    '4104055',
+    'Campo Bonito',
+    'PR'
+), (
+    '4104105',
+    'Campo do Tenente',
+    'PR'
+), ('4104204', 'Campo Largo', 'PR'), ('4104253', 'Campo Magro', 'PR'), (
+    '4104303',
+    'Campo Mourão',
+    'PR'
+), (
+    '4104402',
+    'Cândido de Abreu',
+    'PR'
+), ('4104428', 'Candói', 'PR'), ('4104451', 'Cantagalo', 'PR'), ('4104501', 'Capanema', 'PR'), (
+    '4104600',
+    'Capitão Leônidas Marques',
+    'PR'
+), ('4104659', 'Carambeí', 'PR'), ('4104709', 'Carlópolis', 'PR'), ('4104808', 'Cascavel', 'PR'), ('4104907', 'Castro', 'PR'), ('4105003', 'Catanduvas', 'PR'), (
+    '4105102',
+    'Centenário do Sul',
+    'PR'
+), ('4105201', 'Cerro Azul', 'PR'), ('4105300', 'Céu Azul', 'PR'), ('4105409', 'Chopinzinho', 'PR'), ('4105508', 'Cianorte', 'PR'), (
+    '4105607',
+    'Cidade Gaúcha',
+    'PR'
+), ('4105706', 'Clevelândia', 'PR'), ('4105805', 'Colombo', 'PR'), ('4105904', 'Colorado', 'PR'), (
+    '4106001',
+    'Congonhinhas',
+    'PR'
+), (
+    '4106100',
+    'Conselheiro Mairinck',
+    'PR'
+), ('4106209', 'Contenda', 'PR'), ('4106308', 'Corbélia', 'PR'), (
+    '4106407',
+    'Cornélio Procópio',
+    'PR'
+), (
+    '4106456',
+    'Coronel Domingos Soares',
+    'PR'
+), (
+    '4106506',
+    'Coronel Vivida',
+    'PR'
+), (
+    '4106555',
+    'Corumbataí do Sul',
+    'PR'
+), (
+    '4106571',
+    'Cruzeiro do Iguaçu',
+    'PR'
+), (
+    '4106605',
+    'Cruzeiro do Oeste',
+    'PR'
+), (
+    '4106704',
+    'Cruzeiro do Sul',
+    'PR'
+), (
+    '4106803',
+    'Cruz Machado',
+    'PR'
+), ('4106852', 'Cruzmaltina', 'PR'), ('4106902', 'Curitiba', 'PR'), ('4107009', 'Curiúva', 'PR'), (
+    '4107108',
+    'Diamante do Norte',
+    'PR'
+), (
+    '4107124',
+    'Diamante do Sul',
+    'PR'
+), (
+    '4107157',
+    'Diamante D''Oeste',
+    'PR'
+), (
+    '4107207',
+    'Dois Vizinhos',
+    'PR'
+), ('4107256', 'Douradina', 'PR'), (
+    '4107306',
+    'Doutor Camargo',
+    'PR'
+), (
+    '4107405',
+    'Enéas Marques',
+    'PR'
+), (
+    '4107504',
+    'Engenheiro Beltrão',
+    'PR'
+), (
+    '4107520',
+    'Esperança Nova',
+    'PR'
+), (
+    '4107538',
+    'Entre Rios do Oeste',
+    'PR'
+), (
+    '4107546',
+    'Espigão Alto do Iguaçu',
+    'PR'
+), ('4107553', 'Farol', 'PR'), ('4107603', 'Faxinal', 'PR'), (
+    '4107652',
+    'Fazenda Rio Grande',
+    'PR'
+), ('4107702', 'Fênix', 'PR'), (
+    '4107736',
+    'Fernandes Pinheiro',
+    'PR'
+), ('4107751', 'Figueira', 'PR'), ('4107801', 'Floraí', 'PR'), (
+    '4107850',
+    'Flor da Serra do Sul',
+    'PR'
+), ('4107900', 'Floresta', 'PR'), (
+    '4108007',
+    'Florestópolis',
+    'PR'
+), ('4108106', 'Flórida', 'PR'), (
+    '4108205',
+    'Formosa do Oeste',
+    'PR'
+), (
+    '4108304',
+    'Foz do Iguaçu',
+    'PR'
+), (
+    '4108320',
+    'Francisco Alves',
+    'PR'
+), (
+    '4108403',
+    'Francisco Beltrão',
+    'PR'
+), (
+    '4108452',
+    'Foz do Jordão',
+    'PR'
+), (
+    '4108502',
+    'General Carneiro',
+    'PR'
+), (
+    '4108551',
+    'Godoy Moreira',
+    'PR'
+), ('4108601', 'Goioerê', 'PR'), ('4108650', 'Goioxim', 'PR'), (
+    '4108700',
+    'Grandes Rios',
+    'PR'
+), ('4108809', 'Guaíra', 'PR'), ('4108908', 'Guairaçá', 'PR'), ('4108957', 'Guamiranga', 'PR'), ('4109005', 'Guapirama', 'PR'), ('4109104', 'Guaporema', 'PR'), ('4109203', 'Guaraci', 'PR'), ('4109302', 'Guaraniaçu', 'PR'), ('4109401', 'Guarapuava', 'PR'), (
+    '4109500',
+    'Guaraqueçaba',
+    'PR'
+), ('4109609', 'Guaratuba', 'PR'), (
+    '4109658',
+    'Honório Serpa',
+    'PR'
+), ('4109708', 'Ibaiti', 'PR'), ('4109757', 'Ibema', 'PR'), ('4109807', 'Ibiporã', 'PR'), ('4109906', 'Icaraíma', 'PR'), ('4110003', 'Iguaraçu', 'PR'), ('4110052', 'Iguatu', 'PR'), ('4110078', 'Imbaú', 'PR'), ('4110102', 'Imbituva', 'PR'), (
+    '4110201',
+    'Inácio Martins',
+    'PR'
+), ('4110300', 'Inajá', 'PR'), (
+    '4110409',
+    'Indianópolis',
+    'PR'
+), ('4110508', 'Ipiranga', 'PR'), ('4110607', 'Iporã', 'PR'), (
+    '4110656',
+    'Iracema do Oeste',
+    'PR'
+), ('4110706', 'Irati', 'PR'), ('4110805', 'Iretama', 'PR'), ('4110904', 'Itaguajé', 'PR'), (
+    '4110953',
+    'Itaipulândia',
+    'PR'
+), ('4111001', 'Itambaracá', 'PR'), ('4111100', 'Itambé', 'PR'), (
+    '4111209',
+    'Itapejara D''Oeste',
+    'PR'
+), ('4111258', 'Itaperuçu', 'PR'), (
+    '4111308',
+    'Itaúna do Sul',
+    'PR'
+), ('4111407', 'Ivaí', 'PR'), ('4111506', 'Ivaiporã', 'PR'), ('4111555', 'Ivaté', 'PR'), ('4111605', 'Ivatuba', 'PR'), ('4111704', 'Jaboti', 'PR'), ('4111803', 'Jacarezinho', 'PR'), ('4111902', 'Jaguapitã', 'PR'), ('4112009', 'Jaguariaíva', 'PR'), (
+    '4112108',
+    'Jandaia do Sul',
+    'PR'
+), ('4112207', 'Janiópolis', 'PR'), ('4112306', 'Japira', 'PR'), ('4112405', 'Japurá', 'PR'), (
+    '4112504',
+    'Jardim Alegre',
+    'PR'
+), (
+    '4112603',
+    'Jardim Olinda',
+    'PR'
+), ('4112702', 'Jataizinho', 'PR'), ('4112751', 'Jesuítas', 'PR'), (
+    '4112801',
+    'Joaquim Távora',
+    'PR'
+), (
+    '4112900',
+    'Jundiaí do Sul',
+    'PR'
+), ('4112959', 'Juranda', 'PR'), ('4113007', 'Jussara', 'PR'), ('4113106', 'Kaloré', 'PR'), ('4113205', 'Lapa', 'PR'), ('4113254', 'Laranjal', 'PR'), (
+    '4113304',
+    'Laranjeiras do Sul',
+    'PR'
+), ('4113403', 'Leópolis', 'PR'), (
+    '4113429',
+    'Lidianópolis',
+    'PR'
+), ('4113452', 'Lindoeste', 'PR'), ('4113502', 'Loanda', 'PR'), ('4113601', 'Lobato', 'PR'), ('4113700', 'Londrina', 'PR'), ('4113734', 'Luiziana', 'PR'), ('4113759', 'Lunardelli', 'PR'), (
+    '4113809',
+    'Lupionópolis',
+    'PR'
+), ('4113908', 'Mallet', 'PR'), ('4114005', 'Mamborê', 'PR'), ('4114104', 'Mandaguaçu', 'PR'), ('4114203', 'Mandaguari', 'PR'), ('4114302', 'Mandirituba', 'PR'), (
+    '4114351',
+    'Manfrinópolis',
+    'PR'
+), (
+    '4114401',
+    'Mangueirinha',
+    'PR'
+), (
+    '4114500',
+    'Manoel Ribas',
+    'PR'
+), (
+    '4114609',
+    'Marechal Cândido Rondon',
+    'PR'
+), (
+    '4114708',
+    'Maria Helena',
+    'PR'
+), ('4114807', 'Marialva', 'PR'), (
+    '4114906',
+    'Marilândia do Sul',
+    'PR'
+), ('4115002', 'Marilena', 'PR'), ('4115101', 'Mariluz', 'PR'), ('4115200', 'Maringá', 'PR'), ('4115309', 'Mariópolis', 'PR'), ('4115358', 'Maripá', 'PR'), ('4115408', 'Marmeleiro', 'PR'), ('4115457', 'Marquinho', 'PR'), ('4115507', 'Marumbi', 'PR'), ('4115606', 'Matelândia', 'PR'), ('4115705', 'Matinhos', 'PR'), ('4115739', 'Mato Rico', 'PR'), (
+    '4115754',
+    'Mauá da Serra',
+    'PR'
+), ('4115804', 'Medianeira', 'PR'), ('4115853', 'Mercedes', 'PR'), ('4115903', 'Mirador', 'PR'), ('4116000', 'Miraselva', 'PR'), ('4116059', 'Missal', 'PR'), (
+    '4116109',
+    'Moreira Sales',
+    'PR'
+), ('4116208', 'Morretes', 'PR'), (
+    '4116307',
+    'Munhoz de Melo',
+    'PR'
+), (
+    '4116406',
+    'Nossa Senhora das Graças',
+    'PR'
+), (
+    '4116505',
+    'Nova Aliança do Ivaí',
+    'PR'
+), (
+    '4116604',
+    'Nova América da Colina',
+    'PR'
+), ('4116703', 'Nova Aurora', 'PR'), ('4116802', 'Nova Cantu', 'PR'), (
+    '4116901',
+    'Nova Esperança',
+    'PR'
+), (
+    '4116950',
+    'Nova Esperança do Sudoeste',
+    'PR'
+), ('4117008', 'Nova Fátima', 'PR'), (
+    '4117057',
+    'Nova Laranjeiras',
+    'PR'
+), (
+    '4117107',
+    'Nova Londrina',
+    'PR'
+), (
+    '4117206',
+    'Nova Olímpia',
+    'PR'
+), (
+    '4117214',
+    'Nova Santa Bárbara',
+    'PR'
+), (
+    '4117222',
+    'Nova Santa Rosa',
+    'PR'
+), (
+    '4117255',
+    'Nova Prata do Iguaçu',
+    'PR'
+), ('4117271', 'Nova Tebas', 'PR'), (
+    '4117297',
+    'Novo Itacolomi',
+    'PR'
+), ('4117305', 'Ortigueira', 'PR'), ('4117404', 'Ourizona', 'PR'), (
+    '4117453',
+    'Ouro Verde do Oeste',
+    'PR'
+), ('4117503', 'Paiçandu', 'PR'), ('4117602', 'Palmas', 'PR'), ('4117701', 'Palmeira', 'PR'), ('4117800', 'Palmital', 'PR'), ('4117909', 'Palotina', 'PR'), (
+    '4118006',
+    'Paraíso do Norte',
+    'PR'
+), ('4118105', 'Paranacity', 'PR'), ('4118204', 'Paranaguá', 'PR'), ('4118303', 'Paranapoema', 'PR'), ('4118402', 'Paranavaí', 'PR'), (
+    '4118451',
+    'Pato Bragado',
+    'PR'
+), ('4118501', 'Pato Branco', 'PR'), (
+    '4118600',
+    'Paula Freitas',
+    'PR'
+), (
+    '4118709',
+    'Paulo Frontin',
+    'PR'
+), ('4118808', 'Peabiru', 'PR'), ('4118857', 'Perobal', 'PR'), ('4118907', 'Pérola', 'PR'), (
+    '4119004',
+    'Pérola D''Oeste',
+    'PR'
+), ('4119103', 'Piên', 'PR'), ('4119152', 'Pinhais', 'PR'), ('4119202', 'Pinhalão', 'PR'), (
+    '4119251',
+    'Pinhal de São Bento',
+    'PR'
+), ('4119301', 'Pinhão', 'PR'), (
+    '4119400',
+    'Piraí do Sul',
+    'PR'
+), ('4119509', 'Piraquara', 'PR'), ('4119608', 'Pitanga', 'PR'), (
+    '4119657',
+    'Pitangueiras',
+    'PR'
+), (
+    '4119707',
+    'Planaltina do Paraná',
+    'PR'
+), ('4119806', 'Planalto', 'PR'), (
+    '4119905',
+    'Ponta Grossa',
+    'PR'
+), (
+    '4119954',
+    'Pontal do Paraná',
+    'PR'
+), ('4120002', 'Porecatu', 'PR'), (
+    '4120101',
+    'Porto Amazonas',
+    'PR'
+), (
+    '4120150',
+    'Porto Barreiro',
+    'PR'
+), ('4120200', 'Porto Rico', 'PR'), (
+    '4120309',
+    'Porto Vitória',
+    'PR'
+), (
+    '4120333',
+    'Prado Ferreira',
+    'PR'
+), ('4120358', 'Pranchita', 'PR'), (
+    '4120408',
+    'Presidente Castelo Branco',
+    'PR'
+), (
+    '4120507',
+    'Primeiro de Maio',
+    'PR'
+), (
+    '4120606',
+    'Prudentópolis',
+    'PR'
+), (
+    '4120655',
+    'Quarto Centenário',
+    'PR'
+), ('4120705', 'Quatiguá', 'PR'), (
+    '4120804',
+    'Quatro Barras',
+    'PR'
+), (
+    '4120853',
+    'Quatro Pontes',
+    'PR'
+), (
+    '4120903',
+    'Quedas do Iguaçu',
+    'PR'
+), (
+    '4121000',
+    'Querência do Norte',
+    'PR'
+), (
+    '4121109',
+    'Quinta do Sol',
+    'PR'
+), ('4121208', 'Quitandinha', 'PR'), ('4121257', 'Ramilândia', 'PR'), (
+    '4121307',
+    'Rancho Alegre',
+    'PR'
+), (
+    '4121356',
+    'Rancho Alegre D''Oeste',
+    'PR'
+), ('4121406', 'Realeza', 'PR'), ('4121505', 'Rebouças', 'PR'), ('4121604', 'Renascença', 'PR'), ('4121703', 'Reserva', 'PR'), (
+    '4121752',
+    'Reserva do Iguaçu',
+    'PR'
+), (
+    '4121802',
+    'Ribeirão Claro',
+    'PR'
+), (
+    '4121901',
+    'Ribeirão do Pinhal',
+    'PR'
+), ('4122008', 'Rio Azul', 'PR'), ('4122107', 'Rio Bom', 'PR'), (
+    '4122156',
+    'Rio Bonito do Iguaçu',
+    'PR'
+), (
+    '4122172',
+    'Rio Branco do Ivaí',
+    'PR'
+), (
+    '4122206',
+    'Rio Branco do Sul',
+    'PR'
+), ('4122305', 'Rio Negro', 'PR'), ('4122404', 'Rolândia', 'PR'), ('4122503', 'Roncador', 'PR'), ('4122602', 'Rondon', 'PR'), (
+    '4122651',
+    'Rosário do Ivaí',
+    'PR'
+), ('4122701', 'Sabáudia', 'PR'), (
+    '4122800',
+    'Salgado Filho',
+    'PR'
+), (
+    '4122909',
+    'Salto do Itararé',
+    'PR'
+), (
+    '4123006',
+    'Salto do Lontra',
+    'PR'
+), (
+    '4123105',
+    'Santa Amélia',
+    'PR'
+), (
+    '4123204',
+    'Santa Cecília do Pavão',
+    'PR'
+), (
+    '4123303',
+    'Santa Cruz de Monte Castelo',
+    'PR'
+), ('4123402', 'Santa Fé', 'PR'), (
+    '4123501',
+    'Santa Helena',
+    'PR'
+), ('4123600', 'Santa Inês', 'PR'), (
+    '4123709',
+    'Santa Isabel do Ivaí',
+    'PR'
+), (
+    '4123808',
+    'Santa Izabel do Oeste',
+    'PR'
+), ('4123824', 'Santa Lúcia', 'PR'), (
+    '4123857',
+    'Santa Maria do Oeste',
+    'PR'
+), (
+    '4123907',
+    'Santa Mariana',
+    'PR'
+), (
+    '4123956',
+    'Santa Mônica',
+    'PR'
+), (
+    '4124004',
+    'Santana do Itararé',
+    'PR'
+), (
+    '4124020',
+    'Santa Tereza do Oeste',
+    'PR'
+), (
+    '4124053',
+    'Santa Terezinha de Itaipu',
+    'PR'
+), (
+    '4124103',
+    'Santo Antônio da Platina',
+    'PR'
+), (
+    '4124202',
+    'Santo Antônio do Caiuá',
+    'PR'
+), (
+    '4124301',
+    'Santo Antônio do Paraíso',
+    'PR'
+), (
+    '4124400',
+    'Santo Antônio do Sudoeste',
+    'PR'
+), (
+    '4124509',
+    'Santo Inácio',
+    'PR'
+), (
+    '4124608',
+    'São Carlos do Ivaí',
+    'PR'
+), (
+    '4124707',
+    'São Jerônimo da Serra',
+    'PR'
+), ('4124806', 'São João', 'PR'), (
+    '4124905',
+    'São João do Caiuá',
+    'PR'
+), (
+    '4125001',
+    'São João do Ivaí',
+    'PR'
+), (
+    '4125100',
+    'São João do Triunfo',
+    'PR'
+), (
+    '4125209',
+    'São Jorge D''Oeste',
+    'PR'
+), (
+    '4125308',
+    'São Jorge do Ivaí',
+    'PR'
+), (
+    '4125357',
+    'São Jorge do Patrocínio',
+    'PR'
+), (
+    '4125407',
+    'São José da Boa Vista',
+    'PR'
+), (
+    '4125456',
+    'São José das Palmeiras',
+    'PR'
+), (
+    '4125506',
+    'São José dos Pinhais',
+    'PR'
+), (
+    '4125555',
+    'São Manoel do Paraná',
+    'PR'
+), (
+    '4125605',
+    'São Mateus do Sul',
+    'PR'
+), (
+    '4125704',
+    'São Miguel do Iguaçu',
+    'PR'
+), (
+    '4125753',
+    'São Pedro do Iguaçu',
+    'PR'
+), (
+    '4125803',
+    'São Pedro do Ivaí',
+    'PR'
+), (
+    '4125902',
+    'São Pedro do Paraná',
+    'PR'
+), (
+    '4126009',
+    'São Sebastião da Amoreira',
+    'PR'
+), ('4126108', 'São Tomé', 'PR'), ('4126207', 'Sapopema', 'PR'), ('4126256', 'Sarandi', 'PR'), (
+    '4126272',
+    'Saudade do Iguaçu',
+    'PR'
+), ('4126306', 'Sengés', 'PR'), (
+    '4126355',
+    'Serranópolis do Iguaçu',
+    'PR'
+), ('4126405', 'Sertaneja', 'PR'), (
+    '4126504',
+    'Sertanópolis',
+    'PR'
+), (
+    '4126603',
+    'Siqueira Campos',
+    'PR'
+), ('4126652', 'Sulina', 'PR'), ('4126678', 'Tamarana', 'PR'), ('4126702', 'Tamboara', 'PR'), ('4126801', 'Tapejara', 'PR'), ('4126900', 'Tapira', 'PR'), (
+    '4127007',
+    'Teixeira Soares',
+    'PR'
+), (
+    '4127106',
+    'Telêmaco Borba',
+    'PR'
+), ('4127205', 'Terra Boa', 'PR'), ('4127304', 'Terra Rica', 'PR'), ('4127403', 'Terra Roxa', 'PR'), ('4127502', 'Tibagi', 'PR'), (
+    '4127601',
+    'Tijucas do Sul',
+    'PR'
+), ('4127700', 'Toledo', 'PR'), ('4127809', 'Tomazina', 'PR'), (
+    '4127858',
+    'Três Barras do Paraná',
+    'PR'
+), (
+    '4127882',
+    'Tunas do Paraná',
+    'PR'
+), (
+    '4127908',
+    'Tuneiras do Oeste',
+    'PR'
+), ('4127957', 'Tupãssi', 'PR'), ('4127965', 'Turvo', 'PR'), ('4128005', 'Ubiratã', 'PR'), ('4128104', 'Umuarama', 'PR'), (
+    '4128203',
+    'União da Vitória',
+    'PR'
+), ('4128302', 'Uniflor', 'PR'), ('4128401', 'Uraí', 'PR'), (
+    '4128500',
+    'Wenceslau Braz',
+    'PR'
+), ('4128534', 'Ventania', 'PR'), (
+    '4128559',
+    'Vera Cruz do Oeste',
+    'PR'
+), ('4128609', 'Verê', 'PR'), (
+    '4128625',
+    'Alto Paraíso',
+    'PR'
+), (
+    '4128633',
+    'Doutor Ulysses',
+    'PR'
+), ('4128658', 'Virmond', 'PR'), ('4128708', 'Vitorino', 'PR'), ('4128807', 'Xambrê', 'PR'), (
+    '4200051',
+    'Abdon Batista',
+    'SC'
+), (
+    '4200101',
+    'Abelardo Luz',
+    'SC'
+), ('4200200', 'Agrolândia', 'SC'), ('4200309', 'Agronômica', 'SC'), ('4200408', 'Água Doce', 'SC'), (
+    '4200507',
+    'Águas de Chapecó',
+    'SC'
+), ('4200556', 'Águas Frias', 'SC'), (
+    '4200606',
+    'Águas Mornas',
+    'SC'
+), (
+    '4200705',
+    'Alfredo Wagner',
+    'SC'
+), (
+    '4200754',
+    'Alto Bela Vista',
+    'SC'
+), ('4200804', 'Anchieta', 'SC'), ('4200903', 'Angelina', 'SC'), (
+    '4201000',
+    'Anita Garibaldi',
+    'SC'
+), ('4201109', 'Anitápolis', 'SC'), (
+    '4201208',
+    'Antônio Carlos',
+    'SC'
+), ('4201257', 'Apiúna', 'SC'), ('4201273', 'Arabutã', 'SC'), ('4201307', 'Araquari', 'SC'), ('4201406', 'Araranguá', 'SC'), ('4201505', 'Armazém', 'SC'), (
+    '4201604',
+    'Arroio Trinta',
+    'SC'
+), ('4201653', 'Arvoredo', 'SC'), ('4201703', 'Ascurra', 'SC'), ('4201802', 'Atalanta', 'SC'), ('4201901', 'Aurora', 'SC'), (
+    '4201950',
+    'Balneário Arroio do Silva',
+    'SC'
+), (
+    '4202008',
+    'Balneário Camboriú',
+    'SC'
+), (
+    '4202057',
+    'Balneário Barra do Sul',
+    'SC'
+), (
+    '4202073',
+    'Balneário Gaivota',
+    'SC'
+), ('4202081', 'Bandeirante', 'SC'), (
+    '4202099',
+    'Barra Bonita',
+    'SC'
+), ('4202107', 'Barra Velha', 'SC'), (
+    '4202131',
+    'Bela Vista do Toldo',
+    'SC'
+), ('4202156', 'Belmonte', 'SC'), (
+    '4202206',
+    'Benedito Novo',
+    'SC'
+), ('4202305', 'Biguaçu', 'SC'), ('4202404', 'Blumenau', 'SC'), (
+    '4202438',
+    'Bocaina do Sul',
+    'SC'
+), ('4202453', 'Bombinhas', 'SC'), (
+    '4202503',
+    'Bom Jardim da Serra',
+    'SC'
+), ('4202537', 'Bom Jesus', 'SC'), (
+    '4202578',
+    'Bom Jesus do Oeste',
+    'SC'
+), ('4202602', 'Bom Retiro', 'SC'), ('4202701', 'Botuverá', 'SC'), (
+    '4202800',
+    'Braço do Norte',
+    'SC'
+), (
+    '4202859',
+    'Braço do Trombudo',
+    'SC'
+), ('4202875', 'Brunópolis', 'SC'), ('4202909', 'Brusque', 'SC'), ('4203006', 'Caçador', 'SC'), ('4203105', 'Caibi', 'SC'), ('4203154', 'Calmon', 'SC'), ('4203204', 'Camboriú', 'SC'), ('4203253', 'Capão Alto', 'SC'), (
+    '4203303',
+    'Campo Alegre',
+    'SC'
+), (
+    '4203402',
+    'Campo Belo do Sul',
+    'SC'
+), ('4203501', 'Campo Erê', 'SC'), (
+    '4203600',
+    'Campos Novos',
+    'SC'
+), ('4203709', 'Canelinha', 'SC'), ('4203808', 'Canoinhas', 'SC'), ('4203907', 'Capinzal', 'SC'), (
+    '4203956',
+    'Capivari de Baixo',
+    'SC'
+), ('4204004', 'Catanduvas', 'SC'), (
+    '4204103',
+    'Caxambu do Sul',
+    'SC'
+), ('4204152', 'Celso Ramos', 'SC'), ('4204178', 'Cerro Negro', 'SC'), (
+    '4204194',
+    'Chapadão do Lageado',
+    'SC'
+), ('4204202', 'Chapecó', 'SC'), (
+    '4204251',
+    'Cocal do Sul',
+    'SC'
+), ('4204301', 'Concórdia', 'SC'), (
+    '4204350',
+    'Cordilheira Alta',
+    'SC'
+), (
+    '4204400',
+    'Coronel Freitas',
+    'SC'
+), (
+    '4204459',
+    'Coronel Martins',
+    'SC'
+), ('4204509', 'Corupá', 'SC'), (
+    '4204558',
+    'Correia Pinto',
+    'SC'
+), ('4204608', 'Criciúma', 'SC'), ('4204707', 'Cunha Porã', 'SC'), ('4204756', 'Cunhataí', 'SC'), ('4204806', 'Curitibanos', 'SC'), ('4204905', 'Descanso', 'SC'), (
+    '4205001',
+    'Dionísio Cerqueira',
+    'SC'
+), ('4205100', 'Dona Emma', 'SC'), (
+    '4205159',
+    'Doutor Pedrinho',
+    'SC'
+), ('4205175', 'Entre Rios', 'SC'), ('4205191', 'Ermo', 'SC'), ('4205209', 'Erval Velho', 'SC'), (
+    '4205308',
+    'Faxinal dos Guedes',
+    'SC'
+), (
+    '4205357',
+    'Flor do Sertão',
+    'SC'
+), (
+    '4205407',
+    'Florianópolis',
+    'SC'
+), (
+    '4205431',
+    'Formosa do Sul',
+    'SC'
+), (
+    '4205456',
+    'Forquilhinha',
+    'SC'
+), ('4205506', 'Fraiburgo', 'SC'), (
+    '4205555',
+    'Frei Rogério',
+    'SC'
+), ('4205605', 'Galvão', 'SC'), ('4205704', 'Garopaba', 'SC'), ('4205803', 'Garuva', 'SC'), ('4205902', 'Gaspar', 'SC'), (
+    '4206009',
+    'Governador Celso Ramos',
+    'SC'
+), ('4206108', 'Grão Pará', 'SC'), ('4206207', 'Gravatal', 'SC'), ('4206306', 'Guabiruba', 'SC'), ('4206405', 'Guaraciaba', 'SC'), ('4206504', 'Guaramirim', 'SC'), (
+    '4206603',
+    'Guarujá do Sul',
+    'SC'
+), ('4206652', 'Guatambú', 'SC'), (
+    '4206702',
+    'Herval D''Oeste',
+    'SC'
+), ('4206751', 'Ibiam', 'SC'), ('4206801', 'Ibicaré', 'SC'), ('4206900', 'Ibirama', 'SC'), ('4207007', 'Içara', 'SC'), ('4207106', 'Ilhota', 'SC'), ('4207205', 'Imaruí', 'SC'), ('4207304', 'Imbituba', 'SC'), ('4207403', 'Imbuia', 'SC'), ('4207502', 'Indaial', 'SC'), ('4207577', 'Iomerê', 'SC'), ('4207601', 'Ipira', 'SC'), (
+    '4207650',
+    'Iporã do Oeste',
+    'SC'
+), ('4207684', 'Ipuaçu', 'SC'), ('4207700', 'Ipumirim', 'SC'), ('4207759', 'Iraceminha', 'SC'), ('4207809', 'Irani', 'SC'), ('4207858', 'Irati', 'SC'), ('4207908', 'Irineópolis', 'SC'), ('4208005', 'Itá', 'SC'), ('4208104', 'Itaiópolis', 'SC'), ('4208203', 'Itajaí', 'SC'), ('4208302', 'Itapema', 'SC'), ('4208401', 'Itapiranga', 'SC'), ('4208450', 'Itapoá', 'SC'), ('4208500', 'Ituporanga', 'SC'), ('4208609', 'Jaborá', 'SC'), (
+    '4208708',
+    'Jacinto Machado',
+    'SC'
+), ('4208807', 'Jaguaruna', 'SC'), (
+    '4208906',
+    'Jaraguá do Sul',
+    'SC'
+), (
+    '4208955',
+    'Jardinópolis',
+    'SC'
+), ('4209003', 'Joaçaba', 'SC'), ('4209102', 'Joinville', 'SC'), (
+    '4209151',
+    'José Boiteux',
+    'SC'
+), ('4209177', 'Jupiá', 'SC'), (
+    '4209201',
+    'Lacerdópolis',
+    'SC'
+), ('4209300', 'Lages', 'SC'), ('4209409', 'Laguna', 'SC'), (
+    '4209458',
+    'Lajeado Grande',
+    'SC'
+), ('4209508', 'Laurentino', 'SC'), (
+    '4209607',
+    'Lauro Muller',
+    'SC'
+), ('4209706', 'Lebon Régis', 'SC'), (
+    '4209805',
+    'Leoberto Leal',
+    'SC'
+), (
+    '4209854',
+    'Lindóia do Sul',
+    'SC'
+), ('4209904', 'Lontras', 'SC'), ('4210001', 'Luiz Alves', 'SC'), ('4210035', 'Luzerna', 'SC'), ('4210050', 'Macieira', 'SC'), ('4210100', 'Mafra', 'SC'), (
+    '4210209',
+    'Major Gercino',
+    'SC'
+), (
+    '4210308',
+    'Major Vieira',
+    'SC'
+), ('4210407', 'Maracajá', 'SC'), ('4210506', 'Maravilha', 'SC'), ('4210555', 'Marema', 'SC'), (
+    '4210605',
+    'Massaranduba',
+    'SC'
+), ('4210704', 'Matos Costa', 'SC'), ('4210803', 'Meleiro', 'SC'), ('4210852', 'Mirim Doce', 'SC'), ('4210902', 'Modelo', 'SC'), ('4211009', 'Mondaí', 'SC'), ('4211058', 'Monte Carlo', 'SC'), (
+    '4211108',
+    'Monte Castelo',
+    'SC'
+), (
+    '4211207',
+    'Morro da Fumaça',
+    'SC'
+), (
+    '4211256',
+    'Morro Grande',
+    'SC'
+), ('4211306', 'Navegantes', 'SC'), (
+    '4211405',
+    'Nova Erechim',
+    'SC'
+), (
+    '4211454',
+    'Nova Itaberaba',
+    'SC'
+), ('4211504', 'Nova Trento', 'SC'), ('4211603', 'Nova Veneza', 'SC'), (
+    '4211652',
+    'Novo Horizonte',
+    'SC'
+), ('4211702', 'Orleans', 'SC'), (
+    '4211751',
+    'Otacílio Costa',
+    'SC'
+), ('4211801', 'Ouro', 'SC'), ('4211850', 'Ouro Verde', 'SC'), ('4211876', 'Paial', 'SC'), ('4211892', 'Painel', 'SC'), ('4211900', 'Palhoça', 'SC'), ('4212007', 'Palma Sola', 'SC'), ('4212056', 'Palmeira', 'SC'), ('4212106', 'Palmitos', 'SC'), ('4212205', 'Papanduva', 'SC'), ('4212239', 'Paraíso', 'SC'), (
+    '4212254',
+    'Passo de Torres',
+    'SC'
+), ('4212270', 'Passos Maia', 'SC'), ('4212304', 'Paulo Lopes', 'SC'), (
+    '4212403',
+    'Pedras Grandes',
+    'SC'
+), ('4212502', 'Penha', 'SC'), ('4212601', 'Peritiba', 'SC'), (
+    '4212650',
+    'Pescaria Brava',
+    'SC'
+), ('4212700', 'Petrolândia', 'SC'), (
+    '4212809',
+    'Balneário Piçarras',
+    'SC'
+), ('4212908', 'Pinhalzinho', 'SC'), (
+    '4213005',
+    'Pinheiro Preto',
+    'SC'
+), ('4213104', 'Piratuba', 'SC'), (
+    '4213153',
+    'Planalto Alegre',
+    'SC'
+), ('4213203', 'Pomerode', 'SC'), ('4213302', 'Ponte Alta', 'SC'), (
+    '4213351',
+    'Ponte Alta do Norte',
+    'SC'
+), (
+    '4213401',
+    'Ponte Serrada',
+    'SC'
+), ('4213500', 'Porto Belo', 'SC'), ('4213609', 'Porto União', 'SC'), (
+    '4213708',
+    'Pouso Redondo',
+    'SC'
+), (
+    '4213807',
+    'Praia Grande',
+    'SC'
+), (
+    '4213906',
+    'Presidente Castello Branco',
+    'SC'
+), (
+    '4214003',
+    'Presidente Getúlio',
+    'SC'
+), (
+    '4214102',
+    'Presidente Nereu',
+    'SC'
+), ('4214151', 'Princesa', 'SC'), ('4214201', 'Quilombo', 'SC'), (
+    '4214300',
+    'Rancho Queimado',
+    'SC'
+), (
+    '4214409',
+    'Rio das Antas',
+    'SC'
+), (
+    '4214508',
+    'Rio do Campo',
+    'SC'
+), (
+    '4214607',
+    'Rio do Oeste',
+    'SC'
+), (
+    '4214706',
+    'Rio dos Cedros',
+    'SC'
+), ('4214805', 'Rio do Sul', 'SC'), ('4214904', 'Rio Fortuna', 'SC'), (
+    '4215000',
+    'Rio Negrinho',
+    'SC'
+), ('4215059', 'Rio Rufino', 'SC'), ('4215075', 'Riqueza', 'SC'), ('4215109', 'Rodeio', 'SC'), ('4215208', 'Romelândia', 'SC'), ('4215307', 'Salete', 'SC'), ('4215356', 'Saltinho', 'SC'), (
+    '4215406',
+    'Salto Veloso',
+    'SC'
+), ('4215455', 'Sangão', 'SC'), (
+    '4215505',
+    'Santa Cecília',
+    'SC'
+), (
+    '4215554',
+    'Santa Helena',
+    'SC'
+), (
+    '4215604',
+    'Santa Rosa de Lima',
+    'SC'
+), (
+    '4215653',
+    'Santa Rosa do Sul',
+    'SC'
+), (
+    '4215679',
+    'Santa Terezinha',
+    'SC'
+), (
+    '4215687',
+    'Santa Terezinha do Progresso',
+    'SC'
+), (
+    '4215695',
+    'Santiago do Sul',
+    'SC'
+), (
+    '4215703',
+    'Santo Amaro da Imperatriz',
+    'SC'
+), (
+    '4215752',
+    'São Bernardino',
+    'SC'
+), (
+    '4215802',
+    'São Bento do Sul',
+    'SC'
+), (
+    '4215901',
+    'São Bonifácio',
+    'SC'
+), ('4216008', 'São Carlos', 'SC'), (
+    '4216057',
+    'São Cristovão do Sul',
+    'SC'
+), (
+    '4216107',
+    'São Domingos',
+    'SC'
+), (
+    '4216206',
+    'São Francisco do Sul',
+    'SC'
+), (
+    '4216255',
+    'São João do Oeste',
+    'SC'
+), (
+    '4216305',
+    'São João Batista',
+    'SC'
+), (
+    '4216354',
+    'São João do Itaperiú',
+    'SC'
+), (
+    '4216404',
+    'São João do Sul',
+    'SC'
+), ('4216503', 'São Joaquim', 'SC'), ('4216602', 'São José', 'SC'), (
+    '4216701',
+    'São José do Cedro',
+    'SC'
+), (
+    '4216800',
+    'São José do Cerrito',
+    'SC'
+), (
+    '4216909',
+    'São Lourenço do Oeste',
+    'SC'
+), ('4217006', 'São Ludgero', 'SC'), (
+    '4217105',
+    'São Martinho',
+    'SC'
+), (
+    '4217154',
+    'São Miguel da Boa Vista',
+    'SC'
+), (
+    '4217204',
+    'São Miguel do Oeste',
+    'SC'
+), (
+    '4217253',
+    'São Pedro de Alcântara',
+    'SC'
+), ('4217303', 'Saudades', 'SC'), ('4217402', 'Schroeder', 'SC'), ('4217501', 'Seara', 'SC'), ('4217550', 'Serra Alta', 'SC'), ('4217600', 'Siderópolis', 'SC'), ('4217709', 'Sombrio', 'SC'), ('4217758', 'Sul Brasil', 'SC'), ('4217808', 'Taió', 'SC'), ('4217907', 'Tangará', 'SC'), ('4217956', 'Tigrinhos', 'SC'), ('4218004', 'Tijucas', 'SC'), (
+    '4218103',
+    'Timbé do Sul',
+    'SC'
+), ('4218202', 'Timbó', 'SC'), (
+    '4218251',
+    'Timbó Grande',
+    'SC'
+), ('4218301', 'Três Barras', 'SC'), ('4218350', 'Treviso', 'SC'), (
+    '4218400',
+    'Treze de Maio',
+    'SC'
+), (
+    '4218509',
+    'Treze Tílias',
+    'SC'
+), (
+    '4218608',
+    'Trombudo Central',
+    'SC'
+), ('4218707', 'Tubarão', 'SC'), ('4218756', 'Tunápolis', 'SC'), ('4218806', 'Turvo', 'SC'), (
+    '4218855',
+    'União do Oeste',
+    'SC'
+), ('4218905', 'Urubici', 'SC'), ('4218954', 'Urupema', 'SC'), ('4219002', 'Urussanga', 'SC'), ('4219101', 'Vargeão', 'SC'), ('4219150', 'Vargem', 'SC'), (
+    '4219176',
+    'Vargem Bonita',
+    'SC'
+), ('4219200', 'Vidal Ramos', 'SC'), ('4219309', 'Videira', 'SC'), (
+    '4219358',
+    'Vitor Meireles',
+    'SC'
+), ('4219408', 'Witmarsum', 'SC'), ('4219507', 'Xanxerê', 'SC'), ('4219606', 'Xavantina', 'SC'), ('4219705', 'Xaxim', 'SC'), ('4219853', 'Zortéa', 'SC'), (
+    '4220000',
+    'Balneário Rincão',
+    'SC'
+), ('4300034', 'Aceguá', 'RS'), ('4300059', 'Água Santa', 'RS'), ('4300109', 'Agudo', 'RS'), ('4300208', 'Ajuricaba', 'RS'), ('4300307', 'Alecrim', 'RS'), ('4300406', 'Alegrete', 'RS'), ('4300455', 'Alegria', 'RS'), (
+    '4300471',
+    'Almirante Tamandaré do Sul',
+    'RS'
+), ('4300505', 'Alpestre', 'RS'), ('4300554', 'Alto Alegre', 'RS'), ('4300570', 'Alto Feliz', 'RS'), ('4300604', 'Alvorada', 'RS'), (
+    '4300638',
+    'Amaral Ferrador',
+    'RS'
+), (
+    '4300646',
+    'Ametista do Sul',
+    'RS'
+), (
+    '4300661',
+    'André da Rocha',
+    'RS'
+), ('4300703', 'Anta Gorda', 'RS'), (
+    '4300802',
+    'Antônio Prado',
+    'RS'
+), ('4300851', 'Arambaré', 'RS'), ('4300877', 'Araricá', 'RS'), ('4300901', 'Aratiba', 'RS'), (
+    '4301008',
+    'Arroio do Meio',
+    'RS'
+), (
+    '4301057',
+    'Arroio do Sal',
+    'RS'
+), (
+    '4301073',
+    'Arroio do Padre',
+    'RS'
+), (
+    '4301107',
+    'Arroio dos Ratos',
+    'RS'
+), (
+    '4301206',
+    'Arroio do Tigre',
+    'RS'
+), (
+    '4301305',
+    'Arroio Grande',
+    'RS'
+), ('4301404', 'Arvorezinha', 'RS'), (
+    '4301503',
+    'Augusto Pestana',
+    'RS'
+), ('4301552', 'Áurea', 'RS'), ('4301602', 'Bagé', 'RS'), (
+    '4301636',
+    'Balneário Pinhal',
+    'RS'
+), ('4301651', 'Barão', 'RS'), (
+    '4301701',
+    'Barão de Cotegipe',
+    'RS'
+), (
+    '4301750',
+    'Barão do Triunfo',
+    'RS'
+), ('4301800', 'Barracão', 'RS'), (
+    '4301859',
+    'Barra do Guarita',
+    'RS'
+), (
+    '4301875',
+    'Barra do Quaraí',
+    'RS'
+), (
+    '4301909',
+    'Barra do Ribeiro',
+    'RS'
+), (
+    '4301925',
+    'Barra do Rio Azul',
+    'RS'
+), ('4301958', 'Barra Funda', 'RS'), (
+    '4302006',
+    'Barros Cassal',
+    'RS'
+), (
+    '4302055',
+    'Benjamin Constant do Sul',
+    'RS'
+), (
+    '4302105',
+    'Bento Gonçalves',
+    'RS'
+), (
+    '4302154',
+    'Boa Vista das Missões',
+    'RS'
+), (
+    '4302204',
+    'Boa Vista do Buricá',
+    'RS'
+), (
+    '4302220',
+    'Boa Vista do Cadeado',
+    'RS'
+), (
+    '4302238',
+    'Boa Vista do Incra',
+    'RS'
+), (
+    '4302253',
+    'Boa Vista do Sul',
+    'RS'
+), ('4302303', 'Bom Jesus', 'RS'), (
+    '4302352',
+    'Bom Princípio',
+    'RS'
+), (
+    '4302378',
+    'Bom Progresso',
+    'RS'
+), (
+    '4302402',
+    'Bom Retiro do Sul',
+    'RS'
+), (
+    '4302451',
+    'Boqueirão do Leão',
+    'RS'
+), ('4302501', 'Bossoroca', 'RS'), ('4302584', 'Bozano', 'RS'), ('4302600', 'Braga', 'RS'), ('4302659', 'Brochier', 'RS'), ('4302709', 'Butiá', 'RS'), (
+    '4302808',
+    'Caçapava do Sul',
+    'RS'
+), ('4302907', 'Cacequi', 'RS'), (
+    '4303004',
+    'Cachoeira do Sul',
+    'RS'
+), (
+    '4303103',
+    'Cachoeirinha',
+    'RS'
+), (
+    '4303202',
+    'Cacique Doble',
+    'RS'
+), ('4303301', 'Caibaté', 'RS'), ('4303400', 'Caiçara', 'RS'), ('4303509', 'Camaquã', 'RS'), ('4303558', 'Camargo', 'RS'), (
+    '4303608',
+    'Cambará do Sul',
+    'RS'
+), (
+    '4303673',
+    'Campestre da Serra',
+    'RS'
+), (
+    '4303707',
+    'Campina das Missões',
+    'RS'
+), (
+    '4303806',
+    'Campinas do Sul',
+    'RS'
+), ('4303905', 'Campo Bom', 'RS'), ('4304002', 'Campo Novo', 'RS'), (
+    '4304101',
+    'Campos Borges',
+    'RS'
+), ('4304200', 'Candelária', 'RS'), (
+    '4304309',
+    'Cândido Godói',
+    'RS'
+), ('4304358', 'Candiota', 'RS'), ('4304408', 'Canela', 'RS'), ('4304507', 'Canguçu', 'RS'), ('4304606', 'Canoas', 'RS'), (
+    '4304614',
+    'Canudos do Vale',
+    'RS'
+), (
+    '4304622',
+    'Capão Bonito do Sul',
+    'RS'
+), (
+    '4304630',
+    'Capão da Canoa',
+    'RS'
+), (
+    '4304655',
+    'Capão do Cipó',
+    'RS'
+), (
+    '4304663',
+    'Capão do Leão',
+    'RS'
+), (
+    '4304671',
+    'Capivari do Sul',
+    'RS'
+), (
+    '4304689',
+    'Capela de Santana',
+    'RS'
+), ('4304697', 'Capitão', 'RS'), ('4304705', 'Carazinho', 'RS'), ('4304713', 'Caraá', 'RS'), (
+    '4304804',
+    'Carlos Barbosa',
+    'RS'
+), (
+    '4304853',
+    'Carlos Gomes',
+    'RS'
+), ('4304903', 'Casca', 'RS'), ('4304952', 'Caseiros', 'RS'), ('4305009', 'Catuípe', 'RS'), (
+    '4305108',
+    'Caxias do Sul',
+    'RS'
+), ('4305116', 'Centenário', 'RS'), ('4305124', 'Cerrito', 'RS'), (
+    '4305132',
+    'Cerro Branco',
+    'RS'
+), (
+    '4305157',
+    'Cerro Grande',
+    'RS'
+), (
+    '4305173',
+    'Cerro Grande do Sul',
+    'RS'
+), ('4305207', 'Cerro Largo', 'RS'), ('4305306', 'Chapada', 'RS'), ('4305355', 'Charqueadas', 'RS'), ('4305371', 'Charrua', 'RS'), ('4305405', 'Chiapetta', 'RS'), ('4305439', 'Chuí', 'RS'), ('4305447', 'Chuvisca', 'RS'), ('4305454', 'Cidreira', 'RS'), ('4305504', 'Ciríaco', 'RS'), ('4305587', 'Colinas', 'RS'), ('4305603', 'Colorado', 'RS'), ('4305702', 'Condor', 'RS'), ('4305801', 'Constantina', 'RS'), (
+    '4305835',
+    'Coqueiro Baixo',
+    'RS'
+), (
+    '4305850',
+    'Coqueiros do Sul',
+    'RS'
+), (
+    '4305871',
+    'Coronel Barros',
+    'RS'
+), (
+    '4305900',
+    'Coronel Bicaco',
+    'RS'
+), (
+    '4305934',
+    'Coronel Pilar',
+    'RS'
+), ('4305959', 'Cotiporã', 'RS'), ('4305975', 'Coxilha', 'RS'), ('4306007', 'Crissiumal', 'RS'), ('4306056', 'Cristal', 'RS'), (
+    '4306072',
+    'Cristal do Sul',
+    'RS'
+), ('4306106', 'Cruz Alta', 'RS'), ('4306130', 'Cruzaltense', 'RS'), (
+    '4306205',
+    'Cruzeiro do Sul',
+    'RS'
+), (
+    '4306304',
+    'David Canabarro',
+    'RS'
+), ('4306320', 'Derrubadas', 'RS'), (
+    '4306353',
+    'Dezesseis de Novembro',
+    'RS'
+), (
+    '4306379',
+    'Dilermando de Aguiar',
+    'RS'
+), ('4306403', 'Dois Irmãos', 'RS'), (
+    '4306429',
+    'Dois Irmãos das Missões',
+    'RS'
+), (
+    '4306452',
+    'Dois Lajeados',
+    'RS'
+), (
+    '4306502',
+    'Dom Feliciano',
+    'RS'
+), (
+    '4306551',
+    'Dom Pedro de Alcântara',
+    'RS'
+), ('4306601', 'Dom Pedrito', 'RS'), (
+    '4306700',
+    'Dona Francisca',
+    'RS'
+), (
+    '4306734',
+    'Doutor Maurício Cardoso',
+    'RS'
+), (
+    '4306759',
+    'Doutor Ricardo',
+    'RS'
+), (
+    '4306767',
+    'Eldorado do Sul',
+    'RS'
+), ('4306809', 'Encantado', 'RS'), (
+    '4306908',
+    'Encruzilhada do Sul',
+    'RS'
+), (
+    '4306924',
+    'Engenho Velho',
+    'RS'
+), ('4306932', 'Entre-Ijuís', 'RS'), (
+    '4306957',
+    'Entre Rios do Sul',
+    'RS'
+), ('4306973', 'Erebango', 'RS'), ('4307005', 'Erechim', 'RS'), ('4307054', 'Ernestina', 'RS'), ('4307104', 'Herval', 'RS'), (
+    '4307203',
+    'Erval Grande',
+    'RS'
+), ('4307302', 'Erval Seco', 'RS'), ('4307401', 'Esmeralda', 'RS'), (
+    '4307450',
+    'Esperança do Sul',
+    'RS'
+), ('4307500', 'Espumoso', 'RS'), ('4307559', 'Estação', 'RS'), (
+    '4307609',
+    'Estância Velha',
+    'RS'
+), ('4307708', 'Esteio', 'RS'), ('4307807', 'Estrela', 'RS'), (
+    '4307815',
+    'Estrela Velha',
+    'RS'
+), (
+    '4307831',
+    'Eugênio de Castro',
+    'RS'
+), (
+    '4307864',
+    'Fagundes Varela',
+    'RS'
+), ('4307906', 'Farroupilha', 'RS'), (
+    '4308003',
+    'Faxinal do Soturno',
+    'RS'
+), (
+    '4308052',
+    'Faxinalzinho',
+    'RS'
+), (
+    '4308078',
+    'Fazenda Vilanova',
+    'RS'
+), ('4308102', 'Feliz', 'RS'), (
+    '4308201',
+    'Flores da Cunha',
+    'RS'
+), (
+    '4308250',
+    'Floriano Peixoto',
+    'RS'
+), (
+    '4308300',
+    'Fontoura Xavier',
+    'RS'
+), ('4308409', 'Formigueiro', 'RS'), ('4308433', 'Forquetinha', 'RS'), (
+    '4308458',
+    'Fortaleza dos Valos',
+    'RS'
+), (
+    '4308508',
+    'Frederico Westphalen',
+    'RS'
+), ('4308607', 'Garibaldi', 'RS'), ('4308656', 'Garruchos', 'RS'), ('4308706', 'Gaurama', 'RS'), (
+    '4308805',
+    'General Câmara',
+    'RS'
+), ('4308854', 'Gentil', 'RS'), (
+    '4308904',
+    'Getúlio Vargas',
+    'RS'
+), ('4309001', 'Giruá', 'RS'), ('4309050', 'Glorinha', 'RS'), ('4309100', 'Gramado', 'RS'), (
+    '4309126',
+    'Gramado dos Loureiros',
+    'RS'
+), (
+    '4309159',
+    'Gramado Xavier',
+    'RS'
+), ('4309209', 'Gravataí', 'RS'), ('4309258', 'Guabiju', 'RS'), ('4309308', 'Guaíba', 'RS'), ('4309407', 'Guaporé', 'RS'), (
+    '4309506',
+    'Guarani das Missões',
+    'RS'
+), ('4309555', 'Harmonia', 'RS'), ('4309571', 'Herveiras', 'RS'), ('4309605', 'Horizontina', 'RS'), ('4309654', 'Hulha Negra', 'RS'), ('4309704', 'Humaitá', 'RS'), ('4309753', 'Ibarama', 'RS'), ('4309803', 'Ibiaçá', 'RS'), ('4309902', 'Ibiraiaras', 'RS'), ('4309951', 'Ibirapuitã', 'RS'), ('4310009', 'Ibirubá', 'RS'), ('4310108', 'Igrejinha', 'RS'), ('4310207', 'Ijuí', 'RS'), ('4310306', 'Ilópolis', 'RS'), ('4310330', 'Imbé', 'RS'), ('4310363', 'Imigrante', 'RS'), (
+    '4310405',
+    'Independência',
+    'RS'
+), ('4310413', 'Inhacorá', 'RS'), ('4310439', 'Ipê', 'RS'), (
+    '4310462',
+    'Ipiranga do Sul',
+    'RS'
+), ('4310504', 'Iraí', 'RS'), ('4310538', 'Itaara', 'RS'), ('4310553', 'Itacurubi', 'RS'), ('4310579', 'Itapuca', 'RS'), ('4310603', 'Itaqui', 'RS'), ('4310652', 'Itati', 'RS'), (
+    '4310702',
+    'Itatiba do Sul',
+    'RS'
+), ('4310751', 'Ivorá', 'RS'), ('4310801', 'Ivoti', 'RS'), ('4310850', 'Jaboticaba', 'RS'), ('4310876', 'Jacuizinho', 'RS'), ('4310900', 'Jacutinga', 'RS'), ('4311007', 'Jaguarão', 'RS'), ('4311106', 'Jaguari', 'RS'), ('4311122', 'Jaquirana', 'RS'), ('4311130', 'Jari', 'RS'), ('4311155', 'Jóia', 'RS'), (
+    '4311205',
+    'Júlio de Castilhos',
+    'RS'
+), (
+    '4311239',
+    'Lagoa Bonita do Sul',
+    'RS'
+), ('4311254', 'Lagoão', 'RS'), (
+    '4311270',
+    'Lagoa dos Três Cantos',
+    'RS'
+), (
+    '4311304',
+    'Lagoa Vermelha',
+    'RS'
+), ('4311403', 'Lajeado', 'RS'), (
+    '4311429',
+    'Lajeado do Bugre',
+    'RS'
+), (
+    '4311502',
+    'Lavras do Sul',
+    'RS'
+), (
+    '4311601',
+    'Liberato Salzano',
+    'RS'
+), (
+    '4311627',
+    'Lindolfo Collor',
+    'RS'
+), ('4311643', 'Linha Nova', 'RS'), ('4311700', 'Machadinho', 'RS'), ('4311718', 'Maçambará', 'RS'), ('4311734', 'Mampituba', 'RS'), (
+    '4311759',
+    'Manoel Viana',
+    'RS'
+), ('4311775', 'Maquiné', 'RS'), ('4311791', 'Maratá', 'RS'), ('4311809', 'Marau', 'RS'), (
+    '4311908',
+    'Marcelino Ramos',
+    'RS'
+), (
+    '4311981',
+    'Mariana Pimentel',
+    'RS'
+), (
+    '4312005',
+    'Mariano Moro',
+    'RS'
+), (
+    '4312054',
+    'Marques de Souza',
+    'RS'
+), ('4312104', 'Mata', 'RS'), (
+    '4312138',
+    'Mato Castelhano',
+    'RS'
+), ('4312153', 'Mato Leitão', 'RS'), (
+    '4312179',
+    'Mato Queimado',
+    'RS'
+), (
+    '4312203',
+    'Maximiliano de Almeida',
+    'RS'
+), (
+    '4312252',
+    'Minas do Leão',
+    'RS'
+), ('4312302', 'Miraguaí', 'RS'), ('4312351', 'Montauri', 'RS'), (
+    '4312377',
+    'Monte Alegre dos Campos',
+    'RS'
+), (
+    '4312385',
+    'Monte Belo do Sul',
+    'RS'
+), ('4312401', 'Montenegro', 'RS'), ('4312427', 'Mormaço', 'RS'), (
+    '4312443',
+    'Morrinhos do Sul',
+    'RS'
+), (
+    '4312450',
+    'Morro Redondo',
+    'RS'
+), (
+    '4312476',
+    'Morro Reuter',
+    'RS'
+), ('4312500', 'Mostardas', 'RS'), ('4312609', 'Muçum', 'RS'), (
+    '4312617',
+    'Muitos Capões',
+    'RS'
+), ('4312625', 'Muliterno', 'RS'), (
+    '4312658',
+    'Não-Me-Toque',
+    'RS'
+), (
+    '4312674',
+    'Nicolau Vergueiro',
+    'RS'
+), ('4312708', 'Nonoai', 'RS'), (
+    '4312757',
+    'Nova Alvorada',
+    'RS'
+), ('4312807', 'Nova Araçá', 'RS'), (
+    '4312906',
+    'Nova Bassano',
+    'RS'
+), (
+    '4312955',
+    'Nova Boa Vista',
+    'RS'
+), (
+    '4313003',
+    'Nova Bréscia',
+    'RS'
+), (
+    '4313011',
+    'Nova Candelária',
+    'RS'
+), (
+    '4313037',
+    'Nova Esperança do Sul',
+    'RS'
+), ('4313060', 'Nova Hartz', 'RS'), ('4313086', 'Nova Pádua', 'RS'), ('4313102', 'Nova Palma', 'RS'), (
+    '4313201',
+    'Nova Petrópolis',
+    'RS'
+), ('4313300', 'Nova Prata', 'RS'), ('4313334', 'Nova Ramada', 'RS'), (
+    '4313359',
+    'Nova Roma do Sul',
+    'RS'
+), (
+    '4313375',
+    'Nova Santa Rita',
+    'RS'
+), (
+    '4313391',
+    'Novo Cabrais',
+    'RS'
+), (
+    '4313409',
+    'Novo Hamburgo',
+    'RS'
+), (
+    '4313425',
+    'Novo Machado',
+    'RS'
+), (
+    '4313441',
+    'Novo Tiradentes',
+    'RS'
+), ('4313466', 'Novo Xingu', 'RS'), (
+    '4313490',
+    'Novo Barreiro',
+    'RS'
+), ('4313508', 'Osório', 'RS'), ('4313607', 'Paim Filho', 'RS'), (
+    '4313656',
+    'Palmares do Sul',
+    'RS'
+), (
+    '4313706',
+    'Palmeira das Missões',
+    'RS'
+), ('4313805', 'Palmitinho', 'RS'), ('4313904', 'Panambi', 'RS'), (
+    '4313953',
+    'Pantano Grande',
+    'RS'
+), ('4314001', 'Paraí', 'RS'), (
+    '4314027',
+    'Paraíso do Sul',
+    'RS'
+), ('4314035', 'Pareci Novo', 'RS'), ('4314050', 'Parobé', 'RS'), ('4314068', 'Passa Sete', 'RS'), (
+    '4314076',
+    'Passo do Sobrado',
+    'RS'
+), ('4314100', 'Passo Fundo', 'RS'), ('4314134', 'Paulo Bento', 'RS'), ('4314159', 'Paverama', 'RS'), (
+    '4314175',
+    'Pedras Altas',
+    'RS'
+), (
+    '4314209',
+    'Pedro Osório',
+    'RS'
+), ('4314308', 'Pejuçara', 'RS'), ('4314407', 'Pelotas', 'RS'), ('4314423', 'Picada Café', 'RS'), ('4314456', 'Pinhal', 'RS'), (
+    '4314464',
+    'Pinhal da Serra',
+    'RS'
+), (
+    '4314472',
+    'Pinhal Grande',
+    'RS'
+), (
+    '4314498',
+    'Pinheirinho do Vale',
+    'RS'
+), (
+    '4314506',
+    'Pinheiro Machado',
+    'RS'
+), (
+    '4314548',
+    'Pinto Bandeira',
+    'RS'
+), ('4314555', 'Pirapó', 'RS'), ('4314605', 'Piratini', 'RS'), ('4314704', 'Planalto', 'RS'), (
+    '4314753',
+    'Poço das Antas',
+    'RS'
+), ('4314779', 'Pontão', 'RS'), ('4314787', 'Ponte Preta', 'RS'), ('4314803', 'Portão', 'RS'), (
+    '4314902',
+    'Porto Alegre',
+    'RS'
+), (
+    '4315008',
+    'Porto Lucena',
+    'RS'
+), ('4315057', 'Porto Mauá', 'RS'), (
+    '4315073',
+    'Porto Vera Cruz',
+    'RS'
+), (
+    '4315107',
+    'Porto Xavier',
+    'RS'
+), ('4315131', 'Pouso Novo', 'RS'), (
+    '4315149',
+    'Presidente Lucena',
+    'RS'
+), ('4315156', 'Progresso', 'RS'), (
+    '4315172',
+    'Protásio Alves',
+    'RS'
+), ('4315206', 'Putinga', 'RS'), ('4315305', 'Quaraí', 'RS'), (
+    '4315313',
+    'Quatro Irmãos',
+    'RS'
+), ('4315321', 'Quevedos', 'RS'), (
+    '4315354',
+    'Quinze de Novembro',
+    'RS'
+), ('4315404', 'Redentora', 'RS'), ('4315453', 'Relvado', 'RS'), (
+    '4315503',
+    'Restinga Seca',
+    'RS'
+), (
+    '4315552',
+    'Rio dos Índios',
+    'RS'
+), ('4315602', 'Rio Grande', 'RS'), ('4315701', 'Rio Pardo', 'RS'), ('4315750', 'Riozinho', 'RS'), ('4315800', 'Roca Sales', 'RS'), (
+    '4315909',
+    'Rodeio Bonito',
+    'RS'
+), ('4315958', 'Rolador', 'RS'), ('4316006', 'Rolante', 'RS'), ('4316105', 'Ronda Alta', 'RS'), ('4316204', 'Rondinha', 'RS'), (
+    '4316303',
+    'Roque Gonzales',
+    'RS'
+), (
+    '4316402',
+    'Rosário do Sul',
+    'RS'
+), (
+    '4316428',
+    'Sagrada Família',
+    'RS'
+), (
+    '4316436',
+    'Saldanha Marinho',
+    'RS'
+), (
+    '4316451',
+    'Salto do Jacuí',
+    'RS'
+), (
+    '4316477',
+    'Salvador das Missões',
+    'RS'
+), (
+    '4316501',
+    'Salvador do Sul',
+    'RS'
+), ('4316600', 'Sananduva', 'RS'), (
+    '4316709',
+    'Santa Bárbara do Sul',
+    'RS'
+), (
+    '4316733',
+    'Santa Cecília do Sul',
+    'RS'
+), (
+    '4316758',
+    'Santa Clara do Sul',
+    'RS'
+), (
+    '4316808',
+    'Santa Cruz do Sul',
+    'RS'
+), ('4316907', 'Santa Maria', 'RS'), (
+    '4316956',
+    'Santa Maria do Herval',
+    'RS'
+), (
+    '4316972',
+    'Santa Margarida do Sul',
+    'RS'
+), (
+    '4317004',
+    'Santana da Boa Vista',
+    'RS'
+), (
+    '4317103',
+    'Sant''Ana do Livramento',
+    'RS'
+), ('4317202', 'Santa Rosa', 'RS'), (
+    '4317251',
+    'Santa Tereza',
+    'RS'
+), (
+    '4317301',
+    'Santa Vitória do Palmar',
+    'RS'
+), ('4317400', 'Santiago', 'RS'), (
+    '4317509',
+    'Santo Ângelo',
+    'RS'
+), (
+    '4317558',
+    'Santo Antônio do Palma',
+    'RS'
+), (
+    '4317608',
+    'Santo Antônio da Patrulha',
+    'RS'
+), (
+    '4317707',
+    'Santo Antônio das Missões',
+    'RS'
+), (
+    '4317756',
+    'Santo Antônio do Planalto',
+    'RS'
+), (
+    '4317806',
+    'Santo Augusto',
+    'RS'
+), (
+    '4317905',
+    'Santo Cristo',
+    'RS'
+), (
+    '4317954',
+    'Santo Expedito do Sul',
+    'RS'
+), ('4318002', 'São Borja', 'RS'), (
+    '4318051',
+    'São Domingos do Sul',
+    'RS'
+), (
+    '4318101',
+    'São Francisco de Assis',
+    'RS'
+), (
+    '4318200',
+    'São Francisco de Paula',
+    'RS'
+), ('4318309', 'São Gabriel', 'RS'), (
+    '4318408',
+    'São Jerônimo',
+    'RS'
+), (
+    '4318424',
+    'São João da Urtiga',
+    'RS'
+), (
+    '4318432',
+    'São João do Polêsine',
+    'RS'
+), ('4318440', 'São Jorge', 'RS'), (
+    '4318457',
+    'São José das Missões',
+    'RS'
+), (
+    '4318465',
+    'São José do Herval',
+    'RS'
+), (
+    '4318481',
+    'São José do Hortêncio',
+    'RS'
+), (
+    '4318499',
+    'São José do Inhacorá',
+    'RS'
+), (
+    '4318507',
+    'São José do Norte',
+    'RS'
+), (
+    '4318606',
+    'São José do Ouro',
+    'RS'
+), (
+    '4318614',
+    'São José do Sul',
+    'RS'
+), (
+    '4318622',
+    'São José dos Ausentes',
+    'RS'
+), (
+    '4318705',
+    'São Leopoldo',
+    'RS'
+), (
+    '4318804',
+    'São Lourenço do Sul',
+    'RS'
+), (
+    '4318903',
+    'São Luiz Gonzaga',
+    'RS'
+), ('4319000', 'São Marcos', 'RS'), (
+    '4319109',
+    'São Martinho',
+    'RS'
+), (
+    '4319125',
+    'São Martinho da Serra',
+    'RS'
+), (
+    '4319158',
+    'São Miguel das Missões',
+    'RS'
+), ('4319208', 'São Nicolau', 'RS'), (
+    '4319307',
+    'São Paulo das Missões',
+    'RS'
+), (
+    '4319356',
+    'São Pedro da Serra',
+    'RS'
+), (
+    '4319364',
+    'São Pedro das Missões',
+    'RS'
+), (
+    '4319372',
+    'São Pedro do Butiá',
+    'RS'
+), (
+    '4319406',
+    'São Pedro do Sul',
+    'RS'
+), (
+    '4319505',
+    'São Sebastião do Caí',
+    'RS'
+), ('4319604', 'São Sepé', 'RS'), (
+    '4319703',
+    'São Valentim',
+    'RS'
+), (
+    '4319711',
+    'São Valentim do Sul',
+    'RS'
+), (
+    '4319737',
+    'São Valério do Sul',
+    'RS'
+), (
+    '4319752',
+    'São Vendelino',
+    'RS'
+), (
+    '4319802',
+    'São Vicente do Sul',
+    'RS'
+), ('4319901', 'Sapiranga', 'RS'), (
+    '4320008',
+    'Sapucaia do Sul',
+    'RS'
+), ('4320107', 'Sarandi', 'RS'), ('4320206', 'Seberi', 'RS'), ('4320230', 'Sede Nova', 'RS'), ('4320263', 'Segredo', 'RS'), ('4320305', 'Selbach', 'RS'), (
+    '4320321',
+    'Senador Salgado Filho',
+    'RS'
+), (
+    '4320354',
+    'Sentinela do Sul',
+    'RS'
+), (
+    '4320404',
+    'Serafina Corrêa',
+    'RS'
+), ('4320453', 'Sério', 'RS'), ('4320503', 'Sertão', 'RS'), (
+    '4320552',
+    'Sertão Santana',
+    'RS'
+), (
+    '4320578',
+    'Sete de Setembro',
+    'RS'
+), (
+    '4320602',
+    'Severiano de Almeida',
+    'RS'
+), (
+    '4320651',
+    'Silveira Martins',
+    'RS'
+), ('4320677', 'Sinimbu', 'RS'), ('4320701', 'Sobradinho', 'RS'), ('4320800', 'Soledade', 'RS'), ('4320859', 'Tabaí', 'RS'), ('4320909', 'Tapejara', 'RS'), ('4321006', 'Tapera', 'RS'), ('4321105', 'Tapes', 'RS'), ('4321204', 'Taquara', 'RS'), ('4321303', 'Taquari', 'RS'), (
+    '4321329',
+    'Taquaruçu do Sul',
+    'RS'
+), ('4321352', 'Tavares', 'RS'), (
+    '4321402',
+    'Tenente Portela',
+    'RS'
+), (
+    '4321436',
+    'Terra de Areia',
+    'RS'
+), ('4321451', 'Teutônia', 'RS'), ('4321469', 'Tio Hugo', 'RS'), (
+    '4321477',
+    'Tiradentes do Sul',
+    'RS'
+), ('4321493', 'Toropi', 'RS'), ('4321501', 'Torres', 'RS'), ('4321600', 'Tramandaí', 'RS'), ('4321626', 'Travesseiro', 'RS'), (
+    '4321634',
+    'Três Arroios',
+    'RS'
+), (
+    '4321667',
+    'Três Cachoeiras',
+    'RS'
+), ('4321709', 'Três Coroas', 'RS'), (
+    '4321808',
+    'Três de Maio',
+    'RS'
+), (
+    '4321832',
+    'Três Forquilhas',
+    'RS'
+), (
+    '4321857',
+    'Três Palmeiras',
+    'RS'
+), ('4321907', 'Três Passos', 'RS'), (
+    '4321956',
+    'Trindade do Sul',
+    'RS'
+), ('4322004', 'Triunfo', 'RS'), ('4322103', 'Tucunduva', 'RS'), ('4322152', 'Tunas', 'RS'), (
+    '4322186',
+    'Tupanci do Sul',
+    'RS'
+), ('4322202', 'Tupanciretã', 'RS'), ('4322251', 'Tupandi', 'RS'), ('4322301', 'Tuparendi', 'RS'), ('4322327', 'Turuçu', 'RS'), ('4322343', 'Ubiretama', 'RS'), (
+    '4322350',
+    'União da Serra',
+    'RS'
+), ('4322376', 'Unistalda', 'RS'), ('4322400', 'Uruguaiana', 'RS'), ('4322509', 'Vacaria', 'RS'), ('4322525', 'Vale Verde', 'RS'), ('4322533', 'Vale do Sol', 'RS'), ('4322541', 'Vale Real', 'RS'), ('4322558', 'Vanini', 'RS'), (
+    '4322608',
+    'Venâncio Aires',
+    'RS'
+), ('4322707', 'Vera Cruz', 'RS'), ('4322806', 'Veranópolis', 'RS'), (
+    '4322855',
+    'Vespasiano Correa',
+    'RS'
+), ('4322905', 'Viadutos', 'RS'), ('4323002', 'Viamão', 'RS'), (
+    '4323101',
+    'Vicente Dutra',
+    'RS'
+), (
+    '4323200',
+    'Victor Graeff',
+    'RS'
+), ('4323309', 'Vila Flores', 'RS'), (
+    '4323358',
+    'Vila Lângaro',
+    'RS'
+), ('4323408', 'Vila Maria', 'RS'), (
+    '4323457',
+    'Vila Nova do Sul',
+    'RS'
+), (
+    '4323507',
+    'Vista Alegre',
+    'RS'
+), (
+    '4323606',
+    'Vista Alegre do Prata',
+    'RS'
+), (
+    '4323705',
+    'Vista Gaúcha',
+    'RS'
+), (
+    '4323754',
+    'Vitória das Missões',
+    'RS'
+), ('4323770', 'Westfalia', 'RS'), ('4323804', 'Xangri-lá', 'RS'), ('5000203', 'Água Clara', 'MS'), ('5000252', 'Alcinópolis', 'MS'), ('5000609', 'Amambai', 'MS'), ('5000708', 'Anastácio', 'MS'), (
+    '5000807',
+    'Anaurilândia',
+    'MS'
+), ('5000856', 'Angélica', 'MS'), (
+    '5000906',
+    'Antônio João',
+    'MS'
+), (
+    '5001003',
+    'Aparecida do Taboado',
+    'MS'
+), ('5001102', 'Aquidauana', 'MS'), (
+    '5001243',
+    'Aral Moreira',
+    'MS'
+), (
+    '5001508',
+    'Bandeirantes',
+    'MS'
+), ('5001904', 'Bataguassu', 'MS'), ('5002001', 'Batayporã', 'MS'), ('5002100', 'Bela Vista', 'MS'), ('5002159', 'Bodoquena', 'MS'), ('5002209', 'Bonito', 'MS'), ('5002308', 'Brasilândia', 'MS'), ('5002407', 'Caarapó', 'MS'), ('5002605', 'Camapuã', 'MS'), (
+    '5002704',
+    'Campo Grande',
+    'MS'
+), ('5002803', 'Caracol', 'MS'), ('5002902', 'Cassilândia', 'MS'), (
+    '5002951',
+    'Chapadão do Sul',
+    'MS'
+), ('5003108', 'Corguinho', 'MS'), (
+    '5003157',
+    'Coronel Sapucaia',
+    'MS'
+), ('5003207', 'Corumbá', 'MS'), ('5003256', 'Costa Rica', 'MS'), ('5003306', 'Coxim', 'MS'), ('5003454', 'Deodápolis', 'MS'), (
+    '5003488',
+    'Dois Irmãos do Buriti',
+    'MS'
+), ('5003504', 'Douradina', 'MS'), ('5003702', 'Dourados', 'MS'), ('5003751', 'Eldorado', 'MS'), (
+    '5003801',
+    'Fátima do Sul',
+    'MS'
+), ('5003900', 'Figueirão', 'MS'), (
+    '5004007',
+    'Glória de Dourados',
+    'MS'
+), (
+    '5004106',
+    'Guia Lopes da Laguna',
+    'MS'
+), ('5004304', 'Iguatemi', 'MS'), ('5004403', 'Inocência', 'MS'), ('5004502', 'Itaporã', 'MS'), ('5004601', 'Itaquiraí', 'MS'), ('5004700', 'Ivinhema', 'MS'), ('5004809', 'Japorã', 'MS'), ('5004908', 'Jaraguari', 'MS'), ('5005004', 'Jardim', 'MS'), ('5005103', 'Jateí', 'MS'), ('5005152', 'Juti', 'MS'), ('5005202', 'Ladário', 'MS'), (
+    '5005251',
+    'Laguna Carapã',
+    'MS'
+), ('5005400', 'Maracaju', 'MS'), ('5005608', 'Miranda', 'MS'), ('5005681', 'Mundo Novo', 'MS'), ('5005707', 'Naviraí', 'MS'), ('5005806', 'Nioaque', 'MS'), (
+    '5006002',
+    'Nova Alvorada do Sul',
+    'MS'
+), (
+    '5006200',
+    'Nova Andradina',
+    'MS'
+), (
+    '5006259',
+    'Novo Horizonte do Sul',
+    'MS'
+), (
+    '5006275',
+    'Paraíso das Águas',
+    'MS'
+), ('5006309', 'Paranaíba', 'MS'), ('5006358', 'Paranhos', 'MS'), ('5006408', 'Pedro Gomes', 'MS'), ('5006606', 'Ponta Porã', 'MS'), (
+    '5006903',
+    'Porto Murtinho',
+    'MS'
+), (
+    '5007109',
+    'Ribas do Rio Pardo',
+    'MS'
+), (
+    '5007208',
+    'Rio Brilhante',
+    'MS'
+), ('5007307', 'Rio Negro', 'MS'), (
+    '5007406',
+    'Rio Verde de Mato Grosso',
+    'MS'
+), ('5007505', 'Rochedo', 'MS'), (
+    '5007554',
+    'Santa Rita do Pardo',
+    'MS'
+), (
+    '5007695',
+    'São Gabriel do Oeste',
+    'MS'
+), ('5007703', 'Sete Quedas', 'MS'), ('5007802', 'Selvíria', 'MS'), ('5007901', 'Sidrolândia', 'MS'), ('5007935', 'Sonora', 'MS'), ('5007950', 'Tacuru', 'MS'), ('5007976', 'Taquarussu', 'MS'), ('5008008', 'Terenos', 'MS'), ('5008305', 'Três Lagoas', 'MS'), ('5008404', 'Vicentina', 'MS'), ('5100102', 'Acorizal', 'MT'), ('5100201', 'Água Boa', 'MT'), (
+    '5100250',
+    'Alta Floresta',
+    'MT'
+), (
+    '5100300',
+    'Alto Araguaia',
+    'MT'
+), (
+    '5100359',
+    'Alto Boa Vista',
+    'MT'
+), ('5100409', 'Alto Garças', 'MT'), (
+    '5100508',
+    'Alto Paraguai',
+    'MT'
+), (
+    '5100607',
+    'Alto Taquari',
+    'MT'
+), ('5100805', 'Apiacás', 'MT'), ('5101001', 'Araguaiana', 'MT'), ('5101209', 'Araguainha', 'MT'), ('5101258', 'Araputanga', 'MT'), ('5101308', 'Arenápolis', 'MT'), ('5101407', 'Aripuanã', 'MT'), (
+    '5101605',
+    'Barão de Melgaço',
+    'MT'
+), (
+    '5101704',
+    'Barra do Bugres',
+    'MT'
+), (
+    '5101803',
+    'Barra do Garças',
+    'MT'
+), (
+    '5101852',
+    'Bom Jesus do Araguaia',
+    'MT'
+), ('5101902', 'Brasnorte', 'MT'), ('5102504', 'Cáceres', 'MT'), (
+    '5102603',
+    'Campinápolis',
+    'MT'
+), (
+    '5102637',
+    'Campo Novo do Parecis',
+    'MT'
+), ('5102678', 'Campo Verde', 'MT'), (
+    '5102686',
+    'Campos de Júlio',
+    'MT'
+), (
+    '5102694',
+    'Canabrava do Norte',
+    'MT'
+), ('5102702', 'Canarana', 'MT'), ('5102793', 'Carlinda', 'MT'), ('5102850', 'Castanheira', 'MT'), (
+    '5103007',
+    'Chapada dos Guimarães',
+    'MT'
+), ('5103056', 'Cláudia', 'MT'), ('5103106', 'Cocalinho', 'MT'), ('5103205', 'Colíder', 'MT'), ('5103254', 'Colniza', 'MT'), ('5103304', 'Comodoro', 'MT'), ('5103353', 'Confresa', 'MT'), (
+    '5103361',
+    'Conquista D''Oeste',
+    'MT'
+), ('5103379', 'Cotriguaçu', 'MT'), ('5103403', 'Cuiabá', 'MT'), ('5103437', 'Curvelândia', 'MT'), ('5103452', 'Denise', 'MT'), ('5103502', 'Diamantino', 'MT'), ('5103601', 'Dom Aquino', 'MT'), ('5103700', 'Feliz Natal', 'MT'), (
+    '5103809',
+    'Figueirópolis D''Oeste',
+    'MT'
+), (
+    '5103858',
+    'Gaúcha do Norte',
+    'MT'
+), (
+    '5103908',
+    'General Carneiro',
+    'MT'
+), (
+    '5103957',
+    'Glória D''Oeste',
+    'MT'
+), (
+    '5104104',
+    'Guarantã do Norte',
+    'MT'
+), ('5104203', 'Guiratinga', 'MT'), ('5104500', 'Indiavaí', 'MT'), (
+    '5104526',
+    'Ipiranga do Norte',
+    'MT'
+), ('5104542', 'Itanhangá', 'MT'), ('5104559', 'Itaúba', 'MT'), ('5104609', 'Itiquira', 'MT'), ('5104807', 'Jaciara', 'MT'), ('5104906', 'Jangada', 'MT'), ('5105002', 'Jauru', 'MT'), ('5105101', 'Juara', 'MT'), ('5105150', 'Juína', 'MT'), ('5105176', 'Juruena', 'MT'), ('5105200', 'Juscimeira', 'MT'), (
+    '5105234',
+    'Lambari D''Oeste',
+    'MT'
+), (
+    '5105259',
+    'Lucas do Rio Verde',
+    'MT'
+), ('5105309', 'Luciara', 'MT'), (
+    '5105507',
+    'Vila Bela da Santíssima Trindade',
+    'MT'
+), ('5105580', 'Marcelândia', 'MT'), ('5105606', 'Matupá', 'MT'), (
+    '5105622',
+    'Mirassol D''Oeste',
+    'MT'
+), ('5105903', 'Nobres', 'MT'), ('5106000', 'Nortelândia', 'MT'), (
+    '5106109',
+    'Nossa Senhora do Livramento',
+    'MT'
+), (
+    '5106158',
+    'Nova Bandeirantes',
+    'MT'
+), ('5106174', 'Nova Nazaré', 'MT'), (
+    '5106182',
+    'Nova Lacerda',
+    'MT'
+), (
+    '5106190',
+    'Nova Santa Helena',
+    'MT'
+), (
+    '5106208',
+    'Nova Brasilândia',
+    'MT'
+), (
+    '5106216',
+    'Nova Canaã do Norte',
+    'MT'
+), ('5106224', 'Nova Mutum', 'MT'), (
+    '5106232',
+    'Nova Olímpia',
+    'MT'
+), (
+    '5106240',
+    'Nova Ubiratã',
+    'MT'
+), (
+    '5106257',
+    'Nova Xavantina',
+    'MT'
+), ('5106265', 'Novo Mundo', 'MT'), (
+    '5106273',
+    'Novo Horizonte do Norte',
+    'MT'
+), (
+    '5106281',
+    'Novo São Joaquim',
+    'MT'
+), ('5106299', 'Paranaíta', 'MT'), ('5106307', 'Paranatinga', 'MT'), (
+    '5106315',
+    'Novo Santo Antônio',
+    'MT'
+), ('5106372', 'Pedra Preta', 'MT'), (
+    '5106422',
+    'Peixoto de Azevedo',
+    'MT'
+), (
+    '5106455',
+    'Planalto da Serra',
+    'MT'
+), ('5106505', 'Poconé', 'MT'), (
+    '5106653',
+    'Pontal do Araguaia',
+    'MT'
+), (
+    '5106703',
+    'Ponte Branca',
+    'MT'
+), (
+    '5106752',
+    'Pontes e Lacerda',
+    'MT'
+), (
+    '5106778',
+    'Porto Alegre do Norte',
+    'MT'
+), (
+    '5106802',
+    'Porto dos Gaúchos',
+    'MT'
+), (
+    '5106828',
+    'Porto Esperidião',
+    'MT'
+), (
+    '5106851',
+    'Porto Estrela',
+    'MT'
+), ('5107008', 'Poxoréo', 'MT'), (
+    '5107040',
+    'Primavera do Leste',
+    'MT'
+), ('5107065', 'Querência', 'MT'), (
+    '5107107',
+    'São José dos Quatro Marcos',
+    'MT'
+), (
+    '5107156',
+    'Reserva do Cabaçal',
+    'MT'
+), (
+    '5107180',
+    'Ribeirão Cascalheira',
+    'MT'
+), (
+    '5107198',
+    'Ribeirãozinho',
+    'MT'
+), ('5107206', 'Rio Branco', 'MT'), (
+    '5107248',
+    'Santa Carmem',
+    'MT'
+), (
+    '5107263',
+    'Santo Afonso',
+    'MT'
+), (
+    '5107297',
+    'São José do Povo',
+    'MT'
+), (
+    '5107305',
+    'São José do Rio Claro',
+    'MT'
+), (
+    '5107354',
+    'São José do Xingu',
+    'MT'
+), (
+    '5107404',
+    'São Pedro da Cipa',
+    'MT'
+), ('5107578', 'Rondolândia', 'MT'), (
+    '5107602',
+    'Rondonópolis',
+    'MT'
+), (
+    '5107701',
+    'Rosário Oeste',
+    'MT'
+), (
+    '5107743',
+    'Santa Cruz do Xingu',
+    'MT'
+), (
+    '5107750',
+    'Salto do Céu',
+    'MT'
+), (
+    '5107768',
+    'Santa Rita do Trivelato',
+    'MT'
+), (
+    '5107776',
+    'Santa Terezinha',
+    'MT'
+), (
+    '5107792',
+    'Santo Antônio do Leste',
+    'MT'
+), (
+    '5107800',
+    'Santo Antônio do Leverger',
+    'MT'
+), (
+    '5107859',
+    'São Félix do Araguaia',
+    'MT'
+), ('5107875', 'Sapezal', 'MT'), (
+    '5107883',
+    'Serra Nova Dourada',
+    'MT'
+), ('5107909', 'Sinop', 'MT'), ('5107925', 'Sorriso', 'MT'), ('5107941', 'Tabaporã', 'MT'), (
+    '5107958',
+    'Tangará da Serra',
+    'MT'
+), ('5108006', 'Tapurah', 'MT'), (
+    '5108055',
+    'Terra Nova do Norte',
+    'MT'
+), ('5108105', 'Tesouro', 'MT'), ('5108204', 'Torixoréu', 'MT'), (
+    '5108303',
+    'União do Sul',
+    'MT'
+), (
+    '5108352',
+    'Vale de São Domingos',
+    'MT'
+), (
+    '5108402',
+    'Várzea Grande',
+    'MT'
+), ('5108501', 'Vera', 'MT'), ('5108600', 'Vila Rica', 'MT'), (
+    '5108808',
+    'Nova Guarita',
+    'MT'
+), (
+    '5108857',
+    'Nova Marilândia',
+    'MT'
+), (
+    '5108907',
+    'Nova Maringá',
+    'MT'
+), (
+    '5108956',
+    'Nova Monte Verde',
+    'MT'
+), (
+    '5200050',
+    'Abadia de Goiás',
+    'GO'
+), ('5200100', 'Abadiânia', 'GO'), ('5200134', 'Acreúna', 'GO'), ('5200159', 'Adelândia', 'GO'), (
+    '5200175',
+    'Água Fria de Goiás',
+    'GO'
+), ('5200209', 'Água Limpa', 'GO'), (
+    '5200258',
+    'Águas Lindas de Goiás',
+    'GO'
+), ('5200308', 'Alexânia', 'GO'), ('5200506', 'Aloândia', 'GO'), (
+    '5200555',
+    'Alto Horizonte',
+    'GO'
+), (
+    '5200605',
+    'Alto Paraíso de Goiás',
+    'GO'
+), (
+    '5200803',
+    'Alvorada do Norte',
+    'GO'
+), ('5200829', 'Amaralina', 'GO'), (
+    '5200852',
+    'Americano do Brasil',
+    'GO'
+), (
+    '5200902',
+    'Amorinópolis',
+    'GO'
+), ('5201108', 'Anápolis', 'GO'), ('5201207', 'Anhanguera', 'GO'), ('5201306', 'Anicuns', 'GO'), (
+    '5201405',
+    'Aparecida de Goiânia',
+    'GO'
+), (
+    '5201454',
+    'Aparecida do Rio Doce',
+    'GO'
+), ('5201504', 'Aporé', 'GO'), ('5201603', 'Araçu', 'GO'), ('5201702', 'Aragarças', 'GO'), ('5201801', 'Aragoiânia', 'GO'), ('5202155', 'Araguapaz', 'GO'), ('5202353', 'Arenópolis', 'GO'), ('5202502', 'Aruanã', 'GO'), ('5202601', 'Aurilândia', 'GO'), (
+    '5202809',
+    'Avelinópolis',
+    'GO'
+), ('5203104', 'Baliza', 'GO'), ('5203203', 'Barro Alto', 'GO'), (
+    '5203302',
+    'Bela Vista de Goiás',
+    'GO'
+), (
+    '5203401',
+    'Bom Jardim de Goiás',
+    'GO'
+), (
+    '5203500',
+    'Bom Jesus de Goiás',
+    'GO'
+), (
+    '5203559',
+    'Bonfinópolis',
+    'GO'
+), ('5203575', 'Bonópolis', 'GO'), (
+    '5203609',
+    'Brazabrantes',
+    'GO'
+), ('5203807', 'Britânia', 'GO'), (
+    '5203906',
+    'Buriti Alegre',
+    'GO'
+), (
+    '5203939',
+    'Buriti de Goiás',
+    'GO'
+), (
+    '5203962',
+    'Buritinópolis',
+    'GO'
+), ('5204003', 'Cabeceiras', 'GO'), (
+    '5204102',
+    'Cachoeira Alta',
+    'GO'
+), (
+    '5204201',
+    'Cachoeira de Goiás',
+    'GO'
+), (
+    '5204250',
+    'Cachoeira Dourada',
+    'GO'
+), ('5204300', 'Caçu', 'GO'), ('5204409', 'Caiapônia', 'GO'), (
+    '5204508',
+    'Caldas Novas',
+    'GO'
+), ('5204557', 'Caldazinha', 'GO'), (
+    '5204607',
+    'Campestre de Goiás',
+    'GO'
+), ('5204656', 'Campinaçu', 'GO'), ('5204706', 'Campinorte', 'GO'), (
+    '5204805',
+    'Campo Alegre de Goiás',
+    'GO'
+), (
+    '5204854',
+    'Campo Limpo de Goiás',
+    'GO'
+), (
+    '5204904',
+    'Campos Belos',
+    'GO'
+), (
+    '5204953',
+    'Campos Verdes',
+    'GO'
+), (
+    '5205000',
+    'Carmo do Rio Verde',
+    'GO'
+), ('5205059', 'Castelândia', 'GO'), ('5205109', 'Catalão', 'GO'), ('5205208', 'Caturaí', 'GO'), ('5205307', 'Cavalcante', 'GO'), ('5205406', 'Ceres', 'GO'), ('5205455', 'Cezarina', 'GO'), (
+    '5205471',
+    'Chapadão do Céu',
+    'GO'
+), (
+    '5205497',
+    'Cidade Ocidental',
+    'GO'
+), (
+    '5205513',
+    'Cocalzinho de Goiás',
+    'GO'
+), (
+    '5205521',
+    'Colinas do Sul',
+    'GO'
+), (
+    '5205703',
+    'Córrego do Ouro',
+    'GO'
+), (
+    '5205802',
+    'Corumbá de Goiás',
+    'GO'
+), ('5205901', 'Corumbaíba', 'GO'), ('5206206', 'Cristalina', 'GO'), (
+    '5206305',
+    'Cristianópolis',
+    'GO'
+), ('5206404', 'Crixás', 'GO'), ('5206503', 'Cromínia', 'GO'), ('5206602', 'Cumari', 'GO'), (
+    '5206701',
+    'Damianópolis',
+    'GO'
+), ('5206800', 'Damolândia', 'GO'), ('5206909', 'Davinópolis', 'GO'), ('5207105', 'Diorama', 'GO'), ('5207253', 'Doverlândia', 'GO'), ('5207352', 'Edealina', 'GO'), ('5207402', 'Edéia', 'GO'), (
+    '5207501',
+    'Estrela do Norte',
+    'GO'
+), ('5207535', 'Faina', 'GO'), (
+    '5207600',
+    'Fazenda Nova',
+    'GO'
+), (
+    '5207808',
+    'Firminópolis',
+    'GO'
+), (
+    '5207907',
+    'Flores de Goiás',
+    'GO'
+), ('5208004', 'Formosa', 'GO'), ('5208103', 'Formoso', 'GO'), (
+    '5208152',
+    'Gameleira de Goiás',
+    'GO'
+), (
+    '5208301',
+    'Divinópolis de Goiás',
+    'GO'
+), ('5208400', 'Goianápolis', 'GO'), ('5208509', 'Goiandira', 'GO'), ('5208608', 'Goianésia', 'GO'), ('5208707', 'Goiânia', 'GO'), ('5208806', 'Goianira', 'GO'), ('5208905', 'Goiás', 'GO'), ('5209101', 'Goiatuba', 'GO'), ('5209150', 'Gouvelândia', 'GO'), ('5209200', 'Guapó', 'GO'), ('5209291', 'Guaraíta', 'GO'), (
+    '5209408',
+    'Guarani de Goiás',
+    'GO'
+), ('5209457', 'Guarinos', 'GO'), ('5209606', 'Heitoraí', 'GO'), ('5209705', 'Hidrolândia', 'GO'), ('5209804', 'Hidrolina', 'GO'), ('5209903', 'Iaciara', 'GO'), (
+    '5209937',
+    'Inaciolândia',
+    'GO'
+), ('5209952', 'Indiara', 'GO'), ('5210000', 'Inhumas', 'GO'), ('5210109', 'Ipameri', 'GO'), (
+    '5210158',
+    'Ipiranga de Goiás',
+    'GO'
+), ('5210208', 'Iporá', 'GO'), ('5210307', 'Israelândia', 'GO'), ('5210406', 'Itaberaí', 'GO'), ('5210562', 'Itaguari', 'GO'), ('5210604', 'Itaguaru', 'GO'), ('5210802', 'Itajá', 'GO'), ('5210901', 'Itapaci', 'GO'), ('5211008', 'Itapirapuã', 'GO'), ('5211206', 'Itapuranga', 'GO'), ('5211305', 'Itarumã', 'GO'), ('5211404', 'Itauçu', 'GO'), ('5211503', 'Itumbiara', 'GO'), ('5211602', 'Ivolândia', 'GO'), ('5211701', 'Jandaia', 'GO'), ('5211800', 'Jaraguá', 'GO'), ('5211909', 'Jataí', 'GO'), ('5212006', 'Jaupaci', 'GO'), ('5212055', 'Jesúpolis', 'GO'), ('5212105', 'Joviânia', 'GO'), ('5212204', 'Jussara', 'GO'), ('5212253', 'Lagoa Santa', 'GO'), (
+    '5212303',
+    'Leopoldo de Bulhões',
+    'GO'
+), ('5212501', 'Luziânia', 'GO'), ('5212600', 'Mairipotaba', 'GO'), ('5212709', 'Mambaí', 'GO'), ('5212808', 'Mara Rosa', 'GO'), ('5212907', 'Marzagão', 'GO'), ('5212956', 'Matrinchã', 'GO'), ('5213004', 'Maurilândia', 'GO'), (
+    '5213053',
+    'Mimoso de Goiás',
+    'GO'
+), ('5213087', 'Minaçu', 'GO'), ('5213103', 'Mineiros', 'GO'), ('5213400', 'Moiporá', 'GO'), (
+    '5213509',
+    'Monte Alegre de Goiás',
+    'GO'
+), (
+    '5213707',
+    'Montes Claros de Goiás',
+    'GO'
+), ('5213756', 'Montividiu', 'GO'), (
+    '5213772',
+    'Montividiu do Norte',
+    'GO'
+), ('5213806', 'Morrinhos', 'GO'), (
+    '5213855',
+    'Morro Agudo de Goiás',
+    'GO'
+), ('5213905', 'Mossâmedes', 'GO'), ('5214002', 'Mozarlândia', 'GO'), ('5214051', 'Mundo Novo', 'GO'), ('5214101', 'Mutunópolis', 'GO'), ('5214408', 'Nazário', 'GO'), ('5214507', 'Nerópolis', 'GO'), ('5214606', 'Niquelândia', 'GO'), (
+    '5214705',
+    'Nova América',
+    'GO'
+), ('5214804', 'Nova Aurora', 'GO'), ('5214838', 'Nova Crixás', 'GO'), ('5214861', 'Nova Glória', 'GO'), (
+    '5214879',
+    'Nova Iguaçu de Goiás',
+    'GO'
+), ('5214903', 'Nova Roma', 'GO'), ('5215009', 'Nova Veneza', 'GO'), ('5215207', 'Novo Brasil', 'GO'), ('5215231', 'Novo Gama', 'GO'), (
+    '5215256',
+    'Novo Planalto',
+    'GO'
+), ('5215306', 'Orizona', 'GO'), (
+    '5215405',
+    'Ouro Verde de Goiás',
+    'GO'
+), ('5215504', 'Ouvidor', 'GO'), (
+    '5215603',
+    'Padre Bernardo',
+    'GO'
+), (
+    '5215652',
+    'Palestina de Goiás',
+    'GO'
+), (
+    '5215702',
+    'Palmeiras de Goiás',
+    'GO'
+), ('5215801', 'Palmelo', 'GO'), (
+    '5215900',
+    'Palminópolis',
+    'GO'
+), ('5216007', 'Panamá', 'GO'), (
+    '5216304',
+    'Paranaiguara',
+    'GO'
+), ('5216403', 'Paraúna', 'GO'), ('5216452', 'Perolândia', 'GO'), (
+    '5216809',
+    'Petrolina de Goiás',
+    'GO'
+), (
+    '5216908',
+    'Pilar de Goiás',
+    'GO'
+), ('5217104', 'Piracanjuba', 'GO'), ('5217203', 'Piranhas', 'GO'), ('5217302', 'Pirenópolis', 'GO'), (
+    '5217401',
+    'Pires do Rio',
+    'GO'
+), ('5217609', 'Planaltina', 'GO'), ('5217708', 'Pontalina', 'GO'), ('5218003', 'Porangatu', 'GO'), ('5218052', 'Porteirão', 'GO'), ('5218102', 'Portelândia', 'GO'), ('5218300', 'Posse', 'GO'), (
+    '5218391',
+    'Professor Jamil',
+    'GO'
+), (
+    '5218508',
+    'Quirinópolis',
+    'GO'
+), ('5218607', 'Rialma', 'GO'), ('5218706', 'Rianápolis', 'GO'), ('5218789', 'Rio Quente', 'GO'), ('5218805', 'Rio Verde', 'GO'), ('5218904', 'Rubiataba', 'GO'), (
+    '5219001',
+    'Sanclerlândia',
+    'GO'
+), (
+    '5219100',
+    'Santa Bárbara de Goiás',
+    'GO'
+), (
+    '5219209',
+    'Santa Cruz de Goiás',
+    'GO'
+), (
+    '5219258',
+    'Santa Fé de Goiás',
+    'GO'
+), (
+    '5219308',
+    'Santa Helena de Goiás',
+    'GO'
+), (
+    '5219357',
+    'Santa Isabel',
+    'GO'
+), (
+    '5219407',
+    'Santa Rita do Araguaia',
+    'GO'
+), (
+    '5219456',
+    'Santa Rita do Novo Destino',
+    'GO'
+), (
+    '5219506',
+    'Santa Rosa de Goiás',
+    'GO'
+), (
+    '5219605',
+    'Santa Tereza de Goiás',
+    'GO'
+), (
+    '5219704',
+    'Santa Terezinha de Goiás',
+    'GO'
+), (
+    '5219712',
+    'Santo Antônio da Barra',
+    'GO'
+), (
+    '5219738',
+    'Santo Antônio de Goiás',
+    'GO'
+), (
+    '5219753',
+    'Santo Antônio do Descoberto',
+    'GO'
+), (
+    '5219803',
+    'São Domingos',
+    'GO'
+), (
+    '5219902',
+    'São Francisco de Goiás',
+    'GO'
+), (
+    '5220009',
+    'São João D''Aliança',
+    'GO'
+), (
+    '5220058',
+    'São João da Paraúna',
+    'GO'
+), (
+    '5220108',
+    'São Luís de Montes Belos',
+    'GO'
+), (
+    '5220157',
+    'São Luíz do Norte',
+    'GO'
+), (
+    '5220207',
+    'São Miguel do Araguaia',
+    'GO'
+), (
+    '5220264',
+    'São Miguel do Passa Quatro',
+    'GO'
+), (
+    '5220280',
+    'São Patrício',
+    'GO'
+), ('5220405', 'São Simão', 'GO'), (
+    '5220454',
+    'Senador Canedo',
+    'GO'
+), (
+    '5220504',
+    'Serranópolis',
+    'GO'
+), ('5220603', 'Silvânia', 'GO'), ('5220686', 'Simolândia', 'GO'), (
+    '5220702',
+    'Sítio D''Abadia',
+    'GO'
+), (
+    '5221007',
+    'Taquaral de Goiás',
+    'GO'
+), (
+    '5221080',
+    'Teresina de Goiás',
+    'GO'
+), (
+    '5221197',
+    'Terezópolis de Goiás',
+    'GO'
+), (
+    '5221304',
+    'Três Ranchos',
+    'GO'
+), ('5221403', 'Trindade', 'GO'), ('5221452', 'Trombas', 'GO'), ('5221502', 'Turvânia', 'GO'), ('5221551', 'Turvelândia', 'GO'), ('5221577', 'Uirapuru', 'GO'), ('5221601', 'Uruaçu', 'GO'), ('5221700', 'Uruana', 'GO'), ('5221809', 'Urutaí', 'GO'), (
+    '5221858',
+    'Valparaíso de Goiás',
+    'GO'
+), ('5221908', 'Varjão', 'GO'), ('5222005', 'Vianópolis', 'GO'), (
+    '5222054',
+    'Vicentinópolis',
+    'GO'
+), ('5222203', 'Vila Boa', 'GO'), (
+    '5222302',
+    'Vila Propício',
+    'GO'
+), ('5300108', 'Brasília', 'DF');

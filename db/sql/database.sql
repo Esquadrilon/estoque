@@ -1,5 +1,5 @@
 CREATE TABLE
-    Municipio (
+municipio ( 
         id INT NOT NULL AUTO_INCREMENT,
         codigo INT NOT NULL,
         nome VARCHAR(255) NOT NULL,
@@ -8,7 +8,7 @@ CREATE TABLE
     );
 
 CREATE TABLE
-    Estado (
+estado ( 
         id INT NOT NULL AUTO_INCREMENT,
         codigoUf INT NOT NULL,
         nome VARCHAR (50) NOT NULL,
