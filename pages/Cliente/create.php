@@ -6,10 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="shortcut icon" href="\estoque\img\logo.svg" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="../../css/estilo.css">
 
-  <title>Home</title>
+  <title>Cadastro de Cliente</title>
 </head>
 
 <body>
@@ -17,50 +18,57 @@
   include_once('../../db/connection.php');
   include('../../includes/navbar.php');
   ?>
-  <main>
-    <div class="conteudo medio text-center">
-      <h1 class="titulo">Cadastro de Cliente</h1>
-      <form action="./actions.php" method="post">
+  <main class="container d-flex justify-content-center align-items-center my-5">
+    <div class="wrapper p-4 my-1 w-75 fs-4">
+      <h1 class="text-center fs-1">Cadastro de Cliente</h1>
+      <form action="./controller.php" method="post">
         <input type="hidden" name="acao" value="cadastrar">
-        <div class="col">
-          <label for="nome">Nome</label>
-          <input type="text" name="nome" class="form-control" placeholder="Lucas Alves">
+
+        <div class="col mt-2">
+          <label for="nome ">Nome</label>
+          <input type="text" name="nome" id="nome" class="form-control" placeholder="Lucas Alves">
         </div>
-        <div class="row">
+
+        <div class="row  mt-2">
           <div class="col">
             <label for="email">E-mail</label>
-            <input type="email" name="email" class="form-control" placeholder="exemplo@exemplo.com">
+            <input type="email" name="email" id="email" class="form-control" placeholder="exemplo@exemplo.com">
           </div>
+
           <div class="col">
             <label for="telefone">Telefone</label>
-            <input type="tel" name="telefone" class="form-control" placeholder="(43) 91234-5678" minlength="11" maxlength="16" pattern="^\(?[0-9]{2}+\)? ?[9] ?[0-9]{4}+\-?+[0-9]{4}$">
+            <input type="tel" name="telefone" id="telefone" class="form-control" placeholder="(43) 91234-5678" minlength="11" maxlength="16">
           </div>
         </div>
-        <div class="col">
+
+        <div class="col mt-2">
           <label for="cpf_cnpj">CPF / CNPJ</label>
-          <input type="text" name="cpf_cnpj" class="form-control" placeholder="123.456.789-01 ou 12.345.678/0001-01">
+          <input type="text" name="cpf_cnpj" id="cpf_cnpj" class="form-control" placeholder="123.456.789-01 ou 12.345.678/0001-01">
         </div>
-        <div class="col">
+
+        <div class="col mt-2">
           <label for="endereco">Rua</label>
-          <input type="text" name="endereco" class="form-control" placeholder="Rua Sergipe, 123">
+          <input type="text" name="endereco" id="endereco" class="form-control" placeholder="Rua Sergipe, 123">
         </div>
-        <div class="row">
+
+        <div class="row mt-2">
           <div class="col">
-            <label for="cidade">Cidade</label>
-            <select name="cidade" id="cidade" class="form-select" style="padding: 0 0.625rem; width: 100%; height: 3.75rem; background-color: #DCDCDC; border: none; border-radius: 8px;">
+            <label for="cidade_id">Cidade</label>
+            <select name="cidade_id" id="cidade_id" class="form-select">
               <option value="0" selected>Selecione...</option>
               <?php
               $res = $conn->query("select * from municipio");
               $row = $res->fetch_assoc();
               while ($row = $res->fetch_object()) {
-                print "<option value=\"$row->id\"> $row->nome </option>";
+                print "<option value='$row->id'> $row->nome </option>";
               }
               ?>
             </select>
           </div>
+
           <div class="col">
-            <label for="estado">Estado</label>
-            <select name="estado" id="estado" class="form-select" style="padding: 0 0.625rem; width: 100%; height: 3.75rem; background-color: #DCDCDC; border: none; border-radius: 8px;">
+            <label for="estado_id">Estado</label>
+            <select name="estado_id" id="estado_id" class="form-select">
               <option value="0" selected>Selecione...</option>
               <?php
               $res = $conn->query("select * from estado");
@@ -72,24 +80,45 @@
             </select>
           </div>
         </div>
-        <div class="col">
+
+        <div class="col mt-2">
           <label for="cep">CEP</label>
-          <input type="text" name="cep" class="form-control" placeholder="12345-678">
+          <input type="text" name="cep" id="cep" class="form-control" placeholder="12345-678">
         </div>
-        <div class="col">
+
+        <div class="col mt-2">
           <label for="observacoes">Observações</label>
-          <textarea name="observacoes" cols="30" rows="10" placeholder="Se necessário"></textarea>
+          <textarea class="form-control" name="observacoes" id="observacoes" cols="50" rows="3" placeholder="Se necessário"></textarea>
         </div>
-        <div class="row">
-          <div class="col">
-            <input type="submit" value="Cadastrar">
+
+        <div class="row mt-4">
+          <div class="col w-50">
+            <button type="button" class="btn btn-outline-danger w-100 fs-5 fw-semibold" onclick="clearData()">Limpar</button>
+          </div>
+
+          <div class="col w-50">
+            <button type="submit" class="btn btn-outline-success w-100 fs-5 fw-bold">Cadastrar</button>
           </div>
         </div>
+
       </form>
     </div>
   </main>
   <footer></footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  <script>
+    function clearData() {
+      document.getElementById('nome').value = '';
+      document.getElementById('email').value = '';
+      document.getElementById('telefone').value = '';
+      document.getElementById('cpf_cnpj').value = '';
+      document.getElementById('endereco').value = '';
+      document.getElementById('cidade_id').value = '';
+      document.getElementById('estado_id').value = '';
+      document.getElementById('cep').value = '';
+      document.getElementById('observacoes').value = '';
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 
 </html>
