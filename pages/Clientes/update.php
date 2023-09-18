@@ -18,8 +18,6 @@
   include_once('../../db/connection.php');
 
   if (isset($_GET['id'])) {
-    $client_id = $_GET['id'];
-
     $sql = "SELECT * FROM clientes WHERE id = " . $_REQUEST['id'];
 
     $res = $conn->query($sql);
@@ -30,8 +28,8 @@
   <main class="container d-flex justify-content-center align-items-center my-5">
     <div class="wrapper p-4 my-1 w-75 fs-4">
       <h1 class="text-center fs-1">Cadastro de Cliente</h1>
-      <form action="./controller.php" method="post">
-        <input type="hidden" name="acao" value="cadastrar">
+      <form action="./controller.php?id='<?php echo $_GET['id'] ?>'" method="post">
+        <input type="hidden" name="acao" value="editar">
 
         <div class="col mt-2">
           <label for="nome ">Nome</label>
@@ -69,11 +67,9 @@
               $cidades = $conn->query("select * from municipio");
               $cidade = $cidades->fetch_assoc();
               while ($cidade = $cidades->fetch_object()) {
-                if ($cidade->id = $row->cidade_id) {
-                  print "<option value=\"$cidade->id\" selected> $cidade->nome </option>";
-                } else {
-                  print "<option value=\"$cidade->id\"> $cidade->nome </option>";
-                }
+                $cidade->id == $row->cidade_id
+                  ? print "<option value=\"$cidade->id\" selected> $cidade->nome </option>"
+                  : print "<option value=\"$cidade->id\"> $cidade->nome </option>";
               }
               ?>
             </select>
@@ -84,10 +80,11 @@
             <select name="estado_id" id="estado_id" class="form-select">
               <option value="0" selected>Selecione...</option>
               <?php
-              $res = $conn->query("select * from estado");
-              $row = $res->fetch_assoc();
-              while ($row = $res->fetch_object()) {
-                print "<option value=\"$row->id\"> $row->nome </option>";
+              $estados = $conn->query("SELECT * FROM estado");
+              $estado = $estados->fetch_assoc();
+              while ($estado = $estados->fetch_object()) {
+                $selected = ($estado->id == $row->estado_id) ? "selected" : "";
+                echo "<option value=\"$estado->id\" $selected>$estado->nome</option>";
               }
               ?>
             </select>
@@ -110,7 +107,7 @@
           </div>
 
           <div class="col w-50">
-            <input type="submit" class="btn btn-outline-success w-100 fs-5 fw-semibold" value="submit">
+            <button type="submit" class="btn btn-outline-success w-100 fs-5 fw-bold">Atualizar</button>
           </div>
         </div>
 

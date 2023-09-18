@@ -23,10 +23,10 @@
             <h1 class="text-center fs-1 py-3" style="border-bottom:2px solid #00E600;">O que deseja fazer?</h1>
             <div class="fs-5 px-4">
                 <ul class="d-grid list-unstyled gap-2">
-                    <li>Clientes? <a href="./pages/Cliente/create.php">Clique aqui</a></li>
+                    <li>Clientes? <a href="./pages/Clientes/read.php">Clique aqui</a></li>
                     <li>Obras? <a href="">Clique aqui</a></li>
                     <li>Perfis? <a href="">Clique aqui</a></li>
-                    <li>Cores? <a href="">Clique aqui</a></li>
+                    <li>Cores? <a href="./pages/Cores/read.php">Clique aqui</a></li>
                     <li>Entradas? <a href="">Clique aqui</a></li>
                     <li>Saídas? <a href="">Clique aqui</a></li>
                     <li>Filtrar estoque? <a href="">Clique aqui</a></li>

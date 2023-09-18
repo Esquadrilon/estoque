@@ -71,7 +71,7 @@ CREATE TABLE
     cores(
         id INT NOT NULL AUTO_INCREMENT,
         nome VARCHAR(50) NOT NULL,
-        codigo DOUBLE NULL,
+codigo VARCHAR(50) NULL, 
         PRIMARY KEY (id)
     );
 
