@@ -16,47 +16,46 @@ foreach ($data as $input_name) {
     : ${$input_name} = "";
 };
 
+$redirect_success = "./read.php";
+$redirect_error = "./read.php";
+
 try {
   switch ($_REQUEST["acao"]) {
     case 'cadastrar':
-      $sql = "INSERT INTO clientes (codigo, descricao, peso, nativo, linha, referencia) VALUES ('$codigo', '$descricao', '$peso', '$nativo', '$linha', '$referencia')";
+      $sql = "INSERT INTO perfis (codigo, descricao, peso, nativo, linha, referencia) VALUES ('$codigo', '$descricao', '$peso', '$nativo', '$linha', '$referencia')";
+      
       $res = $conn->query($sql);
-      $redirect_success = "./read.php";
+
       $redirect_error = "./create.php";
-      $success_message = "Cliente cadastrado com sucesso!";
-      $error_message = "Erro ao tentar cadastrar cliente!";
+      $success_message = "Perfil cadastrado com sucesso!";
+      $error_message = "Erro ao tentar cadastrar perfil!";
       break;
 
     case 'editar':
-      $sql = "UPDATE clientes SET codigo = '$codigo', descricao = '$descricao', peso = '$peso', nativo = '$nativo', linha = '$linha', referencia = '$referencia'
-      WHERE 
-      id = $_REQUEST[id]";
+      $sql = "UPDATE perfis SET descricao = '$descricao', peso = '$peso', nativo = '$nativo', linha = '$linha', referencia = '$referencia' WHERE codigo = '$codigo'";
 
       $res = $conn->query($sql);
 
-      $redirect_success = "./read.php";
-      $redirect_error = "./edit.php?codigo={$_REQUEST['codigo']}";
-      $success_message = "Cliente editado com sucesso!";
-      $error_message = "Erro ao tentar editar cliente!";
+      $success_message = "Perfil editado com sucesso!";
+      $error_message = "Erro ao tentar editar perfil!";
       break;
-
+      
     case 'deletar':
-      if (isset($_REQUEST['codigo'])) {
-        $sql = "DELETE FROM clientes WHERE codigo = $_REQUEST[codigo]";
+      if (isset($_REQUEST['perfil'])) {
+        $sql = "DELETE FROM perfis WHERE codigo = '{$_REQUEST['perfil']}'";
+
         $res = $conn->query($sql);
-        $redirect_success = "./read.php";
-        $redirect_error =  "./read.php";
-        $success_message = "Cliente deletado com sucesso!";
-        $error_message = "Erro ao tentar deletar cliente!";
+
+        $success_message = "Perfil deletado com sucesso!";
+        $error_message = "Erro ao tentar deletar perfil!";
       }
       break;
   }
 
-  if ($res === false) {
-    throw new Exception("Erro na consulta SQL: " . $conn->error);
-  }
-
-  print "<script>alert('$success_message')</script>";
+  $res === true
+    ? print "<script>alert('$success_message')</script>"
+    : throw new Exception("Erro na consulta SQL: " . $conn->error);
+  
   print "<script>location.href = '$redirect_success'</script>";
 } catch (Exception $e) {
   print "<script>alert('Erro: " . $e->getMessage() . "')</script>";

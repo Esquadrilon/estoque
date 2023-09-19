@@ -98,7 +98,7 @@
 
         <div class="col mt-2">
           <label for="observacoes">Observações</label>
-          <textarea class="form-control" name="observacoes" id="observacoes" value="<?php print $row->observacoes ?>" cols=" 50" rows="3" placeholder="Se necessário"></textarea>
+          <textarea class="form-control" name="observacoes" id="observacoes" cols=" 50" rows="3" placeholder="Se necessário"><?php print $row->observacoes ?></textarea>
         </div>
 
         <div class="row mt-4">

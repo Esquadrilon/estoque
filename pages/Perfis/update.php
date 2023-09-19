@@ -18,8 +18,9 @@
   include('../../includes/navbar.php');
   include_once('../../db/connection.php');
 
-  if (isset($_GET['id'])) {
-    $sql = "SELECT * FROM perfis WHERE codigo = " . $_REQUEST['codigo'];
+  if (isset($_GET['perfil'])) {
+    $sql = "SELECT * FROM perfis WHERE codigo = '" . $_REQUEST['perfil'] . "'";
+
 
     $res = $conn->query($sql);
 
@@ -29,13 +30,14 @@
   <main class="container d-flex justify-content-center align-items-center my-5">
     <div class="wrapper p-4 my-1 w-75 fs-4">
       <h1 class="text-center fs-1">Cadastro de Cliente</h1>
-      <form action="./controller.php?codigo='<?php echo $_GET['codigo'] ?>'" method="post">
-        <input type="hidden" name="acao" value="cadastrar">
+      <form action="./controller.php" method="post">
+        <input type="hidden" name="acao" value="editar">
+
 
         <div class="row mt-2">
           <div class="col">
             <label for="codigo">Codigo</label>
-            <input type="text" name="codigo" id="codigo" value="<?php print $row->codigo ?>" class="form-control" placeholder="PER-MP347">
+            <input type="text" name="codigo" id="codigo" value="<?php print $row->codigo ?>" class="form-control" placeholder="PER-MP347" disabled>
           </div>
 
           <div class="col">
@@ -46,7 +48,7 @@
 
         <div class="col mt-2">
           <label for="descricao">Descrições</label>
-          <textarea class="form-control" name="descricao" id="descricao" value="<?php print $row->descricao ?>" cols="50" rows="3" placeholder="Lambri"></textarea>
+          <textarea class="form-control" name="descricao" id="descricao" cols="50" rows="3" placeholder="Lambri"><?php print $row->descricao ?></textarea>
         </div>
 
         <div class="row  mt-2">
@@ -72,7 +74,7 @@
           </div>
 
           <div class="col w-50">
-            <button type="submit" class="btn btn-outline-success w-100 fs-5 fw-bold">Cadastrar</button>
+            <button type="submit" class="btn btn-outline-success w-100 fs-5 fw-bold">Atualizar</button>
           </div>
         </div>
 
@@ -82,7 +84,6 @@
   <footer></footer>
   <script>
     function clearData() {
-      document.getElementById('codigo').value = '';
       document.getElementById('peso').value = '';
       document.getElementById('nativo').value = '';
       document.getElementById('linha').value = '';

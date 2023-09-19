@@ -28,7 +28,7 @@
     <div class="wrapper w-100 p-4">
       <div class="row">
         <div class="col-2 fs-3 fw-bold text-center border-end border-1 border-white">Código</div>
-        <div class="col-2 fs-3 fw-bold text-center border-start border-end border-1 border-white">Descrição</div>
+        <div class="col-3 fs-3 fw-bold text-center border-start border-end border-1 border-white">Descrição</div>
         <div class="col-1 fs-3 fw-bold text-center border-start border-end border-1 border-white">Peso</div>
         <div class="col-2 fs-3 fw-bold text-center border-start border-end border-1 border-white">Pré-Nativo</div>
         <div class="col fs-3 fw-bold text-center border-start border-end border-1 border-white">Linha</div>
@@ -46,23 +46,23 @@
           echo '
           <div class="row mt-2">
             <div class="col-2 text-center border-end border-1 border-white">' . $perfil['codigo'] . '</div>
-            <div class="col-2 text-center border-start border-end border-1 border-white">' . $perfil['descricao'] . '</div>
+            <div class="col-3 text-center border-start border-end border-1 border-white">' . $perfil['descricao'] . '</div>
             <div class="col-1 text-center border-start border-end border-1 border-white">' . $perfil['peso'] . '</div>
             <div class="col-2 text-center border-start border-end border-1 border-white">' . $perfil['nativo'] . '</div>
             <div class="col text-center border-start border-end border-1 border-white">' . $perfil['linha'] . '</div>
             <div class="col-2 text-center border-start border-end border-1 border-white">' . $perfil['referencia'] . '</div>
             <div class="col text-center border-start border-1 border-white">
-              <a href="./update.php?id=' . $perfil['id'] . '" class="btn btn-primary">
+              <a href="./update.php?perfil=' . $perfil['codigo'] . '" class="btn btn-primary">
                 <i class="bi bi-pencil"></i>
               </a>
-              <a href="./controller.php?id=' . $perfil['id'] . '&acao=deletar" class="btn btn-danger" onclick="return confirm(\'Tem certeza que deseja excluir esse perfil?\');">
+              <a href="./controller.php?perfil=' . $perfil['codigo'] . '&acao=deletar" class="btn btn-danger" onclick="return confirm(\'Tem certeza que deseja excluir esse perfil?\');">
                 <i class="bi bi-trash"></i>
               </a>
             </div>
           </div>';
         };
       } else {
-        echo "<p class='alert alert-danger'>Nenhum resultado foi encontrado!</p>";
+        echo "<p class='alert alert-danger text-center'>Nenhum resultado foi encontrado!</p>";
       }
       ?>
 
