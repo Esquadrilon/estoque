@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="shortcut icon" href="\estoque\img\logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/estilo.css">
 
@@ -23,13 +24,13 @@
             <h1 class="text-center fs-1 py-3" style="border-bottom:2px solid #00E600;">O que deseja fazer?</h1>
             <div class="fs-5 px-4">
                 <ul class="d-grid list-unstyled gap-2">
-                    <li>Clientes? <a href="./pages/Clientes/read.php">Clique aqui</a></li>
-                    <li>Obras? <a href="">Clique aqui</a></li>
-                    <li>Perfis? <a href="./pages/Perfis/read.php">Clique aqui</a></li>
-                    <li>Cores? <a href="./pages/Cores/read.php">Clique aqui</a></li>
-                    <li>Entradas? <a href="">Clique aqui</a></li>
-                    <li>Saídas? <a href="">Clique aqui</a></li>
-                    <li>Filtrar estoque? <a href="">Clique aqui</a></li>
+                    <li><i class="bi bi-person"></i> Clientes? <a href="./pages/Clientes/read.php">Clique aqui</a></li>
+                    <li><i class="bi bi-buildings"></i> Obras? <a href="./pages/Obras/read.php">Clique aqui</a></li>
+                    <li><i class="bi bi-slash-lg"></i> Perfis? <a href="./pages/Perfis/read.php">Clique aqui</a></li>
+                    <li><i class="bi bi-palette"></i> Cores? <a href="./pages/Cores/read.php">Clique aqui</a></li>
+                    <li><i class="bi bi-plus-lg"></i> Entradas? <a href="">Clique aqui</a></li>
+                    <li><i class="bi bi-dash-lg"></i> Saídas? <a href="">Clique aqui</a></li>
+                    <li><i class="bi bi-inboxes"></i> Ver estoque? <a href="">Clique aqui</a></li>
                 </ul>
             </div>
         </div>
