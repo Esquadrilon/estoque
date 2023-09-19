@@ -26,7 +26,15 @@
       </a>
     </div>
     <div class="wrapper w-100 p-4">
-
+      <div class="row">
+        <div class="col-2 fs-3 fw-bold text-center border-end border-1 border-white">Nome</div>
+        <div class="col-2 fs-3 fw-bold text-center border-start border-end border-1 border-white">E-mail</div>
+        <div class="col-1 fs-3 fw-bold text-center border-start border-end border-1 border-white">Telefone</div>
+        <div class="col-2 fs-3 fw-bold text-center border-start border-end border-1 border-white">Endereço</div>
+        <div class="col fs-3 fw-bold text-center border-start border-end border-1 border-white">Cidade</div>
+        <div class="col-2 fs-3 fw-bold text-center border-start border-end border-1 border-white">Observações</div>
+        <div class="col fs-3 fw-bold text-center border-start border-1 border-white"></div>
+      </div>
       <?php
       $sql = "SELECT * FROM clientes";
       $res = $conn->query($sql);
@@ -34,28 +42,16 @@
       if ($res->num_rows > 0) {
         $clientes = $res->fetch_all(MYSQLI_ASSOC);
 
-        echo '
-        <div class="row">
-          <div class="col-2 text-center border-end border-1 border-primary">Nome</div>
-          <div class="col-2 text-center border-start border-end border-1 border-primary">E-mail</div>
-          <div class="col-1 text-center border-start border-end border-1 border-primary">Telefone</div>
-          <div class="col-2 text-center border-start border-end border-1 border-primary">Endereço</div>
-          <div class="col text-center border-start border-end border-1 border-primary">Cidade</div>
-          <div class="col-2 text-center border-start border-end border-1 border-primary">Observações</div>
-          <div class="col text-center border-start border-1 border-primary"></div>
-        </div>';
-
         foreach ($clientes as $cliente) {
-
           echo '
           <div class="row mt-2">
-            <div class="col-2 text-center border-end border-1 border-primary">' . $cliente['nome'] . '</div>
-            <div class="col-2 text-center border-start border-end border-1 border-primary">' . $cliente['email'] . '</div>
-            <div class="col-1 text-center border-start border-end border-1 border-primary">' . $cliente['telefone'] . '</div>
-            <div class="col-2 text-center border-start border-end border-1 border-primary">' . $cliente['endereco'] . '</div>
-            <div class="col text-center border-start border-end border-1 border-primary">' . $cliente['cidade_id'] . '</div>
-            <div class="col-2 text-center border-start border-end border-1 border-primary">' . $cliente['observacoes'] . '</div>
-            <div class="col text-center border-start border-1 border-primary">
+            <div class="col-2 text-center border-end border-1 border-white">' . $cliente['nome'] . '</div>
+            <div class="col-2 text-center border-start border-end border-1 border-white">' . $cliente['email'] . '</div>
+            <div class="col-1 text-center border-start border-end border-1 border-white">' . $cliente['telefone'] . '</div>
+            <div class="col-2 text-center border-start border-end border-1 border-white">' . $cliente['endereco'] . '</div>
+            <div class="col text-center border-start border-end border-1 border-white">' . $cliente['cidade_id'] . '</div>
+            <div class="col-2 text-center border-start border-end border-1 border-white">' . $cliente['observacoes'] . '</div>
+            <div class="col text-center border-start border-1 border-white">
               <a href="./update.php?id=' . $cliente['id'] . '" class="btn btn-primary">
                 <i class="bi bi-pencil"></i>
               </a>

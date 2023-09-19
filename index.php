@@ -25,7 +25,7 @@
                 <ul class="d-grid list-unstyled gap-2">
                     <li>Clientes? <a href="./pages/Clientes/read.php">Clique aqui</a></li>
                     <li>Obras? <a href="">Clique aqui</a></li>
-                    <li>Perfis? <a href="">Clique aqui</a></li>
+                    <li>Perfis? <a href="./pages/Perfis/read.php">Clique aqui</a></li>
                     <li>Cores? <a href="./pages/Cores/read.php">Clique aqui</a></li>
                     <li>Entradas? <a href="">Clique aqui</a></li>
                     <li>Saídas? <a href="">Clique aqui</a></li>
