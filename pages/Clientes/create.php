@@ -12,13 +12,14 @@
   <link rel="shortcut icon" href="/estoque/img/logo.svg" type="image/x-icon">
   <link rel="stylesheet" href="/estoque/css/estilo.css">
 
-  <title>Cadastrando Cliente</title>
+  <title>Cadastro Cliente</title>
 </head>
 
 <body>
   <?php
-  include_once('/estoque/db/connection.php');
-  include('/estoque/includes/navbar.php');
+  include_once('../../includes/navbar.php');
+  include_once('../../db/connection.php');
+  include_once('../../includes/toast.php');
   ?>
   <main class="container d-flex justify-content-center align-items-center my-5">
     <div class="wrapper p-4 my-1 w-75 fs-4">

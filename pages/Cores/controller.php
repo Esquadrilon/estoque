@@ -1,5 +1,5 @@
 <?php
-include_once('/estoque/db/connection.php');
+include_once('../../db/connection.php');
 
 $data = array(
   'nome',
@@ -49,11 +49,10 @@ try {
       break;
   }
 
-  if ($res === false) {
-    throw new Exception("Erro na consulta SQL: " . $conn->error);
-  }
-
-  print "<script>location.href = '$redirect_success?success_message=$success_message'</script>";
+  $res === true
+    ? print "<script>location.href = '$redirect_success?success_message=$success_message'</script>"
+    : throw new Exception("Erro na consulta SQL: " . $conn->error);
+    
 } catch (Exception $e) {
   print "<script>alert('Erro: " . $e->getMessage() . "')</script>";
   print "<script>location.href = '$redirect_error?error_message=$error_message'</script>";

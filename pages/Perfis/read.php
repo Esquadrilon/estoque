@@ -17,8 +17,9 @@
 
 <body>
   <?php
-  include_once('/estoque/db/connection.php');
-  include('/estoque/includes/navbar.php');
+  include_once('../../includes/navbar.php');
+  include_once('../../db/connection.php');
+  include_once('../../includes/toast.php');
   ?>
   <main class="container-fluid d-flex justify-content-center align-items-center my-3 w-100 flex-column">
     <div class="text-center mb-4">

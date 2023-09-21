@@ -12,13 +12,14 @@
   <link rel="shortcut icon" href="/estoque/img/logo.svg" type="image/x-icon">
   <link rel="stylesheet" href="/estoque/css/estilo.css">
 
-  <title>Lista de Obras</title>
+  <title>Lista Obras</title>
 </head>
 
 <body>
   <?php
-  include_once('/estoque/db/connection.php');
-  include('/estoque/includes/navbar.php');
+  include_once('../../includes/navbar.php');
+  include_once('../../db/connection.php');
+  include_once('../../includes/toast.php');
   ?>
   <main class="container-fluid d-flex justify-content-center align-items-center my-3 w-100 flex-column">
     <div class="text-center mb-4">
@@ -37,7 +38,10 @@
         <div class="col fs-3 fw-bold text-center border-start border-1 border-white"></div>
       </div>
       <?php
+      include_once('../../db/connection.php');
+
       $sql = "SELECT * FROM obras";
+      
       $res = $conn->query($sql);
 
       if ($res->num_rows > 0) {

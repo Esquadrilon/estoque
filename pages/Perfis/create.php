@@ -17,7 +17,8 @@
 
 <body>
   <?php
-  include('/estoque/includes/navbar.php');
+  include_once('../../includes/navbar.php');
+  include_once('../../includes/toast.php');
   ?>
   <main class="container d-flex justify-content-center align-items-center my-5">
     <div class="wrapper p-4 my-1 w-75 fs-4">

@@ -12,13 +12,14 @@
   <link rel="shortcut icon" href="/estoque/img/logo.svg" type="image/x-icon">
   <link rel="stylesheet" href="/estoque/css/estilo.css">
 
-  <title>Editando Cor</title>
+  <title>Editar Cor</title>
 </head>
 
 <body>
   <?php
-  include_once('/estoque/db/connection.php');
-  include('/estoque/includes/navbar.php');
+  include_once('../../includes/navbar.php');
+  include_once('../../db/connection.php');
+  include_once('../../includes/toast.php');
 
   if (isset($_GET['id'])) {
     $sql = "SELECT * FROM cores WHERE id = " . $_REQUEST['id'];

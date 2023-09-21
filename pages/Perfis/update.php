@@ -17,8 +17,9 @@
 
 <body>
   <?php
-  include_once('/estoque/db/connection.php');
-  include('/estoque/includes/navbar.php');
+  include_once('../../includes/navbar.php');
+  include_once('../../db/connection.php');
+  include_once('../../includes/toast.php');
 
   if (isset($_GET['perfil'])) {
     $sql = "SELECT * FROM perfis WHERE codigo = '" . $_REQUEST['perfil'] . "'";
@@ -32,7 +33,7 @@
   <main class="container d-flex justify-content-center align-items-center my-5">
     <div class="wrapper p-4 my-1 w-75 fs-4">
       <h1 class="text-center fs-1">Perfil</h1>
-      <form action="./controller.php" method="post">
+      <form action="./controller.php?id='<?php echo $_REQUEST['perfil'] ?>'" method="post">
         <input type="hidden" name="acao" value="editar">
 
 
