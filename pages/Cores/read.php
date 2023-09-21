@@ -24,6 +24,9 @@
       <a href="./create.php" class="btn btn-success">
         <i class="bi bi-plus"></i> Cadastrar Cor
       </a>
+      <?php
+      include('../../includes/toast.php');
+      ?>
     </div>
     <div class="wrapper w-50 p-4">
 

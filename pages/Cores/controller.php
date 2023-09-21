@@ -53,9 +53,8 @@ try {
     throw new Exception("Erro na consulta SQL: " . $conn->error);
   }
 
-  print "<script>alert('$success_message')</script>";
-  print "<script>location.href = '$redirect_success'</script>";
+  print "<script>location.href = '$redirect_success?success_message=$success_message'</script>";
 } catch (Exception $e) {
   print "<script>alert('Erro: " . $e->getMessage() . "')</script>";
-  print "<script>location.href = '$redirect_error'</script>";
+  print "<script>location.href = '$redirect_error?error_message=$error_message'</script>";
 }
