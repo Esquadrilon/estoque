@@ -1,5 +1,5 @@
 <?php
-include_once('../../db/connection.php');
+include_once('/estoque/db/connection.php');
 
 $data = array(
   'codigo',
