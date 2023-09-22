@@ -45,13 +45,19 @@
         $clientes = $res->fetch_all(MYSQLI_ASSOC);
 
         foreach ($clientes as $cliente) {
+          $cidades = $conn->query("SELECT * FROM cidades")->fetch_all(MYSQLI_ASSOC);
+          foreach($cidades as $cidade){
+            $cliente['cidade_id'] == $cidade['id'] 
+              ? $nome_cidade = $cidade['nome']
+              : null; 
+          };
           echo '
           <div class="row mt-2">
             <div class="col-2 text-center border-end border-1 border-white">' . $cliente['nome'] . '</div>
             <div class="col-2 text-center border-start border-end border-1 border-white">' . $cliente['email'] . '</div>
             <div class="col-1 text-center border-start border-end border-1 border-white">' . $cliente['telefone'] . '</div>
             <div class="col-2 text-center border-start border-end border-1 border-white">' . $cliente['endereco'] . '</div>
-            <div class="col text-center border-start border-end border-1 border-white">' . $cliente['cidade_id'] . '</div>
+            <div class="col text-center border-start border-end border-1 border-white">' . $nome_cidade . '</div>
             <div class="col-2 text-center border-start border-end border-1 border-white">' . $cliente['observacoes'] . '</div>
             <div class="col text-center border-start border-1 border-white">
               <a href="./update.php?id=' . $cliente['id'] . '" class="btn btn-primary">
@@ -63,10 +69,10 @@
             </div>
           </div>';
         };
-      } else {
-        echo "<p class='alert alert-danger'>Nenhum resultado foi encontrado!</p>";
-      }
-      ?>
+        } else {
+          echo "<p class='alert alert-danger'>Nenhum resultado foi encontrado!</p>";
+        }
+        ?>
 
 
     </div>

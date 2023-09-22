@@ -96,49 +96,10 @@
           <textarea class="form-control" name="observacoes" id="observacoes" cols="50" rows="3" placeholder="Se necessário"></textarea>
         </div>
 
-        <div class="wrapper bg-dark p-4 mt-3" id="itens">
-          <button type="button" onclick="newRow()" class="btn btn-success">
+        <div class="wrapper bg-dark p-3 mt-3" id="itens">
+          <button type="button" onclick="newRow()" class="btn btn-primary">
             <i class="bi bi-plus"></i> Adicionar Perfil
           </button>
-
-          <div class="row my-2">
-            <div class="col">
-              <label for="perfil">Perfil</label>
-              <select name="perfil" id="perfil" class="form-select">
-                <option value="0" selected>Selecione...</option>
-                <?php
-                $perfis = $conn->query("SELECT * FROM perfis");
-                while ($perfil = $perfis->fetch_object()) {
-                  print "<option value=\"$perfil->id\"> $perfil->codigo </option>";
-                }
-                ?>
-              </select>
-            </div>
-
-            <div class="col">
-              <label for="tamanho">Tamanho</label>
-              <input type="number" name="tamanho" id="tamanho" min="1000" max="9999" class="form-control" placeholder="6000mm">
-            </div>
-
-            <div class="col">
-              <label for="cor_id">Cor</label>
-              <select name="cor_id" id="cor_id" class="form-select">
-                <option value="0" selected>Selecione...</option>
-                <?php
-                $cores = $conn->query("SELECT * FROM cores");
-                while ($cor = $cores->fetch_object()) {
-                  print "<option value=\"$cor->id\"> $cor->nome </option>";
-                }
-                ?>
-              </select>
-            </div>
-
-            <div class="col">
-              <label for="quantidade">Quantidade</label>
-              <input type="number" name="quantidade" id="quantidade" min="1" class="form-control" placeholder="1">
-            </div>
-          </div>
-          
         </div>
 
         <div class="row mt-4">

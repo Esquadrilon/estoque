@@ -46,15 +46,27 @@
 
       if ($res->num_rows > 0) {
         $obras = $res->fetch_all(MYSQLI_ASSOC);
-
+        
         foreach ($obras as $obra) {
+          $clientes = $conn->query("SELECT * FROM clientes")->fetch_all(MYSQLI_ASSOC);
+          foreach($clientes as $cliente){
+            $obra['cliente_id'] == $cliente['id'] 
+              ? $nome_cliente = $cliente['nome']
+              : null;
+          }
+          $cidades = $conn->query("SELECT * FROM cidades")->fetch_all(MYSQLI_ASSOC);
+          foreach($cidades as $cidade){
+            $obra['cidade_id'] == $cidade['id'] 
+              ? $nome_cidade = $cidade['nome']
+              : null; 
+          };
           echo '
           <div class="row mt-2">
             <div class="col-2 text-center border-end border-1 border-white">' . $obra['nome'] . '</div>
-            <div class="col-2 text-center border-start border-end border-1 border-white">' . $obra['cliente_id'] . '</div>
+            <div class="col-2 text-center border-start border-end border-1 border-white">' . $nome_cliente . '</div>
             <div class="col-1 text-center border-start border-end border-1 border-white">' . $obra['situacao'] . '</div>
             <div class="col-2 text-center border-start border-end border-1 border-white">' . $obra['endereco'] . '</div>
-            <div class="col-1 text-center border-start border-end border-1 border-white">' . $obra['cidade_id'] . '</div>
+            <div class="col-1 text-center border-start border-end border-1 border-white">' . $nome_cidade . '</div>
             <div class="col-2 text-center border-start border-end border-1 border-white">' . $obra['observacoes'] . '</div>
             <div class="col text-center border-start border-1 border-white">
               <a href="./update.php?id=' . $obra['id'] . '" class="btn btn-primary">
