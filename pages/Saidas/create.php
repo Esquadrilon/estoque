@@ -132,55 +132,66 @@
     }
 
     function newRow() {
-    // Crie um novo elemento div para a linha
-    var newRow = document.createElement("div");
-    newRow.className = "row my-2";
+      // Crie um novo elemento div para a linha
+      var newRow = document.createElement("div");
+      newRow.className = "row my-2";
 
-    // Crie o HTML interno da linha
-    newRow.innerHTML = `
-      <div class="col">
-        <label for="perfil">Perfil</label>
-        <select name="perfil" class="form-select">
-          <option value="0" selected>Selecione...</option>
-        </select>
-      </div>
+      // Crie o HTML interno da linha
+      newRow.innerHTML = `
+        <div class="col">
+          <label for="perfil">Perfil</label>
+          <select name="perfil" class="form-select">
+            <option value="0" selected>Selecione...</option>
+          </select>
+        </div>
 
-      <div class="col">
-        <label for="tamanho">Tamanho</label>
-        <input type="number" name="tamanho" min="1000" max="9999" class="form-control" placeholder="6000mm">
-      </div>
+        <div class="col">
+          <label for="tamanho">Tamanho</label>
+          <input type="number" name="tamanho" min="1000" max="9999" class="form-control" placeholder="6000mm">
+        </div>
 
-      <div class="col">
-        <label for="cor_id">Cor</label>
-        <select name="cor_id" class="form-select">
-          <option value="0" selected>Selecione...</option>
-        </select>
-      </div>
+        <div class="col">
+          <label for="cor_perfil">Cor</label>
+          <select name="cor_perfil" class="form-select">
+            <option value="0" selected>Selecione...</option>
+          </select>
+        </div>
 
-      <div class="col">
-        <label for="quantidade">Quantidade</label>
-        <input type="number" name="quantidade" min="1" class="form-control" placeholder="1">
-      </div>
-    `;
+        <div class="col">
+          <label for="quantidade">Quantidade</label>
+          <input type="number" name="quantidade" min="1" class="form-control" placeholder="1">
+        </div>
+      `;
 
-    var itensContainer = document.getElementById("itens");
-    itensContainer.appendChild(newRow);
+      var itensContainer = document.getElementById("itens");
+      itensContainer.appendChild(newRow);
 
-    var perfilSelect = newRow.querySelector("select[name='perfil']");
-    var corSelect = newRow.querySelector("select[name='cor_id']");
+      var perfilSelect = newRow.querySelector("select[name='perfil']");
+      var corSelect = newRow.querySelector("select[name='cor_perfil']");
 
-    <?php
-    $perfis = $conn->query("SELECT * FROM perfis");
-    while ($perfil = $perfis->fetch_object()) {
-        echo "perfilSelect.innerHTML += '<option value=\"$perfil->codigo\">$perfil->codigo</option>';\n";
-    }
+      // Buscar os perfis usando uma solicitação assíncrona em JavaScript
+      fetch('../Perfis/listar_perfis.php')
+        .then(response => response.json())
+        .then(data => {
+          console.log(data);
+          // Atualizar as opções do <select> de perfil com os dados obtidos
+          data.forEach(codigo => {
+            var option = document.createElement('option');
+            option.value = codigo['codigo'];
+            option.textContent = codigo['codigo'];
+            perfilSelect.appendChild(option);
+          });
+        })
+        .catch(error => console.error('Erro ao buscar os perfis: ' + error));
 
-    $cores = $conn->query("SELECT * FROM cores");
-    while ($cor = $cores->fetch_object()) {
-        echo "corSelect.innerHTML += '<option value=\"$cor->id\">$cor->nome</option>';\n";
-    }
+      // Buscar as cores usando PHP (como você já está fazendo)
+      <?php
+        $cores = $conn->query("SELECT * FROM cores");
+        while ($cor = $cores->fetch_object()) {
+          echo "corSelect.innerHTML += '<option value=\"$cor->id\">$cor->nome</option>';\n";
+        }
     ?>
-  }
+    }
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
