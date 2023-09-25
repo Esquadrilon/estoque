@@ -1,55 +1,56 @@
 <?php
-if ($_REQUEST["acao"] == "cadastrar") {
-    // Receba os valores dos campos gerais
-    $acao = $_POST["acao"];
-    $obra_id = $_POST["obra_id"];
-    $cor_id = $_POST["cor_id"];
-    $origem = $_POST["origem"];
-    $destino = $_POST["destino"];
-    $nota = $_POST["nota"];
-    $responsavel = $_POST["responsavel"];
-    $caminhao = $_POST["caminhao"];
-    $motorista = $_POST["motorista"];
-    $observacoes = $_POST["observacoes"];
+$data = array(
+    'obra_id',
+    'cor_id',
+    'origem',
+    'destino',
+    'nota',
+    'responsavel',
+    'caminhao',
+    'motorista',
+    'observacoes'
+);
 
-    // Processamento dos campos dos itens
-    $itens = array();
+foreach ($data as $input_name) {
+    isset($_POST[$input_name])
+        ? ${$input_name} = $_POST[$input_name]
+        : ${$input_name} = "";
+};
+  
 
-    if (isset($_POST["itens"]) && is_array($_POST["itens"])) {
-        foreach ($_POST["itens"] as $item) {
-            $perfil = $item["perfil"];
-            $tamanho = $item["tamanho"];
-            $cor_id_item = $item["cor_id"];
-            $quantidade = $item["quantidade"];
+$items = array();
 
-            $itens[] = array(
-                "perfil" => $perfil,
-                "tamanho" => $tamanho,
-                "cor_id" => $cor_id_item,
-                "quantidade" => $quantidade
-            );
-        }
+
+    $perfil = $_POST['perfil'];
+    $tamanho = $_POST['tamanho'];
+    $cor_perfil = $_POST['cor_perfil'];
+    $quantidade = $_POST['quantidade'];
+
+    // Certifique-se de que todos os arrays têm o mesmo comprimento
+    $numItems = count($perfil);
+
+    for ($i = 0; $i < $numItems; $i++) {
+        $item = array(
+            'perfil' => $perfil[$i],
+            'tamanho' => $tamanho[$i],
+            'cor_perfil' => $cor_perfil[$i],
+            'quantidade' => $quantidade[$i]
+        );
+        
+        // Adicione o item ao array de items
+        $items[] = $item;
+        print_r($item);
+        print "<br> ";
     }
 
-    // Agora você pode processar os valores recebidos conforme necessário, como inseri-los em um banco de dados ou realizar outras ações.
-
-    // Exemplo de saída para depuração:
-    echo "<h2>Valores Recebidos:</h2>";
-    echo "<p>Ação: $acao</p>";
-    echo "<p>Obra ID: $obra_id</p>";
-    echo "<p>Cor ID: $cor_id</p>";
-    echo "<p>Origem: $origem</p>";
-    echo "<p>Destino: $destino</p>";
-    echo "<p>Nota Fiscal: $nota</p>";
-    echo "<p>Responsável: $responsavel</p>";
-    echo "<p>Placa do Caminhão: $caminhao</p>";
-    echo "<p>Motorista: $motorista</p>";
-    echo "<p>Observações: $observacoes</p>";
-    echo "<h2>Itens da Entrada:</h2>";
-    foreach ($itens as $item) {
-        echo "<p>Perfil: {$item['perfil']}, Tamanho: {$item['tamanho']}, Cor ID: {$item['cor_id']}, Quantidade: {$item['quantidade']}</p>";
-    }
-
-    // Agora você pode realizar as operações necessárias com esses valores, como inseri-los em um banco de dados.
-}
+echo "<h2>Valores Recebidos:</h2>";
+echo "<p>Obra ID: $obra_id</p>";
+echo "<p>Cor ID: $cor_id</p>";
+echo "<p>Origem: $origem</p>";
+echo "<p>Destino: $destino</p>";
+echo "<p>Nota Fiscal: $nota</p>";
+echo "<p>Responsável: $responsavel</p>";
+echo "<p>Placa do Caminhão: $caminhao</p>";
+echo "<p>Motorista: $motorista</p>";
+echo "<p>Observações: $observacoes</p>";
 ?>

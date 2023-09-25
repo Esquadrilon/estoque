@@ -139,45 +139,45 @@
     // Crie o HTML interno da linha
     newRow.innerHTML = `
       <div class="col">
-        <label for="perfil">Perfil</label>
-        <select name="perfil" class="form-select">
+        <label for="perfil[]">Perfil</label>
+        <select name="perfil[]" class="form-select">
           <option value="0" selected>Selecione...</option>
         </select>
       </div>
 
       <div class="col">
-        <label for="tamanho">Tamanho</label>
-        <input type="number" name="tamanho" min="1000" max="9999" class="form-control" placeholder="6000mm">
+        <label for="tamanho[]">Tamanho</label>
+        <input type="number" name="tamanho[]" min="1000" max="9999" class="form-control" placeholder="6000mm">
       </div>
 
       <div class="col">
-        <label for="cor_id">Cor</label>
-        <select name="cor_id" class="form-select">
+        <label for="cor_perfil[]">Cor</label>
+        <select name="cor_perfil[]" class="form-select">
           <option value="0" selected>Selecione...</option>
         </select>
       </div>
 
       <div class="col">
-        <label for="quantidade">Quantidade</label>
-        <input type="number" name="quantidade" min="1" class="form-control" placeholder="1">
+        <label for="quantidade[]">Quantidade</label>
+        <input type="number" name="quantidade[]" min="1" class="form-control" placeholder="1">
       </div>
     `;
 
     var itensContainer = document.getElementById("itens");
     itensContainer.appendChild(newRow);
 
-    var perfilSelect = newRow.querySelector("select[name='perfil']");
-    var corSelect = newRow.querySelector("select[name='cor_id']");
+    var perfilSelect = newRow.querySelector("select[name='perfil[]']");
+    var corSelect = newRow.querySelector("select[name='cor_perfil[]']");
 
     <?php
-    $perfis = $conn->query("SELECT * FROM perfis");
+    $perfis = $conn->query("SELECT codigo FROM perfis");
     while ($perfil = $perfis->fetch_object()) {
-        echo "perfilSelect.innerHTML += '<option value=\"$perfil->id\">$perfil->codigo</option>';\n";
+      echo "perfilSelect.innerHTML += '<option value=\"$perfil->codigo\">$perfil->codigo</option>';\n";
     }
 
     $cores = $conn->query("SELECT * FROM cores");
     while ($cor = $cores->fetch_object()) {
-        echo "corSelect.innerHTML += '<option value=\"$cor->id\">$cor->nome</option>';\n";
+      echo "corSelect.innerHTML += '<option value=\"$cor->id\">$cor->nome</option>';\n";
     }
     ?>
   }

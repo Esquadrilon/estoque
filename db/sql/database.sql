@@ -120,3 +120,5 @@ CREATE TABLE saidas
     FOREIGN KEY (perfil_codigo) REFERENCES perfis (codigo) ON DELETE RESTRICT ON UPDATE CASCADE,
     FOREIGN KEY (cor_id) REFERENCES cores (id) ON DELETE RESTRICT ON UPDATE CASCADE
 );
+
+CREATE INDEX idx_codigo ON perfis (codigo);
