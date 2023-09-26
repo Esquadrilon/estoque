@@ -34,12 +34,12 @@
 
         <div class="row  mt-2">
           <div class="col">
-            <label for="situacao">Situacao</label>
+            <label for="situacao">Status da Obra</label>
             <input type="text" name="situacao" id="situacao" class="form-control" placeholder="Em construção">
           </div>
 
           <div class="col">
-            <label for="website">Site</label>
+            <label for="website">URL do Site</label>
             <input type="text" name="website" id="website" class="form-control" placeholder="https://exemplo.com.br/exemplo">
           </div>
         </div>
@@ -68,7 +68,7 @@
             <select name="cidade_id" id="cidade_id" class="form-select">
               <option value="0" selected>Selecione...</option>
               <?php
-              $cidades = $conn->query("SELECT * FROM cidades");
+              $cidades = $conn->query("SELECT * FROM cidades ORDER BY nome");
               while ($cidade = $cidades->fetch_object()) {
                 print "<option value='$cidade->id'> $cidade->nome </option>";
               }
@@ -81,7 +81,7 @@
             <select name="estado_id" id="estado_id" class="form-select">
               <option value="0" selected>Selecione...</option>
               <?php
-              $estados = $conn->query("SELECT * FROM estados");
+              $estados = $conn->query("SELECT * FROM estados ORDER BY nome");
               while ($estado = $estados->fetch_object()) {
                 print "<option value=\"$estado->id\"> $estado->nome </option>";
               }

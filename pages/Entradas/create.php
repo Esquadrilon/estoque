@@ -22,9 +22,9 @@
   include_once('../../includes/toast.php');
   ?>
   <main class="container d-flex justify-content-center align-items-center my-5">
-    <div class="wrapper p-4 my-1 w-75 fs-4">
+    <div class="wrapper p-4 my-1 w-100 fs-4">
       <h1 class="text-center fs-1">Entrada</h1>
-      <form action="./controller.php" method="post">
+      <form action="./controller.php" method="post" id="form_entrada">
         <input type="hidden" name="acao" value="cadastrar">
 
         <div class="row mt-2">
@@ -42,8 +42,8 @@
           </div>
 
           <div class="col">
-            <label for="cor_id">Cor</label>
-            <select name="cor_id" id="cor_id" class="form-select">
+            <label for="cor_fixa">Cor</label>
+            <select name="cor_fixa" id="cor_fixa" onchange="newRow()" class="form-select">
               <option value="0" selected>Selecione...</option>
               <?php
               $cores = $conn->query("SELECT * FROM cores");
@@ -97,9 +97,6 @@
         </div>
 
         <div class="wrapper bg-dark p-3 mt-3" id="itens">
-          <button type="button" onclick="newRow()" class="btn btn-primary">
-            <i class="bi bi-plus"></i> Adicionar Perfil
-          </button>
         </div>
 
         <div class="row mt-4">
@@ -119,9 +116,15 @@
 
   </footer>
   <script>
+    document.getElementById("form_entrada").addEventListener("keydown", function (event) {
+      event.keyCode === 13
+        ?event.preventDefault()
+        : null;
+      
+    });
     function clearData() {
       document.getElementById('obra_id').value = '';
-      document.getElementById('cor_id').value = '';
+      document.getElementById('cor_fixa').value = '';
       document.getElementById('origem').value = '';
       document.getElementById('destino').value = '';
       document.getElementById('nota').value = '';
@@ -132,55 +135,73 @@
     }
 
     function newRow() {
-    // Crie um novo elemento div para a linha
-    var newRow = document.createElement("div");
-    newRow.className = "row my-2";
+      // Crie um novo elemento div para a linha
+      var newRow = document.createElement("div");
+      newRow.className = "row my-2";
 
-    // Crie o HTML interno da linha
-    newRow.innerHTML = `
-      <div class="col">
-        <label for="perfil[]">Perfil</label>
-        <select name="perfil[]" class="form-select">
-          <option value="0" selected>Selecione...</option>
-        </select>
-      </div>
+      // Crie o HTML interno da linha
+      newRow.innerHTML = `
+        <div class="col">
+          <label for="perfil[]">Perfil</label>
+          <select name="perfil[]" class="form-select">
+            <option value="0" selected>Selecione...</option>
+          </select>
+        </div>
 
-      <div class="col">
-        <label for="tamanho[]">Tamanho</label>
-        <input type="number" name="tamanho[]" min="1000" max="9999" class="form-control" placeholder="6000mm">
-      </div>
+        <div class="col">
+          <label for="tamanho[]">Tamanho</label>
+          <input type="number" name="tamanho[]" min="1000" max="9999" value="6000" class="form-control" placeholder="6000mm">
+        </div>
 
-      <div class="col">
-        <label for="cor_perfil[]">Cor</label>
-        <select name="cor_perfil[]" class="form-select">
-          <option value="0" selected>Selecione...</option>
-        </select>
-      </div>
+        <div class="col">
+          <label for="cor_id[]">Cor</label>
+          <select name="cor_id[]" class="form-select" onfocus="newRow()">
+            <option value="0" selected>Selecione...</option>
+          </select>
+        </div>
 
-      <div class="col">
-        <label for="quantidade[]">Quantidade</label>
-        <input type="number" name="quantidade[]" min="1" class="form-control" placeholder="1">
-      </div>
-    `;
+        <div class="col">
+          <label for="quantidade[]">Quantidade</label>
+          <input type="number" name="quantidade[]" min="1" class="form-control" placeholder="1">
+        </div>
+      `;
 
-    var itensContainer = document.getElementById("itens");
-    itensContainer.appendChild(newRow);
+      var itensContainer = document.getElementById("itens");
+      itensContainer.appendChild(newRow);
 
-    var perfilSelect = newRow.querySelector("select[name='perfil[]']");
-    var corSelect = newRow.querySelector("select[name='cor_perfil[]']");
+      var perfilSelect = newRow.querySelector("select[name='perfil[]']");
+      
+      fetch('../Perfis/listar_perfis.php')
+        .then(response => response.json())
+        .then(data => {
+          console.log(data);
+          // Atualizar as opções do <select> de perfil com os dados obtidos
+          data.forEach(codigo => {
+            var option = document.createElement('option');
+            option.value = codigo['codigo'];
+            option.textContent = codigo['codigo'];
+            perfilSelect.appendChild(option);
+          });
+        })
+        .catch(error => console.error('Erro ao buscar os perfis: ' + error));
 
-    <?php
-    $perfis = $conn->query("SELECT codigo FROM perfis");
-    while ($perfil = $perfis->fetch_object()) {
-      echo "perfilSelect.innerHTML += '<option value=\"$perfil->codigo\">$perfil->codigo</option>';\n";
+      var corSelect = newRow.querySelector("select[name='cor_id[]']");
+      var corIdSelect = document.getElementById("cor_fixa");
+
+      // Copiar as opções de cor_id
+      for (var i = 0; i < corIdSelect.options.length; i++) {
+        var option = document.createElement("option");
+        option.value = corIdSelect.options[i].value;
+        option.text = corIdSelect.options[i].text;
+
+        // Verificar se a opção é igual à selecionada em cor_id
+        if (corIdSelect.options[i].value == corIdSelect.value) {
+          option.selected = true;
+        }
+
+        corSelect.appendChild(option);
+      }
     }
-
-    $cores = $conn->query("SELECT * FROM cores");
-    while ($cor = $cores->fetch_object()) {
-      echo "corSelect.innerHTML += '<option value=\"$cor->id\">$cor->nome</option>';\n";
-    }
-    ?>
-  }
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>

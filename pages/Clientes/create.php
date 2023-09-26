@@ -60,7 +60,7 @@
             <select name="cidade_id" id="cidade_id" class="form-select">
               <option value="0" selected>Selecione...</option>
               <?php
-              $cidades = $conn->query("SELECT * FROM cidades");
+              $cidades = $conn->query("SELECT * FROM cidades ORDER BY nome");
               while ($cidade = $cidades->fetch_object()) {
                 print "<option value='$cidade->id'> $cidade->nome </option>";
               }
@@ -73,7 +73,7 @@
             <select name="estado_id" id="estado_id" class="form-select">
               <option value="0" selected>Selecione...</option>
               <?php
-              $estados = $conn->query("SELECT * FROM estados");
+              $estados = $conn->query("SELECT * FROM estados ORDER BY nome");
               while ($estado = $estados->fetch_object()) {
                 print "<option value=\"$estado->id\"> $estado->nome </option>";
               }

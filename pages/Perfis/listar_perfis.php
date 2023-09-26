@@ -13,6 +13,8 @@ if ($result) {
 
         $perfis = $item;
     }
+
+    header('Content-Type: application/json');
     
     echo json_encode($perfis);
 } else {

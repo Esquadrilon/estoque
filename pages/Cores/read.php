@@ -28,21 +28,18 @@
       </a>
     </div>
     <div class="wrapper w-50 p-4">
-
+        <div class="row row-cols-4">
+          <div class="col fs-3 fw-bold text-center border-end border-1 border-white">Id</div>
+          <div class="col fs-3 fw-bold text-center border-start border-end border-1 border-white">Nome</div>
+          <div class="col fs-3 fw-bold text-center border-start border-end border-1 border-white">Código RAL</div>
+          <div class="col fs-3 fw-bold text-center border-start border-1 border-white"></div>
+        </div>
       <?php
       $sql = "SELECT * FROM cores";
       $res = $conn->query($sql);
 
       if ($res->num_rows > 0) {
         $cores = $res->fetch_all(MYSQLI_ASSOC);
-
-        echo '
-        <div class="row row-cols-4">
-          <div class="col fs-3 fw-bold text-center border-end border-1 border-white">Id</div>
-          <div class="col fs-3 fw-bold text-center border-start border-end border-1 border-white">Nome</div>
-          <div class="col fs-3 fw-bold text-center border-start border-end border-1 border-white">Código</div>
-          <div class="col fs-3 fw-bold text-center border-start border-1 border-white"></div>
-        </div>';
 
         foreach ($cores as $cor) {
 

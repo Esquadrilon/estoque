@@ -1,7 +1,8 @@
 <?php
+include_once('../../db/connection.php');
+
 $data = array(
     'obra_id',
-    'cor_id',
     'origem',
     'destino',
     'nota',
@@ -17,35 +18,103 @@ foreach ($data as $input_name) {
         : ${$input_name} = "";
 };
   
+$redirect_success = "./read.php";
+$redirect_error = "./read.php";
 
-$items = array();
+try {
+  switch ($_REQUEST["acao"]) {
+    case 'cadastrar':
+
+        $perfil = $_POST['perfil'];
+        $tamanho = $_POST['tamanho'];
+        $cor = $_POST['cor_id'];
+        $quantidade = $_POST['quantidade'];
+
+        for ($i = 0; $i < count($perfil); $i++) {
+            $item = array(
+                'perfil' => $perfil[$i],
+                'tamanho' => $tamanho[$i],
+                'cor' => $cor[$i],
+                'quantidade' => $quantidade[$i]
+            );
+            print_r($item);
+            $sql = 
+            "INSERT INTO entradas 
+                (obra_id, perfil_codigo, cor_id, tamanho, quantidade, nota, origem, destino, caminhao, motorista, responsavel, observacoes)
+            VALUES
+                ('$obra_id', '{$perfil[$i]}', '{$cor[$i]}', '{$tamanho[$i]}', '{$quantidade[$i]}', '$nota', '$origem', '$destino', '$caminhao', '$motorista', '$responsavel', '$observacoes')";
+            $res = $conn->query($sql);
+        }
+
+        $success_message = "Entrada cadastrada com sucesso!";
+        $error_message = "Erro ao tentar cadastrar entrada!";
+        break;
+
+    case 'editar':
+        $perfil = isset($_POST['perfil']) ? $_POST['perfil'] : "";
+        $tamanho = isset($_POST['tamanho']) ? $_POST['tamanho'] : "";
+        $cor = isset($_POST['cor']) ? $_POST['cor'] : "";
+        $quantidade = isset($_POST['quantidade']) ? $_POST['quantidade'] : "";
 
 
-    $perfil = $_POST['perfil'];
-    $tamanho = $_POST['tamanho'];
-    $cor_perfil = $_POST['cor_perfil'];
-    $quantidade = $_POST['quantidade'];
+        $sql = 
+        "UPDATE entradas 
+        SET 
+            obra_id = '$obra_id',
+            perfil_codigo = '$perfil',
+            tamanho = '$tamanho',
+            cor_id = '$cor',
+            quantidade = '$quantidade',
+            origem = '$origem',
+            destino = '$destino',
+            nota = '$nota',
+            responsavel = '$responsavel',
+            caminhao = '$caminhao',
+            motorista = '$motorista',
+            observacoes = '$observacoes'
+        WHERE id = $_REQUEST[id]
+        ";
 
-    // Certifique-se de que todos os arrays têm o mesmo comprimento
-    $numItems = count($perfil);
+        $res = $conn->query($sql);
 
-    for ($i = 0; $i < $numItems; $i++) {
-        $item = array(
-            'perfil' => $perfil[$i],
-            'tamanho' => $tamanho[$i],
-            'cor_perfil' => $cor_perfil[$i],
-            'quantidade' => $quantidade[$i]
-        );
-        
-        // Adicione o item ao array de items
-        $items[] = $item;
-        print_r($item);
-        print "<br> ";
-    }
+        $redirect_error = "./update.php?id={$_REQUEST['id']}";
+        $success_message = "Entrada editada com sucesso!";
+        $error_message = "Erro ao tentar editar entrada!";
+        break;
+
+    case 'deletar':
+        if (isset($_REQUEST['id'])) {
+            $res = $conn->query("DELETE FROM entradas WHERE id = $_REQUEST[id]");
+            
+            $success_message = "Entrada deletada com sucesso!";
+            $error_message = "Erro ao tentar deletar entrada!";
+        }
+        break;
+  }
+
+  $res === true
+    ? print "<script>location.href = '$redirect_success?success_message=$success_message'</script>"
+    : throw new Exception("Erro na consulta SQL: " . $conn->error);
+    
+} catch (Exception $e) {
+  print "<script>alert('Erro: " . $e->getMessage() . "')</script>";
+//   print "<script>location.href = '$redirect_error?error_message=$error_message'</script>";
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 echo "<h2>Valores Recebidos:</h2>";
 echo "<p>Obra ID: $obra_id</p>";
-echo "<p>Cor ID: $cor_id</p>";
 echo "<p>Origem: $origem</p>";
 echo "<p>Destino: $destino</p>";
 echo "<p>Nota Fiscal: $nota</p>";

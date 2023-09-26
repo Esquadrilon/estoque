@@ -31,12 +31,13 @@
       <div class="row">
         <div class="col-2 fs-3 fw-bold text-center border-end border-1 border-white">Nome</div>
         <div class="col-2 fs-3 fw-bold text-center border-start border-end border-1 border-white">Cliente</div>
-        <div class="col-1 fs-3 fw-bold text-center border-start border-end border-1 border-white">Situação</div>
+        <div class="col-1 fs-3 fw-bold text-center border-start border-end border-1 border-white">Status</div>
         <div class="col-2 fs-3 fw-bold text-center border-start border-end border-1 border-white">Endereço</div>
         <div class="col-1 fs-3 fw-bold text-center border-start border-end border-1 border-white">Cidade</div>
         <div class="col-2 fs-3 fw-bold text-center border-start border-end border-1 border-white">Observações</div>
         <div class="col fs-3 fw-bold text-center border-start border-1 border-white"></div>
       </div>
+      
       <?php
       include_once('../../db/connection.php');
 

@@ -97,9 +97,7 @@
         </div>
 
         <div class="wrapper bg-dark p-3 mt-3" id="itens">
-          <button type="button" onclick="newRow()" class="btn btn-primary">
-            <i class="bi bi-plus"></i> Adicionar Perfil
-          </button>
+          
         </div>
 
         <div class="row mt-4">
@@ -139,35 +137,35 @@
       // Crie o HTML interno da linha
       newRow.innerHTML = `
         <div class="col">
-          <label for="perfil">Perfil</label>
-          <select name="perfil" class="form-select">
+          <label for="perfil[]">Perfil</label>
+          <select name="perfil[]" class="form-select">
             <option value="0" selected>Selecione...</option>
           </select>
         </div>
 
         <div class="col">
-          <label for="tamanho">Tamanho</label>
-          <input type="number" name="tamanho" min="1000" max="9999" class="form-control" placeholder="6000mm">
+          <label for="tamanho[]">Tamanho</label>
+          <input type="number" name="tamanho[]" min="1000" max="9999" class="form-control" placeholder="6000mm">
         </div>
 
         <div class="col">
-          <label for="cor_perfil">Cor</label>
-          <select name="cor_perfil" class="form-select">
+          <label for="cor_perfil[]">Cor</label>
+          <select name="cor_perfil[]" class="form-select">
             <option value="0" selected>Selecione...</option>
           </select>
         </div>
 
         <div class="col">
-          <label for="quantidade">Quantidade</label>
-          <input type="number" name="quantidade" min="1" class="form-control" placeholder="1">
+          <label for="quantidade[]">Quantidade</label>
+          <input type="number" name="quantidade[]" min="1" onchange="newRow()" class="form-control" placeholder="1">
         </div>
       `;
 
       var itensContainer = document.getElementById("itens");
       itensContainer.appendChild(newRow);
 
-      var perfilSelect = newRow.querySelector("select[name='perfil']");
-      var corSelect = newRow.querySelector("select[name='cor_perfil']");
+      var perfilSelect = newRow.querySelector("select[name='perfil[]']");
+      var corSelect = newRow.querySelector("select[name='cor_perfil[]']");
 
       // Buscar os perfis usando uma solicitação assíncrona em JavaScript
       fetch('../Perfis/listar_perfis.php')
@@ -192,6 +190,7 @@
         }
     ?>
     }
+    newRow();
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>

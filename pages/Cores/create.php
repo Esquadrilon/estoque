@@ -33,7 +33,7 @@
           </div>
 
           <div class="col mt-2">
-            <label for="codigo">Código</label>
+            <label for="codigo">Código RAL</label>
             <input type="text" name="codigo" id="codigo" class="form-control" placeholder="W2635">
           </div>
         </div>

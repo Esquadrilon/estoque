@@ -37,6 +37,7 @@
         <div class="col-2 fs-3 fw-bold text-center border-start border-end border-1 border-white">Referência</div>
         <div class="col fs-3 fw-bold text-center border-start border-1 border-white"></div>
       </div>
+      
       <?php
       $sql = "SELECT * FROM perfis";
       $res = $conn->query($sql);
