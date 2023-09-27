@@ -39,7 +39,27 @@
           <div class="col fs-3 fw-bold text-center border-start border-1 border-white"></div>
         </div>
       <?php
-      $sql = "SELECT * FROM entradas";
+      $sql = 
+      "SELECT 
+        e.id,
+        o.nome as obra,
+        e.perfil_codigo as perfil,
+        e.tamanho,
+        c.nome as cor,
+        e.origem,
+        e.quantidade,
+        e.responsavel 
+      from 
+        entradas e
+      left join
+        obras o 
+      on
+      e.obra_id = o.id
+      left join
+        cores c 
+      on
+      e.cor_id  = c.id";
+
       $res = $conn->query($sql);
 
       if ($res->num_rows > 0) {
@@ -49,10 +69,10 @@
 
           echo '
           <div class="row row-cols-8 mt-2">
-            <div class="col fw-semibold text-center border-end border-1 border-white">' . $entrada['obra_id'] . '</div>
-            <div class="col fw-semibold text-center border-start border-end border-1 border-white">' . $entrada['perfil_codigo'] . '</div>
+            <div class="col fw-semibold text-center border-end border-1 border-white">' . $entrada['obra'] . '</div>
+            <div class="col fw-semibold text-center border-start border-end border-1 border-white">' . $entrada['perfil'] . '</div>
             <div class="col fw-semibold text-center border-start border-end border-1 border-white">' . $entrada['tamanho'] . '</div>
-            <div class="col fw-semibold text-center border-start border-end border-1 border-white">' . $entrada['cor_id'] . '</div>
+            <div class="col fw-semibold text-center border-start border-end border-1 border-white">' . $entrada['cor'] . '</div>
             <div class="col fw-semibold text-center border-start border-end border-1 border-white">' . $entrada['quantidade'] . '</div>
             <div class="col fw-semibold text-center border-start border-end border-1 border-white">' . $entrada['origem'] . '</div>
             <div class="col fw-semibold text-center border-start border-end border-1 border-white">' . $entrada['responsavel'] . '</div>

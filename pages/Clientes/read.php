@@ -39,26 +39,34 @@
       </div>
 
       <?php
-      $sql = "SELECT * FROM clientes";
+      $sql = 
+      "SELECT
+        c.id,
+        c.nome,
+        c.email,
+        c.telefone, 
+        c.endereco, 
+        cidades.nome as cidade,
+        c.observacoes 
+      from 
+        clientes c
+      left join
+        cidades
+      on
+        cidades.id  = c.cidade_id";
       $res = $conn->query($sql);
 
       if ($res->num_rows > 0) {
         $clientes = $res->fetch_all(MYSQLI_ASSOC);
 
         foreach ($clientes as $cliente) {
-          $cidades = $conn->query("SELECT * FROM cidades")->fetch_all(MYSQLI_ASSOC);
-          foreach($cidades as $cidade){
-            $cliente['cidade_id'] == $cidade['id'] 
-              ? $nome_cidade = $cidade['nome']
-              : null; 
-          };
           echo '
           <div class="row mt-2">
             <div class="col-2 text-center border-end border-1 border-white">' . $cliente['nome'] . '</div>
             <div class="col-2 text-center border-start border-end border-1 border-white">' . $cliente['email'] . '</div>
             <div class="col-1 text-center border-start border-end border-1 border-white">' . $cliente['telefone'] . '</div>
             <div class="col-2 text-center border-start border-end border-1 border-white">' . $cliente['endereco'] . '</div>
-            <div class="col text-center border-start border-end border-1 border-white">' . $nome_cidade . '</div>
+            <div class="col text-center border-start border-end border-1 border-white">' . $cliente['cidade'] . '</div>
             <div class="col-2 text-center border-start border-end border-1 border-white">' . $cliente['observacoes'] . '</div>
             <div class="col text-center border-start border-1 border-white">
               <a href="./update.php?id=' . $cliente['id'] . '" class="btn btn-primary">
