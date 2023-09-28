@@ -22,9 +22,9 @@
   include_once('../../includes/toast.php');
   ?>
   <main class="container d-flex justify-content-center align-items-center my-5">
-    <div class="wrapper p-4 my-1 w-75 fs-4">
+    <div class="wrapper p-4 my-1 w-100 fs-4">
       <h1 class="text-center fs-1">Saída</h1>
-      <form action="./controller.php" method="post">
+      <form action="./controller.php" method="post" id="form_saida">
         <input type="hidden" name="acao" value="cadastrar">
 
         <div class="row mt-2">
@@ -42,8 +42,8 @@
           </div>
 
           <div class="col">
-            <label for="cor_id">Cor</label>
-            <select name="cor_id" id="cor_id" class="form-select">
+            <label for="cor_fixa">Cor</label>
+            <select name="cor_fixa" id="cor_fixa" onchange="newRow()" class="form-select">
               <option value="0" selected>Selecione...</option>
               <?php
               $cores = $conn->query("SELECT * FROM cores");
@@ -69,7 +69,7 @@
 
         <div class="row mt-2">
           <div class="col">
-            <label for="nota">Nota Fiscal</label>
+            <label for="nota">Romaneio</label>
             <input type="text" name="nota" id="nota" class="form-control" placeholder="NF 16341">
           </div>
 
@@ -97,7 +97,6 @@
         </div>
 
         <div class="wrapper bg-dark p-3 mt-3" id="itens">
-          
         </div>
 
         <div class="row mt-4">
@@ -117,9 +116,15 @@
 
   </footer>
   <script>
+    document.getElementById("form_saida").addEventListener("keydown", function (event) {
+      event.keyCode === 13
+        ?event.preventDefault()
+        : null;
+      
+    });
     function clearData() {
       document.getElementById('obra_id').value = '';
-      document.getElementById('cor_id').value = '';
+      document.getElementById('cor_fixa').value = '';
       document.getElementById('origem').value = '';
       document.getElementById('destino').value = '';
       document.getElementById('nota').value = '';
@@ -145,19 +150,19 @@
 
         <div class="col">
           <label for="tamanho[]">Tamanho</label>
-          <input type="number" name="tamanho[]" min="1000" max="9999" class="form-control" placeholder="6000mm">
+          <input type="number" name="tamanho[]" min="1000" max="9999" value="6000" class="form-control" placeholder="6000mm">
         </div>
 
         <div class="col">
-          <label for="cor_perfil[]">Cor</label>
-          <select name="cor_perfil[]" class="form-select">
+          <label for="cor_id[]">Cor</label>
+          <select name="cor_id[]" class="form-select" onfocus="newRow()">
             <option value="0" selected>Selecione...</option>
           </select>
         </div>
 
         <div class="col">
           <label for="quantidade[]">Quantidade</label>
-          <input type="number" name="quantidade[]" min="1" onchange="newRow()" class="form-control" placeholder="1">
+          <input type="number" name="quantidade[]" min="1" class="form-control" placeholder="1">
         </div>
       `;
 
@@ -165,9 +170,7 @@
       itensContainer.appendChild(newRow);
 
       var perfilSelect = newRow.querySelector("select[name='perfil[]']");
-      var corSelect = newRow.querySelector("select[name='cor_perfil[]']");
-
-      // Buscar os perfis usando uma solicitação assíncrona em JavaScript
+      
       fetch('../Perfis/listar_perfis.php')
         .then(response => response.json())
         .then(data => {
@@ -182,15 +185,23 @@
         })
         .catch(error => console.error('Erro ao buscar os perfis: ' + error));
 
-      // Buscar as cores usando PHP (como você já está fazendo)
-      <?php
-        $cores = $conn->query("SELECT * FROM cores");
-        while ($cor = $cores->fetch_object()) {
-          echo "corSelect.innerHTML += '<option value=\"$cor->id\">$cor->nome</option>';\n";
+      var corSelect = newRow.querySelector("select[name='cor_id[]']");
+      var corIdSelect = document.getElementById("cor_fixa");
+
+      // Copiar as opções de cor_id
+      for (var i = 0; i < corIdSelect.options.length; i++) {
+        var option = document.createElement("option");
+        option.value = corIdSelect.options[i].value;
+        option.text = corIdSelect.options[i].text;
+
+        // Verificar se a opção é igual à selecionada em cor_id
+        if (corIdSelect.options[i].value == corIdSelect.value) {
+          option.selected = true;
         }
-    ?>
+
+        corSelect.appendChild(option);
+      }
     }
-    newRow();
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>

@@ -31,7 +31,7 @@
                     <li><i class="bi bi-palette"></i> Cores? <a href="./pages/Cores/read.php">Clique aqui</a></li>
                     <li><i class="bi bi-plus-lg"></i> Entradas? <a href="./pages/Entradas/read.php">Clique aqui</a></li>
                     <li><i class="bi bi-dash-lg"></i> Saídas? <a href="./pages/Saidas/read.php">Clique aqui</a></li>
-                    <li><i class="bi bi-inboxes"></i> Ver estoque? <a href="">Clique aqui</a></li>
+                    <li><i class="bi bi-inboxes"></i> Ver estoque? <a href="./pages/estoque.php">Clique aqui</a></li>
                 </ul>
             </div>
         </div>
