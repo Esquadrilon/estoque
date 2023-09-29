@@ -9,8 +9,8 @@ $data = array(
 );
 
 foreach ($data as $input_name) {
-  isset($_REQUEST[$input_name])
-    ? ${$input_name} = $_REQUEST[$input_name]
+  isset($_GET[$input_name])
+    ? ${$input_name} = $_GET[$input_name]
     : ${$input_name} = "";
 };
 
@@ -21,7 +21,7 @@ $sql =
   c.nome AS cor,
   e.tamanho,
   SUM(e.quantidade) - COALESCE(SUM(s.quantidade), 0) AS saldo,
-  p.peso * (e.tamanho / 1000) * (SUM(e.quantidade) - COALESCE(SUM(s.quantidade), 0)) AS peso
+  ROUND(p.peso * (e.tamanho / 1000) * (SUM(e.quantidade) - COALESCE(SUM(s.quantidade), 0)), 3) AS peso
 FROM 
   entradas e
 LEFT JOIN

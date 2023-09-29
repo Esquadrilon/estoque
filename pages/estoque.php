@@ -63,63 +63,6 @@
           <div class="col fs-3 fw-bold text-center border-start border-end border-1 border-white">Saldo</div>
           <div class="col fs-3 fw-bold text-center border-start border-1 border-white">Peso</div>
         </div>
-        <!-- <?php
-        $sql = 
-        "SELECT 
-          o.nome AS obra,
-          e.perfil_codigo as perfil,
-          c.nome AS cor,
-          e.tamanho,
-          SUM(e.quantidade) - COALESCE(SUM(s.quantidade), 0) AS saldo,
-          p.peso * (e.tamanho / 1000) * (SUM(e.quantidade) - COALESCE(SUM(s.quantidade), 0)) AS peso
-        FROM 
-          entradas e
-        LEFT JOIN
-          saidas s
-        ON
-          e.obra_id = s.obra_id
-          AND e.perfil_codigo = s.perfil_codigo
-          AND e.cor_id = s.cor_id
-          AND e.tamanho = s.tamanho
-        LEFT JOIN
-          obras o
-        ON
-          e.obra_id = o.id
-        LEFT JOIN
-          cores c
-        ON
-          e.cor_id = c.id
-        LEFT JOIN
-          perfis p
-        ON
-          e.perfil_codigo = p.codigo
-        GROUP BY 
-          o.nome,
-          e.perfil_codigo,
-          c.nome,
-          e.tamanho";
-
-        $res = $conn->query($sql);
-
-        if ($res->num_rows > 0) {
-          $estoques = $res->fetch_all(MYSQLI_ASSOC);
-
-          foreach ($estoques as $estoque) {
-
-            echo '
-            <div class="row row-cols-6 rounded mt-2 py-2" style="background-color: rgba(3, 3, 3, 0.3)">
-              <div class="col fw-semibold text-center border-end border-1 border-white">' . $estoque['obra'] . '</div>
-              <div class="col fw-semibold text-center border-start border-end border-1 border-white">' . $estoque['perfil'] . '</div>
-              <div class="col fw-semibold text-center border-start border-end border-1 border-white">' . $estoque['tamanho'] . '</div>
-              <div class="col fw-semibold text-center border-start border-end border-1 border-white">' . $estoque['cor'] . '</div>
-              <div class="col fw-semibold text-center border-start border-end border-1 border-white">' . $estoque['saldo'] . '</div>
-              <div class="col fw-semibold text-center border-start border-1 border-white">' . $estoque['peso'] . '</div>
-            </div>';
-          };
-        } else {
-          echo "<p class='alert alert-danger'>Nenhum resultado foi encontrado!</p>";
-        }
-        ?> -->
     </div>
   </main>
   <footer>
@@ -129,45 +72,45 @@
     function filtrar(event) {
       event.preventDefault();
       var div = document.getElementById("Items");
-      while (div.firstChild) {
-        div.removeChild(div.firstChild);
+      
+      while (div.children.length > 1) {
+        div.removeChild(div.lastChild);
       }
 
       var obra = document.getElementById("filtroObra").value;
       var perfil = document.getElementById("filtroPerfil").value;
-      var tamanho = document.getElementById("filtroCor").value;
-      var cor = document.getElementById("filtroTamanho").value;
+      var tamanho = document.getElementById("filtroTamanho").value;
+      var cor = document.getElementById("filtroCor").value;
       
-
-      fetch(`./listar_estoque.php?estoque=${obra}&perfil=${perfil}&tamanho=${tamanho}&cor=${cor}`)
+      var URL = `http://localhost/estoque/pages/lista_estoque.php?obra=${obra}&perfil=${perfil}&tamanho=${tamanho}&cor=${cor}`
+      
+      fetch(URL)
         .then(response => response.json())
         .then(data => {
           console.log(data);
-          // Atualizar as opções do <select> de perfil com os dados obtidos
           data.forEach(row => {
             newRow(row);
           });
         })
         .catch(error => console.error('Erro ao buscar os perfis: ' + error));
-
     }
-    function newRow(data) {
-      var newRow = document.createElement("div");
-      newRow.className = "row my-2";
 
-      newRow.innerHTML = `
-        <div class="row row-cols-6 rounded mt-2 py-2" style="background-color: rgba(3, 3, 3, 0.3)">
-          <div class="col fw-semibold text-center border-end border-1 border-white">${data.obra}</div>
-          <div class="col fw-semibold text-center border-start border-end border-1 border-white">${data.perfil}</div>
-          <div class="col fw-semibold text-center border-start border-end border-1 border-white">${data.tamanho}</div>
-          <div class="col fw-semibold text-center border-start border-end border-1 border-white">${data.cor}</div>
-          <div class="col fw-semibold text-center border-start border-end border-1 border-white">${data.saldo}</div>
-          <div class="col fw-semibold text-center border-start border-1 border-white">${data.peso}</div>
-        </div>
+    function newRow(data) {
+      var row = document.createElement("div");
+      row.className = "row row-cols-6 rounded mt-2 py-2";
+      row.style.backgroundColor = "rgba(3, 3, 3, 0.3)";
+
+      row.innerHTML = `
+        <div class="col fw-semibold text-center border-end border-1 border-white">${data.obra}</div>
+        <div class="col fw-semibold text-center border-start border-end border-1 border-white">${data.perfil}</div>
+        <div class="col fw-semibold text-center border-start border-end border-1 border-white">${data.tamanho}</div>
+        <div class="col fw-semibold text-center border-start border-end border-1 border-white">${data.cor}</div>
+        <div class="col fw-semibold text-center border-start border-end border-1 border-white">${data.saldo}</div>
+        <div class="col fw-semibold text-center border-start border-1 border-white">${data.peso}</div>
       `;
 
       var container = document.getElementById("Items");
-      container.appendChild(newRow);
+      container.appendChild(row);
     }
   </script>
 </body>
