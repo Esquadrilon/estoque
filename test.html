@@ -11,26 +11,41 @@
   <title>Bootstrap Example</title>
 </head>
 
-<body class="p-3 m-0 border-0 bd-example m-0 border-0">
+<body>
 
-  <!-- Example Code -->
-
-  <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
-    <div class="toast-header bg-success">
-      <svg class="bd-placeholder-img rounded me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg"
-        aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-        <image href="./img/Logo.svg" width="20" height="20" />
-      </svg>
-      <strong class="me-auto">Bootstrap</strong>
-      <small>11 mins ago</small>
-      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="#">Minha Empresa</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="./pages/Clientes/read.php"><i class="bi bi-person"></i> Clientes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./pages/Obras/read.php"><i class="bi bi-buildings"></i> Obras</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./pages/Perfis/read.php"><i class="bi bi-slash-lg"></i> Perfis</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./pages/Cores/read.php"><i class="bi bi-palette"></i> Cores</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./pages/Entradas/read.php"><i class="bi bi-plus-lg"></i> Entradas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./pages/Saidas/read.php"><i class="bi bi-dash-lg"></i> Saídas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./pages/estoque.php"><i class="bi bi-inboxes"></i> Ver estoque</a>
+                </li>
+            </ul>
+        </div>
     </div>
-    <div class="toast-body">
-      Hello, world! This is a toast message.
-    </div>
-  </div>
-
-  <!-- End Example Code -->
+  </nav>
 </body>
 
 </html>
