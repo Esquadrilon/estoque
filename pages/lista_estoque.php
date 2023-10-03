@@ -20,39 +20,55 @@ $sql =
   e.perfil_codigo as perfil,
   c.nome AS cor,
   e.tamanho,
-  SUM(e.quantidade) - COALESCE(SUM(s.quantidade), 0) AS saldo,
-  ROUND(p.peso * (e.tamanho / 1000) * (SUM(e.quantidade) - COALESCE(SUM(s.quantidade), 0)), 3) AS peso
+  COALESCE(SUM(e.quantidade) - SUM(s.quantidade), 0) AS saldo,
+  ROUND(p.peso * (e.tamanho / 1000) * COALESCE(SUM(e.quantidade) - SUM(s.quantidade), 0), 3) AS peso
 FROM 
-  entradas e
-LEFT JOIN
-  saidas s
-ON
-  e.obra_id = s.obra_id
-  AND e.perfil_codigo = s.perfil_codigo
-  AND e.cor_id = s.cor_id
-  AND e.tamanho = s.tamanho
-LEFT JOIN
   obras o
-ON
-  e.obra_id = o.id
-LEFT JOIN
-  cores c
-ON
-  e.cor_id = c.id
-LEFT JOIN
-  perfis p
-ON
-  e.perfil_codigo = p.codigo
+LEFT JOIN (
+SELECT
+  obra_id,
+  perfil_codigo,
+  cor_id,
+  tamanho,
+  COALESCE(SUM(quantidade), 0) AS quantidade
+FROM
+  entradas
+GROUP BY
+  obra_id,
+  perfil_codigo,
+  cor_id,
+  tamanho
+) e ON o.id = e.obra_id
+LEFT JOIN (
+SELECT
+  obra_id,
+  perfil_codigo,
+  cor_id,
+  tamanho,
+  COALESCE(SUM(quantidade), 0) AS quantidade
+FROM
+  saidas
+GROUP BY
+  obra_id,
+  perfil_codigo,
+  cor_id,
+  tamanho
+) s ON e.obra_id = s.obra_id
+AND e.perfil_codigo = s.perfil_codigo
+AND e.cor_id = s.cor_id
+AND e.tamanho = s.tamanho
+LEFT JOIN cores c ON e.cor_id = c.id
+LEFT JOIN perfis p ON e.perfil_codigo = p.codigo
 WHERE
   (o.nome LIKE '%$obra%')
   AND (e.perfil_codigo LIKE '%$perfil%')
   AND (e.tamanho LIKE '%$tamanho%')
   AND (c.nome LIKE '%$cor%')
 GROUP BY 
-  o.nome,
-  e.perfil_codigo,
-  c.nome,
-  e.tamanho";
+o.nome,
+e.perfil_codigo,
+c.nome,
+e.tamanho";
 
 $res = $conn->query($sql);
 
