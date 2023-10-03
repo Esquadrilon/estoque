@@ -12,7 +12,7 @@
   <link rel="shortcut icon" href="/estoque/img/logo.svg" type="image/x-icon">
   <link rel="stylesheet" href="/estoque/css/estilo.css">
 
-  <title>Lista Cores</title>
+  <title>Lista Entradas</title>
 </head>
 
 <body>
