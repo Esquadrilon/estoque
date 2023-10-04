@@ -27,7 +27,7 @@
         <i class="bi bi-plus"></i> Cadastrar Entrada
       </a>
       <a href="./Saidas/create.php" class="btn btn-danger">
-        <i class="bi bi-plus"></i> Cadastrar Saída
+        <i class="bi bi-dash"></i> Cadastrar Saída
       </a>
     </div>
 

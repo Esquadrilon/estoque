@@ -70,7 +70,7 @@
         <div class="row mt-2">
           <div class="col">
             <label for="nota">Romaneio</label>
-            <input type="text" name="nota" id="nota" class="form-control" placeholder="NF 16341">
+            <input type="text" name="nota" id="nota" class="form-control" placeholder="3698">
           </div>
 
           <div class="col">

@@ -46,8 +46,8 @@ try {
             $res = $conn->query($sql);
         }
 
-        $success_message = "Entrada cadastrada com sucesso!";
-        $error_message = "Erro ao tentar cadastrar entrada!";
+        $success_message = "Saída cadastrada com sucesso!";
+        $error_message = "Erro ao tentar cadastrar saída!";
         break;
 
     // case 'editar':
@@ -86,8 +86,8 @@ try {
         if (isset($_REQUEST['id'])) {
             $res = $conn->query("DELETE FROM saidas WHERE id = $_REQUEST[id]");
             
-            $success_message = "Entrada deletada com sucesso!";
-            $error_message = "Erro ao tentar deletar entrada!";
+            $success_message = "Saída deletada com sucesso!";
+            $error_message = "Erro ao tentar deletar saída!";
         }
         break;
   }

@@ -24,7 +24,7 @@
   <main class="container-fluid d-flex justify-content-center align-items-center my-3 w-100 flex-column">
     <div class="text-center mb-4">
       <a href="./create.php" class="btn btn-danger">
-        <i class="bi bi-plus"></i> Cadastrar Saída
+        <i class="bi bi-dash"></i> Cadastrar Saída
       </a>
     </div>
     <div class="wrapper w-100 p-4">
