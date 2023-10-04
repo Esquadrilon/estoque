@@ -82,7 +82,7 @@
       var tamanho = document.getElementById("filtroTamanho").value;
       var cor = document.getElementById("filtroCor").value;
       
-      var URL = `http://localhost/estoque/pages/lista_estoque.php?obra=${obra}&perfil=${perfil}&tamanho=${tamanho}&cor=${cor}`
+      var URL = `/estoque/pages/lista_estoque.php?obra=${obra}&perfil=${perfil}&tamanho=${tamanho}&cor=${cor}`
       
       fetch(URL)
         .then(response => response.json())

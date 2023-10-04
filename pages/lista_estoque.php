@@ -20,8 +20,8 @@ $sql =
   e.perfil_codigo as perfil,
   c.nome AS cor,
   e.tamanho,
-  COALESCE(SUM(e.quantidade) - SUM(s.quantidade), 0) AS saldo,
-  ROUND(p.peso * (e.tamanho / 1000) * COALESCE(SUM(e.quantidade) - SUM(s.quantidade), 0), 3) AS peso
+  SUM(e.quantidade) - COALESCE(SUM(s.quantidade), 0) AS saldo,
+  ROUND(p.peso * (e.tamanho / 1000) * (SUM(e.quantidade) - COALESCE(SUM(s.quantidade), 0)), 3) AS peso
 FROM 
   obras o
 LEFT JOIN (
