@@ -1,6 +1,6 @@
 # V1.0
 
-![projeto fusca](https://img.olx.com.br/images/19/192317298635889.jpg)
+![projeto fusca](https://motortudo.com/wp-content/uploads/2023/07/Fusca-75-original-26.webp)
 
 # Como inicializar o projeto
 

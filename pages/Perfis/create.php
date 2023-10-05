@@ -62,11 +62,11 @@
 
         <div class="row mt-4">
           <div class="col w-50">
-            <button type="button" class="btn btn-outline-danger w-100 fs-5 fw-semibold" onclick="clearData()">Limpar</button>
+            <button type="button" class="btn btn-danger w-100 fs-5 fw-semibold" onclick="clearData()">Limpar</button>
           </div>
 
           <div class="col w-50">
-            <button type="submit" class="btn btn-outline-success w-100 fs-5 fw-bold">Cadastrar</button>
+            <button type="submit" class="btn btn-success w-100 fs-5 fw-bold">Cadastrar</button>
           </div>
         </div>
 

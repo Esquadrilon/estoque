@@ -98,7 +98,7 @@ try {
     
 } catch (Exception $e) {
   print "<script>alert('Erro: " . $e->getMessage() . "')</script>";
-//   print "<script>location.href = '$redirect_error?error_message=$error_message'</script>";
+  print "<script>location.href = '$redirect_error?error_message=$error_message'</script>";
 }
 
 

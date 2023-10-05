@@ -23,6 +23,7 @@ body {
 .text-green {
   color: #00E600;
 }
+
 .wrapper {
   background: rgba(175, 175, 175, 0.5);
   border-radius: 16px;
@@ -39,4 +40,18 @@ ul li a {
 
 ul li a:hover {
   color: #00E600;
+}
+
+.form-control::placeholder,
+.form-select::placeholder {
+  color: #696969;
+  font-weight: 400;
+  font-size: small;
+}
+
+.form-control,
+.form-select {
+  color: #000000;
+  font-weight: 500;
+  font-size: medium;
 }

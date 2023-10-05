@@ -105,11 +105,11 @@
 
         <div class="row mt-4">
           <div class="col w-50">
-            <button type="button" class="btn btn-outline-danger w-100 fs-5 fw-semibold" onclick="clearData()">Limpar</button>
+            <button type="button" class="btn btn-danger w-100 fs-5 fw-semibold" onclick="window.location.href = './read.php'">Cancelar</button>
           </div>
 
           <div class="col w-50">
-            <button type="submit" class="btn btn-outline-success w-100 fs-5 fw-bold">Atualizar</button>
+            <button type="submit" class="btn btn-success w-100 fs-5 fw-bold">Atualizar</button>
           </div>
         </div>
 
@@ -117,19 +117,6 @@
     </div>
   </main>
   <footer></footer>
-  <script>
-    function clearData() {
-      document.getElementById('nome').value = '';
-      document.getElementById('email').value = '';
-      document.getElementById('telefone').value = '';
-      document.getElementById('cpf_cnpj').value = '';
-      document.getElementById('endereco').value = '';
-      document.getElementById('cidade_id').value = '';
-      document.getElementById('estado_id').value = '';
-      document.getElementById('cep').value = '';
-      document.getElementById('observacoes').value = '';
-    }
-  </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 

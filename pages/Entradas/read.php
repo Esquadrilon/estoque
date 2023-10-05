@@ -35,6 +35,7 @@
           <div class="col fs-3 fw-bold text-center border-start border-end border-1 border-white">Cor</div>
           <div class="col fs-3 fw-bold text-center border-start border-end border-1 border-white">Quantidade</div>
           <div class="col fs-3 fw-bold text-center border-start border-end border-1 border-white">Origem</div>
+          <div class="col fs-3 fw-bold text-center border-start border-end border-1 border-white">Nota</div>
           <div class="col fs-3 fw-bold text-center border-start border-end border-1 border-white">Responsável</div>
           <div class="col fs-3 fw-bold text-center border-start border-1 border-white"></div>
         </div>
@@ -48,6 +49,7 @@
         c.nome as cor,
         e.origem,
         e.quantidade,
+        e.nota,
         e.responsavel 
       from 
         entradas e
@@ -75,6 +77,7 @@
             <div class="col fw-semibold text-center border-start border-end border-1 border-white">' . $entrada['cor'] . '</div>
             <div class="col fw-semibold text-center border-start border-end border-1 border-white">' . $entrada['quantidade'] . '</div>
             <div class="col fw-semibold text-center border-start border-end border-1 border-white">' . $entrada['origem'] . '</div>
+            <div class="col fw-semibold text-center border-start border-end border-1 border-white">' . $entrada['nota'] . '</div>
             <div class="col fw-semibold text-center border-start border-end border-1 border-white">' . $entrada['responsavel'] . '</div>
             <div class="col fw-semibold text-center border-start border-1 border-white">
               <a href="./update.php?id=' . $entrada['id'] . '" class="btn btn-primary">

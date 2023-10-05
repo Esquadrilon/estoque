@@ -34,7 +34,8 @@
           <div class="col fs-3 fw-bold text-center border-start border-end border-1 border-white">Tamanho</div>
           <div class="col fs-3 fw-bold text-center border-start border-end border-1 border-white">Cor</div>
           <div class="col fs-3 fw-bold text-center border-start border-end border-1 border-white">Quantidade</div>
-          <div class="col fs-3 fw-bold text-center border-start border-end border-1 border-white">destino</div>
+          <div class="col fs-3 fw-bold text-center border-start border-end border-1 border-white">Destino</div>
+          <div class="col fs-3 fw-bold text-center border-start border-end border-1 border-white">Romaneio</div>
           <div class="col fs-3 fw-bold text-center border-start border-end border-1 border-white">Responsável</div>
           <div class="col fs-3 fw-bold text-center border-start border-1 border-white"></div>
         </div>
@@ -48,6 +49,7 @@
         c.nome as cor,
         s.destino,
         s.quantidade,
+        s.romaneio,
         s.responsavel 
       from 
         saidas s
@@ -75,6 +77,7 @@
             <div class="col fw-semibold text-center border-start border-end border-1 border-white">' . $entrada['cor'] . '</div>
             <div class="col fw-semibold text-center border-start border-end border-1 border-white">' . $entrada['quantidade'] . '</div>
             <div class="col fw-semibold text-center border-start border-end border-1 border-white">' . $entrada['destino'] . '</div>
+            <div class="col fw-semibold text-center border-start border-end border-1 border-white">' . $entrada['romaneio'] . '</div>
             <div class="col fw-semibold text-center border-start border-end border-1 border-white">' . $entrada['responsavel'] . '</div>
             <div class="col fw-semibold text-center border-start border-1 border-white">
               <a href="./update.php?id=' . $entrada['id'] . '" class="btn btn-primary">
