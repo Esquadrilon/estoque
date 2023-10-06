@@ -66,7 +66,7 @@ try {
                 quantidade = '$quantidade',
                 origem = '$origem',
                 destino = '$destino',
-                nota = '$nota',
+                romaneio = '$romaneio',
                 responsavel = '$responsavel',
                 caminhao = '$caminhao',
                 motorista = '$motorista',
