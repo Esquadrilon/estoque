@@ -32,7 +32,7 @@
   <main class="container d-flex justify-content-center align-items-center my-5">
     <div class="wrapper p-4 my-1 w-100 fs-4">
       <h1 class="text-center fs-1">Saída</h1>
-      <form action="./controller.php" method="post" id="form">
+      <form action="./controller.php?id='<?php echo $_GET['id'] ?>'" method="post" id="form">
         <input type="hidden" name="acao" value="cadastrar">
 
         <div class="row mt-2">
@@ -117,8 +117,8 @@
 
         <div class="row mt-2">
           <div class="col">
-            <label for="cor_id">Cor</label>
-            <select name="cor_id" class="form-select">
+            <label for="cor">Cor</label>
+            <select name="cor" class="form-select">
               <option value="" selected>Selecione...</option>
               <?php
               $cores = $conn->query("SELECT * FROM cores");

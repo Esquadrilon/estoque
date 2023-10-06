@@ -50,37 +50,38 @@ try {
         $error_message = "Erro ao tentar cadastrar saída!";
         break;
 
-    // case 'editar':
-    //     $perfil = isset($_POST['perfil']) ? $_POST['perfil'] : "";
-    //     $tamanho = isset($_POST['tamanho']) ? $_POST['tamanho'] : "";
-    //     $cor = isset($_POST['cor']) ? $_POST['cor'] : "";
-    //     $quantidade = isset($_POST['quantidade']) ? $_POST['quantidade'] : "";
+    case 'editar':
+        $perfil = isset($_POST['perfil']) ? $_POST['perfil'] : null;
+        $tamanho = isset($_POST['tamanho']) ? $_POST['tamanho'] : 6000;
+        $cor = isset($_POST['cor']) ? $_POST['cor'] : null;
+        $quantidade = isset($_POST['quantidade']) ? $_POST['quantidade'] : null;
 
+        $sql = 
+            "UPDATE saidas 
+            SET 
+                obra_id = '$obra_id',
+                perfil_codigo = '$perfil',
+                tamanho = '$tamanho',
+                cor = '$cor',
+                quantidade = '$quantidade',
+                origem = '$origem',
+                destino = '$destino',
+                nota = '$nota',
+                responsavel = '$responsavel',
+                caminhao = '$caminhao',
+                motorista = '$motorista',
+                observacoes = '$observacoes'
+            WHERE id = $_REQUEST[id]
+            ";
 
-    //     $sql = 
-    //     "UPDATE saidas 
-    //     SET 
-    //         obra_id = '$obra_id',
-    //         perfil_codigo = '$perfil',
-    //         tamanho = '$tamanho',
-    //         cor_id = '$cor',
-    //         quantidade = '$quantidade',
-    //         origem = '$origem',
-    //         destino = '$destino',
-    //         nota = '$nota',
-    //         responsavel = '$responsavel',
-    //         caminhao = '$caminhao',
-    //         motorista = '$motorista',
-    //         observacoes = '$observacoes'
-    //     WHERE id = $_REQUEST[id]
-    //     ";
+        if ($perfil != null && $cor != null){
+           $res = $conn->query($sql); 
+        }
 
-    //     $res = $conn->query($sql);
-
-    //     $redirect_error = "./update.php?id={$_REQUEST['id']}";
-    //     $success_message = "Entrada editada com sucesso!";
-    //     $error_message = "Erro ao tentar editar entrada!";
-    //     break;
+        $redirect_error = "./update.php?id={$_REQUEST['id']}";
+        $success_message = "Entrada editada com sucesso!";
+        $error_message = "Erro ao tentar editar entrada!";
+        break;
 
     case 'deletar':
         if (isset($_REQUEST['id'])) {
