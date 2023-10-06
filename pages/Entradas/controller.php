@@ -53,7 +53,7 @@ try {
     case 'editar':
         $perfil = isset($_POST['perfil']) ? $_POST['perfil'] : null;
         $tamanho = isset($_POST['tamanho']) ? $_POST['tamanho'] : 6000;
-        $cor = isset($_POST['cor_id']) ? $_POST['cor_id'] : null;
+        $cor = isset($_POST['cor']) ? $_POST['cor'] : null;
         $quantidade = isset($_POST['quantidade']) ? $_POST['quantidade'] : null;
 
         $sql = 
@@ -62,7 +62,7 @@ try {
                 obra_id = '$obra_id',
                 perfil_codigo = '$perfil',
                 tamanho = '$tamanho',
-                cor_id = '$cor',
+                cor = '$cor',
                 quantidade = '$quantidade',
                 origem = '$origem',
                 destino = '$destino',
@@ -99,6 +99,6 @@ try {
     
 } catch (Exception $e) {
   print "<script>alert('Erro: " . $e->getMessage() . "')</script>";
-//   print "<script>location.href = '$redirect_error?error_message=$error_message'</script>";
+  print "<script>location.href = '$redirect_error?error_message=$error_message'</script>";
 }
 ?>

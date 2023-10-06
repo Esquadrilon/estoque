@@ -117,8 +117,8 @@
 
         <div class="row mt-2">
           <div class="col">
-            <label for="cor_id">Cor</label>
-            <select name="cor_id" class="form-select">
+            <label for="cor">Cor</label>
+            <select name="cor" class="form-select">
               <option value="" selected>Selecione...</option>
               <?php
               $cores = $conn->query("SELECT * FROM cores");
