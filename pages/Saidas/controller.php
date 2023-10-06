@@ -51,10 +51,10 @@ try {
         break;
 
     case 'editar':
-        $perfil = isset($_POST['perfil']) ? $_POST['perfil'] : null;
+        $perfil = isset($_POST['perfil']) ? $_POST['perfil'] : "";
         $tamanho = isset($_POST['tamanho']) ? $_POST['tamanho'] : 6000;
-        $cor = isset($_POST['cor']) ? $_POST['cor'] : null;
-        $quantidade = isset($_POST['quantidade']) ? $_POST['quantidade'] : null;
+        $cor = isset($_POST['cor']) ? $_POST['cor'] : "";
+        $quantidade = isset($_POST['quantidade']) ? $_POST['quantidade'] : "";
 
         $sql = 
             "UPDATE saidas 
@@ -62,7 +62,7 @@ try {
                 obra_id = '$obra_id',
                 perfil_codigo = '$perfil',
                 tamanho = '$tamanho',
-                cor = '$cor',
+                cor_id = '$cor',
                 quantidade = '$quantidade',
                 origem = '$origem',
                 destino = '$destino',
@@ -73,8 +73,8 @@ try {
                 observacoes = '$observacoes'
             WHERE id = $_REQUEST[id]
             ";
-
-        if ($perfil != null && $cor != null){
+        echo $sql;    
+        if ($perfil != "" && $cor != ""){
            $res = $conn->query($sql); 
         }
 

@@ -62,7 +62,7 @@ try {
                 obra_id = '$obra_id',
                 perfil_codigo = '$perfil',
                 tamanho = '$tamanho',
-                cor = '$cor',
+                cor_id = '$cor',
                 quantidade = '$quantidade',
                 origem = '$origem',
                 destino = '$destino',
