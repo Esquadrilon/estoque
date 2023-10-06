@@ -33,7 +33,7 @@
     <div class="wrapper p-4 my-1 w-100 fs-4">
       <h1 class="text-center fs-1">Saída</h1>
       <form action="./controller.php?id='<?php echo $_GET['id'] ?>'" method="post" id="form">
-        <input type="hidden" name="acao" value="cadastrar">
+        <input type="hidden" name="acao" value="editar">
 
         <div class="row mt-2">
           <div class="col">
