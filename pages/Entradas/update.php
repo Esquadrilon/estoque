@@ -32,8 +32,8 @@
   <main class="container d-flex justify-content-center align-items-center my-5">
     <div class="wrapper p-4 my-1 w-100 fs-4">
       <h1 class="text-center fs-1">Entrada</h1>
-      <form action="./controller.php" method="post" id="form">
-        <input type="hidden" name="acao" value="cadastrar">
+      <form action="./controller.php?id='<?php echo $_GET['id'] ?>'" method="post" id="form">
+        <input type="hidden" name="acao" value="editar">
 
         <div class="row mt-2">
           <div class="col">

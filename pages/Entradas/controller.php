@@ -51,31 +51,32 @@ try {
         break;
 
     case 'editar':
-        $perfil = isset($_POST['perfil']) ? $_POST['perfil'] : "";
-        $tamanho = isset($_POST['tamanho']) ? $_POST['tamanho'] : "";
-        $cor = isset($_POST['cor']) ? $_POST['cor'] : "";
-        $quantidade = isset($_POST['quantidade']) ? $_POST['quantidade'] : "";
-
+        $perfil = isset($_POST['perfil']) ? $_POST['perfil'] : null;
+        $tamanho = isset($_POST['tamanho']) ? $_POST['tamanho'] : 6000;
+        $cor = isset($_POST['cor_id']) ? $_POST['cor_id'] : null;
+        $quantidade = isset($_POST['quantidade']) ? $_POST['quantidade'] : null;
 
         $sql = 
-        "UPDATE entradas 
-        SET 
-            obra_id = '$obra_id',
-            perfil_codigo = '$perfil',
-            tamanho = '$tamanho',
-            cor_id = '$cor',
-            quantidade = '$quantidade',
-            origem = '$origem',
-            destino = '$destino',
-            nota = '$nota',
-            responsavel = '$responsavel',
-            caminhao = '$caminhao',
-            motorista = '$motorista',
-            observacoes = '$observacoes'
-        WHERE id = $_REQUEST[id]
-        ";
+            "UPDATE entradas 
+            SET 
+                obra_id = '$obra_id',
+                perfil_codigo = '$perfil',
+                tamanho = '$tamanho',
+                cor_id = '$cor',
+                quantidade = '$quantidade',
+                origem = '$origem',
+                destino = '$destino',
+                nota = '$nota',
+                responsavel = '$responsavel',
+                caminhao = '$caminhao',
+                motorista = '$motorista',
+                observacoes = '$observacoes'
+            WHERE id = $_REQUEST[id]
+            ";
 
-        $res = $conn->query($sql);
+        if ($perfil != null && $cor != null){
+           $res = $conn->query($sql); 
+        }
 
         $redirect_error = "./update.php?id={$_REQUEST['id']}";
         $success_message = "Entrada editada com sucesso!";
@@ -98,28 +99,6 @@ try {
     
 } catch (Exception $e) {
   print "<script>alert('Erro: " . $e->getMessage() . "')</script>";
-  print "<script>location.href = '$redirect_error?error_message=$error_message'</script>";
+//   print "<script>location.href = '$redirect_error?error_message=$error_message'</script>";
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-echo "<h2>Valores Recebidos:</h2>";
-echo "<p>Obra ID: $obra_id</p>";
-echo "<p>Origem: $origem</p>";
-echo "<p>Destino: $destino</p>";
-echo "<p>Nota Fiscal: $nota</p>";
-echo "<p>Responsável: $responsavel</p>";
-echo "<p>Placa do Caminhão: $caminhao</p>";
-echo "<p>Motorista: $motorista</p>";
-echo "<p>Observações: $observacoes</p>";
 ?>
