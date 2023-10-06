@@ -55,12 +55,12 @@
         <div class="row mt-2">
           <div class="col">
             <label for="origem">Origem</label>
-            <input type="text" name="origem" id="origem" value="<?php echo $row->origem?>" class="form-control" placeholder="Perfil Aluminio" required>
+            <input type="text" name="origem" id="origem" value="<?php echo $row->origem?>" class="form-control" placeholder="Perfil Aluminio">
           </div>
 
           <div class="col">
             <label for="destino">Destino</label>
-            <input type="text" name="destino" id="destino" value="<?php echo $row->destino?>" class="form-control" placeholder="1 Lote Torre">
+            <input type="text" name="destino" id="destino" value="<?php echo $row->destino?>" class="form-control" placeholder="1 Lote Torre" required>
           </div>
         </div>
 
