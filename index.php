@@ -23,10 +23,10 @@
   ?>
   <main class="container-fluid d-flex justify-content-center align-items-center my-3 w-100 flex-column">
     <div>
-      <a href="./Entradas/create.php" class="btn btn-success">
+      <a href="./pages/Entradas/create.php" class="btn btn-success">
         <i class="bi bi-plus"></i> Cadastrar Entrada
       </a>
-      <a href="./Saidas/create.php" class="btn btn-danger">
+      <a href="./pages/Saidas/create.php" class="btn btn-danger">
         <i class="bi bi-dash"></i> Cadastrar Saída
       </a>
     </div>
