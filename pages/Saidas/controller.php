@@ -24,17 +24,14 @@ $redirect_success = "./read.php";
 $redirect_error = "./read.php";
 
 try {
-  switch ($_REQUEST["acao"]) {
+    switch ($_REQUEST["acao"]) {
     case 'cadastrar':
         $perfil = isset($_POST['perfil']) ? $perfil = $_POST['perfil'] : [];
         $tamanho = isset($_POST['tamanho']) ? $_POST['tamanho'] : [];
         $cor = isset($_POST['cor_id']) ? $_POST['cor_id'] : [];
         $quantidade = isset($_POST['quantidade']) ? $_POST['quantidade'] : [];
 
-        $itens = [];
-
         for ($i = 0; $i < count($perfil); $i++) {
-            
             if($perfil[$i] != ""){
                 $item = array(
                     'perfil' => $perfil[$i],
@@ -42,26 +39,27 @@ try {
                     'cor' => $cor[$i],
                     'quantidade' => $quantidade[$i]
                 );
-                if($tamanho != null && $cor != null && $quantidade > 0){
-                    $itens = $item;
+                if($tamanho[$i] == null || $cor[$i] == null || $quantidade[$i] == null){
+                    // throw new Exception("");
+                    $error_message = 'Certifique-se de que todos os campos obrigatórios estejam preenchidos corretamente!';
+                    print "<script>location.href = '$redirect_error?error_message=$error_message'</script>";
                 }
+                echo json_encode($item) . "<br>";
             };
-            
-        }
+        };
+        
+        
+        for ($i = 0; $i < count($perfil); $i++) {
+            if($perfil[$i] != null && $tamanho[$i] != null && $cor[$i] != null && $quantidade[$i] != null){
+                $sql = 
+                "INSERT INTO saidas 
+                    (obra_id, perfil_codigo, cor_id, tamanho, quantidade, romaneio, origem, destino, caminhao, motorista, responsavel, observacoes)
+                VALUES
+                    ('$obra_id', '{$perfil[$i]}', '{$cor[$i]}', '{$tamanho[$i]}', '{$quantidade[$i]}', '$romaneio', '$origem', '$destino', '$caminhao', '$motorista', '$responsavel', '$observacoes')";
 
-        foreach($itens as $item){
-            var_dump($item);
-            echo "<br>";
-        }
-
-        // if($perfil != null)
-        // $sql = 
-        // "INSERT INTO saidas 
-        //     (obra_id, perfil_codigo, cor_id, tamanho, quantidade, romaneio, origem, destino, caminhao, motorista, responsavel, observacoes)
-        // VALUES
-        //     ('$obra_id', '{$perfil[$i]}', '{$cor[$i]}', '{$tamanho[$i]}', '{$quantidade[$i]}', '$romaneio', '$origem', '$destino', '$caminhao', '$motorista', '$responsavel', '$observacoes')";
-        // $res = $conn->query($sql);
-
+                $res = $conn->query($sql);
+            }
+        };
         $success_message = "Saída cadastrada com sucesso!";
         $error_message = "Erro ao tentar cadastrar saída!";
         break;
@@ -91,7 +89,7 @@ try {
             WHERE id = $_REQUEST[id]
             ";
 
-           $res = $conn->query($sql); 
+            $res = $conn->query($sql); 
         }
 
         $redirect_error = "./update.php?id={$_REQUEST['id']}";
@@ -107,14 +105,14 @@ try {
             $error_message = "Erro ao tentar deletar saída!";
         }
         break;
-  }
+}
 
-//   $res === true
-//     ? print "<script>location.href = '$redirect_success?success_message=$success_message'</script>"
-//     : throw new Exception("Erro na consulta SQL: " . $conn->error);
+    $res === true
+        ? print "<script>location.href = '$redirect_success?success_message=$success_message'</script>"
+        : throw new Exception("Erro na consulta SQL: " . $conn->error);
     
 } catch (Exception $e) {
-//   print "<script>alert('Erro: " . $e->getMessage() . "')</script>";
-//   print "<script>location.href = '$redirect_error?error_message=$error_message'</script>";
+    print "<script>alert('Erro: " . $e->getMessage() . "')</script>";
+    print "<script>location.href = '$redirect_error?error_message=$error_message '</script>";
 }
 ?>

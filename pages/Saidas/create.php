@@ -69,8 +69,8 @@
 
         <div class="row mt-2">
           <div class="col">
-            <label for="nota">Romaneio</label>
-            <input type="text" name="nota" id="nota" class="form-control" placeholder="3698">
+            <label for="romaneio">Romaneio</label>
+            <input type="text" name="romaneio" id="romaneio" class="form-control" placeholder="3698">
           </div>
 
           <div class="col">
