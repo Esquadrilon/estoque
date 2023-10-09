@@ -40,9 +40,8 @@ try {
                     'quantidade' => $quantidade[$i]
                 );
                 if($tamanho[$i] == null || $cor[$i] == null || $quantidade[$i] == null){
-                    // throw new Exception("");
                     $error_message = 'Certifique-se de que todos os campos obrigatórios estejam preenchidos corretamente!';
-                    print "<script>location.href = '$redirect_error?error_message=$error_message'</script>";
+                    throw new Exception($error_message);
                 }
                 echo json_encode($item) . "<br>";
             };
