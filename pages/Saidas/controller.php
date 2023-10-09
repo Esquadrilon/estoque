@@ -18,8 +18,6 @@ foreach ($data as $input_name) {
         : ${$input_name} = "";
 };
 
-
-
 $redirect_success = "./read.php";
 $redirect_error = "./read.php";
 
@@ -47,7 +45,6 @@ try {
             };
         };
         
-        
         for ($i = 0; $i < count($perfil); $i++) {
             if($perfil[$i] != null && $tamanho[$i] != null && $cor[$i] != null && $quantidade[$i] != null){
                 $sql = 
@@ -59,6 +56,7 @@ try {
                 $res = $conn->query($sql);
             }
         };
+
         $success_message = "Saída cadastrada com sucesso!";
         $error_message = "Erro ao tentar cadastrar saída!";
         break;
@@ -106,9 +104,9 @@ try {
         break;
 }
 
-    $res === true
-        ? print "<script>location.href = '$redirect_success?success_message=$success_message'</script>"
-        : throw new Exception("Erro na consulta SQL: " . $conn->error);
+$res === true
+    ? print "<script>location.href = '$redirect_success?success_message=$success_message'</script>"
+    : throw new Exception("Erro na consulta SQL: " . $conn->error);
     
 } catch (Exception $e) {
     print "<script>alert('Erro: " . $e->getMessage() . "')</script>";
