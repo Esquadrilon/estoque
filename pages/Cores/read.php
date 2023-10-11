@@ -28,7 +28,7 @@
       </a>
     </div>
     <div class="wrapper w-50 p-4">
-        <div class="row row-cols-4">
+        <div class="row row-cols-4 d-flex justify-content-center align-items-center p-1 rounded">
           <div class="col fs-3 fw-bold text-center border-end border-1 border-white">Id</div>
           <div class="col fs-3 fw-bold text-center border-start border-end border-1 border-white">Nome</div>
           <div class="col fs-3 fw-bold text-center border-start border-end border-1 border-white">Código RAL</div>
@@ -44,10 +44,10 @@
         foreach ($cores as $cor) {
 
           echo '
-          <div class="row row-cols-4 mt-2">
-            <div class="col fw-semibold text-center border-end border-1 border-white">' . $cor['id'] . '</div>
-            <div class="col fw-semibold text-center border-start border-end border-1 border-white">' . $cor['nome'] . '</div>
-            <div class="col fw-semibold text-center border-start border-end border-1 border-white">' . $cor['codigo'] . '</div>
+          <div class="row row-cols-4 mt-2 d-flex justify-content-center align-items-center p-1 rounded mt-2">
+            <div class="col fw-semibold text-center border-end border-1 border-white"> ' . $cor['id'] . ' </div>
+            <div class="col fw-semibold text-center border-start border-end border-1 border-white"> ' . $cor['nome'] . ' </div>
+            <div class="col fw-semibold text-center border-start border-end border-1 border-white"> ' . $cor['codigo'] . ' </div>
             <div class="col fw-semibold text-center border-start border-1 border-white">
               <a href="./update.php?id=' . $cor['id'] . '" class="btn btn-primary">
                 <i class="bi bi-pencil"></i>

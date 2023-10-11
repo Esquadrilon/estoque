@@ -8,6 +8,7 @@
 
   <link rel="stylesheet" href="/estoque/node_modules/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="/estoque/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+  <script src="/estoque/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
   <link rel="shortcut icon" href="/estoque/img/logo.svg" type="image/x-icon">
   <link rel="stylesheet" href="/estoque/css/estilo.css">
@@ -96,7 +97,7 @@
           <textarea class="form-control" name="observacoes" id="observacoes" cols="50" rows="3" placeholder="Se necessário"></textarea>
         </div>
 
-        <div class="wrapper bg-dark p-3 mt-3" id="itens">
+        <div id="itens">
         </div>
 
         <div class="row mt-4">
@@ -112,9 +113,9 @@
       </form>
     </div>
   </main>
-  <footer>
+  <div id="modals">
 
-  </footer>
+  </div>
   <script>
     document.getElementById("form").addEventListener("keydown", function (event) {
       event.keyCode === 13
@@ -128,12 +129,12 @@
       data.className = "wrapper bg-dark p-3 mt-3";
 
       var newRow = document.createElement("div");
-      newRow.className = "row my-2";
+      newRow.className = "row my-2 d-flex justify-content-center align-items-center";
 
       newRow.innerHTML = `
         <div class="col">
           <label for="perfil[]">Perfil</label>
-          <select name="perfil[]" class="form-select">
+          <select name="perfil[]" class="form-select" onchange="createModal(this)">
             <option value="" selected>Selecione...</option>
           </select>
         </div>
@@ -154,9 +155,11 @@
           <label for="quantidade[]">Quantidade</label>
           <input type="number" name="quantidade[]" min="1" class="form-control" placeholder="1" onfocus="newRow()">
         </div>
+
+        <div class="col col-auto myButton">
+        </div>
       `;
       data.appendChild(newRow);
-
       var perfilSelect = newRow.querySelector("select[name='perfil[]']");
       fetch('../Perfis/listar_perfis.php')
         .then(response => response.json())
@@ -187,6 +190,70 @@
       }
     }
 
+    function createModal(perfil){
+      const div = perfil.parentElement.parentElement;
+      const btn = div.querySelector(".myButton");
+      var cor = div.querySelector('select[name="cor_id[]"]');
+      cor = cor.options[cor.selectedIndex].text;
+
+      console.log(perfil.value);
+      console.log(cor);
+
+      btn.innerHTML = `
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-${perfil.value}-${cor}">
+        <i class="bi bi-binoculars-fill"></i>
+      </button>
+      `;
+
+      const modal = document.createElement("div");
+      modal.innerHTML = `
+      <div class="modal fade" id="modal-${perfil.value}-${cor}" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content text-dark">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">${perfil.value} - ${cor}</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="content">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <img src="http://192.168.0.111:3001/_next/image?url=%2Fapi%2FprofileImage%2F${perfil.value}.bmp&w=128&q=100" class="card-img-top w-50 h-50" alt="Imagem do perfil ${perfil.value}">
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col">Obra</div>
+                        <div class="col">Tamanho</div>
+                        <div class="col">Saldo</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      `;
+
+      var URL = `/estoque/pages/lista_estoque.php?perfil=${perfil.value}&cor=${cor}`;
+      fetch(URL)
+        .then(response => response.json())
+        .then(data => {
+          console.log(data);
+          data.forEach(res => {
+            if(res.saldo != 0){
+              const row = document.createElement("div");
+              row.className = "row rounded mt-2 py-2";
+              row.style.backgroundColor = "rgba(3, 3, 3, 0.3)";
+          
+              row.innerHTML = `
+                <div class="col">${res.obra}</div>
+                <div class="col">${res.tamanho}</div>
+                <div class="col">${res.saldo}</div>
+              `;
+              document.querySelector(`#modal-${perfil.value}-${cor} #content`).appendChild(row);
+            }
+          });
+        })
+        .catch(error => console.error('Erro ao buscar os perfis: ' + error));
+
+      document.getElementById("modals").appendChild(modal);
+    }
+
     function clearData() {
       document.getElementById('obra_id').value = '';
       document.getElementById('cor_fixa').value = '';
@@ -199,7 +266,6 @@
       document.getElementById('observacoes').value = '';
     }
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 
 </html>

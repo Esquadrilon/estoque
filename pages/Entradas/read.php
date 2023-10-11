@@ -28,7 +28,7 @@
       </a>
     </div>
     <div class="wrapper w-100 p-4">
-        <div class="row row-cols-8">
+        <div class="row row-cols-8 d-flex justify-content-center align-items-center p-1 rounded">
           <div class="col fs-3 fw-bold text-center border-end border-1 border-white">Obra</div>
           <div class="col fs-3 fw-bold text-center border-start border-end border-1 border-white">Perfil</div>
           <div class="col fs-3 fw-bold text-center border-start border-end border-1 border-white">Tamanho</div>
@@ -70,16 +70,16 @@
         foreach ($entradas as $entrada) {
 
           echo '
-          <div class="row row-cols-8 mt-2">
-            <div class="col fw-semibold text-center border-end border-1 border-white">' . $entrada['obra'] . '</div>
-            <div class="col fw-semibold text-center border-start border-end border-1 border-white">' . $entrada['perfil'] . '</div>
-            <div class="col fw-semibold text-center border-start border-end border-1 border-white">' . $entrada['tamanho'] . '</div>
-            <div class="col fw-semibold text-center border-start border-end border-1 border-white">' . $entrada['cor'] . '</div>
-            <div class="col fw-semibold text-center border-start border-end border-1 border-white">' . $entrada['quantidade'] . '</div>
-            <div class="col fw-semibold text-center border-start border-end border-1 border-white">' . $entrada['origem'] . '</div>
-            <div class="col fw-semibold text-center border-start border-end border-1 border-white">' . $entrada['nota'] . '</div>
-            <div class="col fw-semibold text-center border-start border-end border-1 border-white">' . $entrada['responsavel'] . '</div>
-            <div class="col fw-semibold text-center border-start border-1 border-white">
+          <div class="row row-cols-8 mt-2 d-flex justify-content-center align-items-center p-1 rounded">
+            <div class="col fw-semibold text-center border-end border-1 border-white"> ' . $entrada['obra'] . ' </div>
+            <div class="col fw-semibold text-center border-start border-end border-1 border-white"> ' . $entrada['perfil'] . ' </div>
+            <div class="col fw-semibold text-center border-start border-end border-1 border-white"> ' . $entrada['tamanho'] . ' </div>
+            <div class="col fw-semibold text-center border-start border-end border-1 border-white"> ' . $entrada['cor'] . ' </div>
+            <div class="col fw-semibold text-center border-start border-end border-1 border-white"> ' . $entrada['quantidade'] . ' </div>
+            <div class="col fw-semibold text-center border-start border-end border-1 border-white"> ' . $entrada['origem'] . ' </div>
+            <div class="col fw-semibold text-center border-start border-end border-1 border-white"> ' . $entrada['nota'] . ' </div>
+            <div class="col fw-semibold text-center border-start border-end border-1 border-white"> ' . $entrada['responsavel'] . ' </div>
+            <div class="col fw-semibold text-center">
               <a href="./update.php?id=' . $entrada['id'] . '" class="btn btn-primary">
                 <i class="bi bi-pencil"></i>
               </a>

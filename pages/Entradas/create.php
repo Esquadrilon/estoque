@@ -96,7 +96,7 @@
           <textarea class="form-control" name="observacoes" id="observacoes" cols="50" rows="3" placeholder="Se necessário"></textarea>
         </div>
 
-        <div class="" id="itens">
+        <div id="itens">
         </div>
 
         <div class="row mt-4">

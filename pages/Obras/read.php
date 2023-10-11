@@ -28,7 +28,7 @@
       </a>
     </div>
     <div class="wrapper w-100 p-4">
-      <div class="row">
+      <div class="row d-flex justify-content-center align-items-center p-1 rounded">
         <div class="col-2 fs-3 fw-bold text-center border-end border-1 border-white">Nome</div>
         <div class="col-2 fs-3 fw-bold text-center border-start border-end border-1 border-white">Cliente</div>
         <div class="col-1 fs-3 fw-bold text-center border-start border-end border-1 border-white">Status</div>
@@ -69,13 +69,13 @@
         foreach ($obras as $obra) {
           $clientes = $conn->query("SELECT * FROM clientes")->fetch_all(MYSQLI_ASSOC);
           echo '
-          <div class="row mt-2">
-            <div class="col-2 text-center border-end border-1 border-white">' . $obra['nome'] . '</div>
-            <div class="col-2 text-center border-start border-end border-1 border-white">' . $obra['cliente'] . '</div>
-            <div class="col-1 text-center border-start border-end border-1 border-white">' . $obra['situacao'] . '</div>
-            <div class="col-2 text-center border-start border-end border-1 border-white">' . $obra['endereco'] . '</div>
-            <div class="col-1 text-center border-start border-end border-1 border-white">' . $obra['cidade'] . '</div>
-            <div class="col-2 text-center border-start border-end border-1 border-white">' . $obra['observacoes'] . '</div>
+          <div class="row mt-2 d-flex justify-content-center align-items-center p-1 rounded">
+            <div class="col-2 text-center border-end border-1 border-white"> ' . $obra['nome'] . ' </div>
+            <div class="col-2 text-center border-start border-end border-1 border-white"> ' . $obra['cliente'] . ' </div>
+            <div class="col-1 text-center border-start border-end border-1 border-white"> ' . $obra['situacao'] . ' </div>
+            <div class="col-2 text-center border-start border-end border-1 border-white"> ' . $obra['endereco'] . ' </div>
+            <div class="col-1 text-center border-start border-end border-1 border-white"> ' . $obra['cidade'] . ' </div>
+            <div class="col-2 text-center border-start border-end border-1 border-white"> ' . $obra['observacoes'] . ' </div>
             <div class="col text-center border-start border-1 border-white">
               <a href="./update.php?id=' . $obra['id'] . '" class="btn btn-primary">
                 <i class="bi bi-pencil"></i>

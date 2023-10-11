@@ -12,40 +12,64 @@
 </head>
 
 <body>
-
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
-        <a class="navbar-brand" href="#">Minha Empresa</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="./pages/Clientes/read.php"><i class="bi bi-person"></i> Clientes</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./pages/Obras/read.php"><i class="bi bi-buildings"></i> Obras</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./pages/Perfis/read.php"><i class="bi bi-slash-lg"></i> Perfis</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./pages/Cores/read.php"><i class="bi bi-palette"></i> Cores</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./pages/Entradas/read.php"><i class="bi bi-plus-lg"></i> Entradas</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./pages/Saidas/read.php"><i class="bi bi-dash-lg"></i> Saídas</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./pages/estoque.php"><i class="bi bi-inboxes"></i> Ver estoque</a>
-                </li>
-            </ul>
+    <main class="container d-flex justify-content-center align-items-center my-5">
+        <div class="wrapper p-4 my-1 w-100 fs-4">
+            <button type="button" class="btn btn-primary" onclick="filtrar()" data-bs-toggle="modal" data-bs-target="#modal">
+                Modal
+            </button>
+        </div>
+    </main>
+    <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content bg-dark">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">CHR026</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="content">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <img src="http://192.168.0.111:3001/_next/image?url=%2Fapi%2FprofileImage%2FCHR026.bmp&w=128&q=100" class="card-img-top w-50 h-50" alt="...">
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col">Obra</div>
+                        <div class="col">Tamanho</div>
+                        <div class="col">Saldo</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-  </nav>
+
+      <script>
+        function filtrar() {
+          var URL = `/estoque/pages/lista_estoque.php?perfil=CHR026&cor=epris`
+          
+          fetch(URL)
+            .then(response => response.json())
+            .then(data => {
+              console.log(data);
+              data.forEach(row => {
+                if(row.saldo != 0) newRow(row)
+              });
+            })
+            .catch(error => console.error('Erro ao buscar os perfis: ' + error));
+        }
+    
+        function newRow(data) {
+          var row = document.createElement("div");
+          row.className = "row rounded mt-2 py-2";
+          row.style.backgroundColor = "rgba(3, 3, 3, 0.3)";
+    
+          row.innerHTML = `
+            <div class="col">${data.obra}</div>
+            <div class="col">${data.tamanho}</div>
+            <div class="col">${data.saldo}</div>
+          `;
+    
+          var content = document.getElementById("content");
+          content.appendChild(row);
+        }
+      </script>
 </body>
 
 </html>
