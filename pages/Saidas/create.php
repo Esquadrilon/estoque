@@ -197,17 +197,17 @@
       cor = cor.options[cor.selectedIndex].text;
 
       console.log(perfil.value);
-      console.log(cor);
+      console.log(cor.replace(" ", "-"));
 
       btn.innerHTML = `
-      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-${perfil.value}-${cor}">
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-${perfil.value}-${cor.replace(" ", "-")}">
         <i class="bi bi-binoculars-fill"></i>
       </button>
       `;
 
       const modal = document.createElement("div");
       modal.innerHTML = `
-      <div class="modal fade" id="modal-${perfil.value}-${cor}" tabindex="-1">
+      <div class="modal fade" id="modal-${perfil.value}-${cor.replace(" ", "-")}" tabindex="-1">
         <div class="modal-dialog">
             <div class="modal-content text-dark">
                 <div class="modal-header">
@@ -245,7 +245,7 @@
                 <div class="col">${res.tamanho}</div>
                 <div class="col">${res.saldo}</div>
               `;
-              document.querySelector(`#modal-${perfil.value}-${cor} #content`).appendChild(row);
+              document.querySelector(`#modal-${perfil.value}-${cor.replace(" ", "-")} #content`).appendChild(row);
             }
           });
         })

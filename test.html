@@ -14,7 +14,7 @@
 <body>
     <main class="container d-flex justify-content-center align-items-center my-5">
         <div class="wrapper p-4 my-1 w-100 fs-4">
-            <button type="button" class="btn btn-primary" onclick="filtrar()" data-bs-toggle="modal" data-bs-target="#modal">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal">
                 Modal
             </button>
         </div>
@@ -69,6 +69,8 @@
           var content = document.getElementById("content");
           content.appendChild(row);
         }
+
+        filtrar();
       </script>
 </body>
 
