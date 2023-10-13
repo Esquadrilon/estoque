@@ -134,7 +134,7 @@
       newRow.innerHTML = `
         <div class="col">
           <label for="perfil[]">Perfil</label>
-          <select name="perfil[]" class="form-select" onchange="createModal(this)">
+          <select name="perfil[]" class="form-select" onchange="test(this)">
             <option value="" selected>Selecione...</option>
           </select>
         </div>
@@ -145,8 +145,8 @@
         </div>
 
         <div class="col">
-          <label for="cor_id[]">Cor</label>
-          <select name="cor_id[]" class="form-select">
+          <label for="cor[]">Cor</label>
+          <select name="cor[]" class="form-select" onchange="test(this)">
             <option value="" selected>Selecione...</option>
           </select>
         </div>
@@ -175,7 +175,7 @@
         })
         .catch(error => console.error('Erro ao buscar os perfis: ' + error));
 
-      var corSelect = newRow.querySelector("select[name='cor_id[]']");
+      var corSelect = newRow.querySelector("select[name='cor[]']");
       var corFixa = document.getElementById("cor_fixa");
       for (var i = 0; i < corFixa.options.length; i++) {
         var option = document.createElement("option");
@@ -190,13 +190,16 @@
       }
     }
 
-    function createModal(perfil){
-      const div = perfil.parentElement.parentElement;
+    function test(e){
+      const div = e.parentElement.parentElement;
       const btn = div.querySelector(".myButton");
-      var cor = div.querySelector('select[name="cor_id[]"]');
+
+      var perfil = div.querySelector('select[name="perfil[]"]');
+      var cor = div.querySelector('select[name="cor[]"]');
       cor = cor.options[cor.selectedIndex].text;
 
       console.log(perfil.value);
+      console.log(cor);
       console.log(cor.replace(" ", "-"));
 
       btn.innerHTML = `
@@ -204,32 +207,37 @@
         <i class="bi bi-binoculars-fill"></i>
       </button>
       `;
+      
+      createModal(perfil, cor);
+    }
 
+    function createModal(perfil, cor){
       const modal = document.createElement("div");
+      modal.className = "modal fade";
+      modal.id = `modal-${perfil}-${cor.replace(" ", "-")}`;
+      modal.tabIndex = -1;
       modal.innerHTML = `
-      <div class="modal fade" id="modal-${perfil.value}-${cor.replace(" ", "-")}" tabindex="-1">
-        <div class="modal-dialog">
-            <div class="modal-content text-dark">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">${perfil.value} - ${cor}</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body" id="content">
-                    <div class="d-flex justify-content-center align-items-center">
-                        <img src="http://192.168.0.111:3001/_next/image?url=%2Fapi%2FprofileImage%2F${perfil.value}.bmp&w=128&q=100" class="card-img-top w-50 h-50" alt="Imagem do perfil ${perfil.value}">
-                    </div>
-                    <div class="row mt-3">
-                        <div class="col">Obra</div>
-                        <div class="col">Tamanho</div>
-                        <div class="col">Saldo</div>
-                    </div>
-                </div>
-            </div>
-        </div>
+      <div class="modal-dialog">
+          <div class="modal-content text-dark">
+              <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">${perfil} - ${cor}</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body" id="content">
+                  <div class="d-flex justify-content-center align-items-center">
+                      <img src="http://192.168.0.111:3001/_next/image?url=%2Fapi%2FprofileImage%2F${perfil}.bmp&w=128&q=100" class="card-img-top w-50 h-50" alt="Imagem do perfil ${perfil}">
+                  </div>
+                  <div class="row mt-3">
+                      <div class="col">Obra</div>
+                      <div class="col">Tamanho</div>
+                      <div class="col">Saldo</div>
+                  </div>
+              </div>
+          </div>
       </div>
       `;
 
-      var URL = `/estoque/pages/lista_estoque.php?perfil=${perfil.value}&cor=${cor}`;
+      var URL = `/estoque/pages/lista_estoque.php?perfil=${perfil}&cor=${cor}`;
       fetch(URL)
         .then(response => response.json())
         .then(data => {
@@ -245,7 +253,7 @@
                 <div class="col">${res.tamanho}</div>
                 <div class="col">${res.saldo}</div>
               `;
-              document.querySelector(`#modal-${perfil.value}-${cor.replace(" ", "-")} #content`).appendChild(row);
+              document.querySelector(`#modal-${perfil}-${cor.replace(" ", "-")} #content`).appendChild(row);
             }
           });
         })

@@ -26,7 +26,7 @@ try {
     case 'cadastrar':
         $perfil = isset($_POST['perfil']) ? $perfil = $_POST['perfil'] : [];
         $tamanho = isset($_POST['tamanho']) ? $_POST['tamanho'] : [];
-        $cor = isset($_POST['cor_id']) ? $_POST['cor_id'] : [];
+        $cor = isset($_POST['cor']) ? $_POST['cor'] : [];
         $quantidade = isset($_POST['quantidade']) ? $_POST['quantidade'] : [];
 
         for ($i = 0; $i < count($perfil); $i++) {
