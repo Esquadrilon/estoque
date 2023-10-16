@@ -89,7 +89,9 @@
         .then(data => {
           console.log(data);
           data.forEach(row => {
-            newRow(row);
+            if(row.saldo > 0){
+              newRow(row);
+            }
           });
         })
         .catch(error => console.error('Erro ao buscar os perfis: ' + error));
