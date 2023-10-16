@@ -68,7 +68,11 @@ GROUP BY
 o.nome,
 e.perfil_codigo,
 c.nome,
-e.tamanho";
+e.tamanho
+ORDER BY
+o.nome,
+e.tamanho,
+c.nome";
 
 $res = $conn->query($sql);
 
