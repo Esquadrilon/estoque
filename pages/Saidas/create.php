@@ -147,7 +147,6 @@
         <div class="col">
           <label for="cor[]">Cor</label>
           <select name="cor[]" class="form-select" onchange="test(this)">
-            <option value="" selected>Selecione...</option>
           </select>
         </div>
 
@@ -198,9 +197,7 @@
       var cor = div.querySelector('select[name="cor[]"]');
       cor = cor.options[cor.selectedIndex].text;
 
-      console.log(perfil.value);
-      console.log(cor);
-      console.log(cor.replace(" ", "-"));
+      console.log(perfil.value, "   -  ", cor);
 
       btn.innerHTML = `
       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-${perfil.value}-${cor.replace(" ", "-")}">
@@ -208,7 +205,7 @@
       </button>
       `;
       
-      createModal(perfil, cor);
+      createModal(perfil.value, cor);
     }
 
     function createModal(perfil, cor){
@@ -223,7 +220,7 @@
                   <h1 class="modal-title fs-5" id="exampleModalLabel">${perfil} - ${cor}</h1>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
-              <div class="modal-body" id="content">
+              <div class="modal-body">
                   <div class="d-flex justify-content-center align-items-center">
                       <img src="http://192.168.0.111:3001/_next/image?url=%2Fapi%2FprofileImage%2F${perfil}.bmp&w=128&q=100" class="card-img-top w-50 h-50" alt="Imagem do perfil ${perfil}">
                   </div>
@@ -231,6 +228,8 @@
                       <div class="col">Obra</div>
                       <div class="col">Tamanho</div>
                       <div class="col">Saldo</div>
+                  </div>
+                  <div id="content">
                   </div>
               </div>
           </div>
@@ -242,6 +241,7 @@
         .then(response => response.json())
         .then(data => {
           console.log(data);
+          document.querySelector(`#modal-${perfil}-${cor.replace(" ", "-")} #content`).innerHTML = "";
           data.forEach(res => {
             if(res.saldo != 0){
               const row = document.createElement("div");
