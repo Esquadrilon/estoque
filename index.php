@@ -55,13 +55,14 @@
       </form>
     </div>
     <div class="wrapper w-75 my-4 p-4" id="Items">
-        <div class="row row-cols-6">
-          <div class="col fs-3 fw-bold text-center border-end border-1 border-white">Obra</div>
-          <div class="col fs-3 fw-bold text-center border-start border-end border-1 border-white">Perfil</div>
-          <div class="col fs-3 fw-bold text-center border-start border-end border-1 border-white">Tamanho</div>
-          <div class="col fs-3 fw-bold text-center border-start border-end border-1 border-white">Cor</div>
-          <div class="col fs-3 fw-bold text-center border-start border-end border-1 border-white">Saldo</div>
-          <div class="col fs-3 fw-bold text-center border-start border-1 border-white">Peso</div>
+        <div class="row d-flex justify-content-center align-items-center">
+          <div class="col fs-3 fw-bold">Obra</div>
+          <div class="col fs-3 fw-bold">Perfil</div>
+          <div class="col fs-3 fw-bold">Tamanho</div>
+          <div class="col fs-3 fw-bold">Cor</div>
+          <div class="col fs-3 fw-bold">Saldo</div>
+          <div class="col fs-3 fw-bold">Peso</div>
+          <div class="col-1 fs-3 fw-bold"></div>
         </div>
     </div>
   </main>
@@ -99,16 +100,21 @@
 
     function newRow(data) {
       var row = document.createElement("div");
-      row.className = "row row-cols-6 rounded mt-2 py-2";
+      row.className = "row rounded mt-2 py-2 d-flex justify-content-center align-items-center";
       row.style.backgroundColor = "rgba(3, 3, 3, 0.3)";
 
       row.innerHTML = `
-        <div class="col fw-semibold text-center border-end border-1 border-white">${data.obra}</div>
-        <div class="col fw-semibold text-center border-start border-end border-1 border-white">${data.perfil}</div>
-        <div class="col fw-semibold text-center border-start border-end border-1 border-white">${data.tamanho}</div>
-        <div class="col fw-semibold text-center border-start border-end border-1 border-white">${data.cor}</div>
-        <div class="col fw-semibold text-center border-start border-end border-1 border-white">${data.saldo}</div>
-        <div class="col fw-semibold text-center border-start border-1 border-white">${data.peso}</div>
+        <div class="col fw-semibold">${data.obra}</div>
+        <div class="col fw-semibold">${data.perfil}</div>
+        <div class="col fw-semibold">${data.tamanho}</div>
+        <div class="col fw-semibold">${data.cor}</div>
+        <div class="col fw-semibold">${data.saldo}</div>
+        <div class="col fw-semibold">${data.peso}</div>
+        <div class="col-1 fw-semibold">
+          <a href="detalhes.php?obra=${data.obra}&perfil=${data.perfil}&tamanho=${data.tamanho}&cor=${data.cor}" class="btn btn-primary">
+            <i class="bi bi-eye"></i>
+          </a>
+        </div>
       `;
 
       var container = document.getElementById("Items");
