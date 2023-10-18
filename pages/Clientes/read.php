@@ -24,7 +24,7 @@
   <main class="container-fluid d-flex justify-content-center align-items-center my-3 w-100 flex-column">
     <div class="text-center mb-4">
       <a href="./create.php" class="btn btn-success">
-        <i class="bi bi-plus"></i> Cadastrar Cliente
+        <i class="bi bi-person-fill-add"></i> Cadastrar Cliente
       </a>
     </div>
     <div class="wrapper w-100 p-4">
@@ -70,10 +70,10 @@
             <div class="col-2 text-center border-start border-end border-1 border-white"> ' . $cliente['observacoes'] . ' </div>
             <div class="col text-center border-start border-1 border-white">
               <a href="./update.php?id=' . $cliente['id'] . '" class="btn btn-primary">
-                <i class="bi bi-pencil"></i>
+                <i class="bi bi-pencil-fill"></i>
               </a>
               <a href="./controller.php?id=' . $cliente['id'] . '&acao=deletar" class="btn btn-danger" onclick="return confirm(\'Tem certeza que deseja excluir esse cliente?\');">
-                <i class="bi bi-trash"></i>
+                <i class="bi bi-trash-fill"></i>
               </a>
             </div>
           </div>';

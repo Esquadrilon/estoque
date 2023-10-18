@@ -24,10 +24,10 @@
   <main class="container-fluid d-flex justify-content-center align-items-center my-3 w-100 flex-column">
     <div>
       <a href="./pages/Entradas/create.php" class="btn btn-success">
-        <i class="bi bi-plus"></i> Cadastrar Entrada
+        <i class="bi bi-clipboard2-plus-fill"></i> Cadastrar Entrada
       </a>
       <a href="./pages/Saidas/create.php" class="btn btn-danger">
-        <i class="bi bi-dash"></i> Cadastrar Saída
+        <i class="bi bi-clipboard2-minus-fill"></i> Cadastrar Saída
       </a>
     </div>
 
@@ -51,7 +51,10 @@
             <input type="text" class="form-control" id="filtroCor" name="filtroCor" placeholder="Nome da Cor">
           </div>
         </div>
-        <a class="btn btn-primary" onclick="filtrar(event)">Aplicar Filtros</a>
+        <a class="btn btn-primary" onclick="filtrar(event)">
+          <i class="bi bi-filter"></i>
+          Aplicar Filtros
+        </a>
       </form>
     </div>
     <div class="wrapper w-75 my-4 p-4" id="Items">
@@ -112,7 +115,7 @@
         <div class="col fw-semibold">${data.peso}</div>
         <div class="col-1 fw-semibold">
           <a href="detalhes.php?obra=${data.obra}&perfil=${data.perfil}&tamanho=${data.tamanho}&cor=${data.cor}" class="btn btn-primary">
-            <i class="bi bi-eye"></i>
+            <i class="bi bi-eye-fill"></i>
           </a>
         </div>
       `;

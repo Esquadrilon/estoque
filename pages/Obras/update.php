@@ -120,7 +120,7 @@
           </div>
 
           <div class="col w-50">
-            <button type="submit" class="btn btn-success w-100 fs-5 fw-bold">Cadastrar</button>
+            <button type="submit" class="btn btn-success w-100 fs-5 fw-bold">Atualizar</button>
           </div>
         </div>
 

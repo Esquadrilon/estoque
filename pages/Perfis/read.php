@@ -24,7 +24,7 @@
   <main class="container-fluid d-flex justify-content-center align-items-center my-3 w-100 flex-column">
     <div class="text-center mb-4">
       <a href="./create.php" class="btn btn-success">
-        <i class="bi bi-plus"></i> Cadastrar Perfil
+        <i class="bi bi-code"></i> Cadastrar Perfil
       </a>
     </div>
     <div class="wrapper w-100 p-4">
@@ -56,10 +56,10 @@
             <div class="col-2 text-center border-start border-end border-1 border-white"> ' . $perfil['referencia'] . ' </div>
             <div class="col text-center border-start border-1 border-white">
               <a href="./update.php?perfil=' . $perfil['codigo'] . '" class="btn btn-primary">
-                <i class="bi bi-pencil"></i>
+                <i class="bi bi-pencil-fill"></i>
               </a>
               <a href="./controller.php?perfil=' . $perfil['codigo'] . '&acao=deletar" class="btn btn-danger" onclick="return confirm(\'Tem certeza que deseja excluir esse perfil?\');">
-                <i class="bi bi-trash"></i>
+                <i class="bi bi-trash-fill"></i>
               </a>
             </div>
           </div>';
