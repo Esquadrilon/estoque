@@ -28,14 +28,14 @@
       </a>
     </div>
     <div class="wrapper w-100 p-4">
-      <div class="row d-flex justify-content-center align-items-center p-1 rounded">
-        <div class="col-2 fs-3 fw-bold text-center border-end border-1 border-white">Nome</div>
-        <div class="col-2 fs-3 fw-bold text-center border-start border-end border-1 border-white">E-mail</div>
-        <div class="col-1 fs-3 fw-bold text-center border-start border-end border-1 border-white">Telefone</div>
-        <div class="col-2 fs-3 fw-bold text-center border-start border-end border-1 border-white">Endereço</div>
-        <div class="col fs-3 fw-bold text-center border-start border-end border-1 border-white">Cidade</div>
-        <div class="col-2 fs-3 fw-bold text-center border-start border-end border-1 border-white">Observações</div>
-        <div class="col fs-3 fw-bold text-center border-start border-1 border-white"></div>
+      <div class="row d-flex justify-content-center align-items-center p-1 border-bottom border-2 border-white">
+        <div class="col-2 fs-3 fw-bold">Nome</div>
+        <div class="col-2 fs-3 fw-bold">E-mail</div>
+        <div class="col-1 fs-3 fw-bold">Telefone</div>
+        <div class="col-2 fs-3 fw-bold">Endereço</div>
+        <div class="col   fs-3 fw-bold">Cidade</div>
+        <div class="col-2 fs-3 fw-bold">Observações</div>
+        <div class="col   fs-3 fw-bold"></div>
       </div>
 
       <?php
@@ -62,13 +62,13 @@
         foreach ($clientes as $cliente) {
           echo '
           <div class="row mt-2 d-flex justify-content-center align-items-center p-1 rounded">
-            <div class="col-2 text-center border-end border-1 border-white"> ' . $cliente['nome'] . ' </div>
-            <div class="col-2 text-center border-start border-end border-1 border-white"> ' . $cliente['email'] . ' </div>
-            <div class="col-1 text-center border-start border-end border-1 border-white"> ' . $cliente['telefone'] . ' </div>
-            <div class="col-2 text-center border-start border-end border-1 border-white"> ' . $cliente['endereco'] . ' </div>
-            <div class="col text-center border-start border-end border-1 border-white"> ' . $cliente['cidade'] . ' </div>
-            <div class="col-2 text-center border-start border-end border-1 border-white"> ' . $cliente['observacoes'] . ' </div>
-            <div class="col text-center border-start border-1 border-white">
+            <div class="col-2 fw-semibold"> ' . $cliente['nome'] . ' </div>
+            <div class="col-2 fw-semibold"> ' . $cliente['email'] . ' </div>
+            <div class="col-1 fw-semibold"> ' . $cliente['telefone'] . ' </div>
+            <div class="col-2 fw-semibold"> ' . $cliente['endereco'] . ' </div>
+            <div class="col   fw-semibold"> ' . $cliente['cidade'] . ' </div>
+            <div class="col-2 fw-semibold"> ' . $cliente['observacoes'] . ' </div>
+            <div class="col   fw-semibold">
               <a href="./update.php?id=' . $cliente['id'] . '" class="btn btn-primary">
                 <i class="bi bi-pencil-fill"></i>
               </a>

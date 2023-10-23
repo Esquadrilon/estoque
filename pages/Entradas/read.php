@@ -28,16 +28,17 @@
       </a>
     </div>
     <div class="wrapper w-100 p-4">
-        <div class="row row-cols-8 d-flex justify-content-center align-items-center p-1 rounded">
-          <div class="col fs-3 fw-bold text-center border-end border-1 border-white">Obra</div>
-          <div class="col fs-3 fw-bold text-center border-start border-end border-1 border-white">Perfil</div>
-          <div class="col fs-3 fw-bold text-center border-start border-end border-1 border-white">Tamanho</div>
-          <div class="col fs-3 fw-bold text-center border-start border-end border-1 border-white">Cor</div>
-          <div class="col fs-3 fw-bold text-center border-start border-end border-1 border-white">Quantidade</div>
-          <div class="col fs-3 fw-bold text-center border-start border-end border-1 border-white">Origem</div>
-          <div class="col fs-3 fw-bold text-center border-start border-end border-1 border-white">Nota</div>
-          <div class="col fs-3 fw-bold text-center border-start border-end border-1 border-white">Responsável</div>
-          <div class="col fs-3 fw-bold text-center border-start border-1 border-white"></div>
+        <div class="row row-cols-10 d-flex justify-content-center align-items-center p-1 border-bottom border-2 border-white">
+          <div class="col fs-3 fw-bold">Obra</div>
+          <div class="col fs-3 fw-bold">Perfil</div>
+          <div class="col fs-3 fw-bold">Tamanho</div>
+          <div class="col fs-3 fw-bold">Cor</div>
+          <div class="col fs-3 fw-bold">Quantidade</div>
+          <div class="col fs-3 fw-bold">Data</div>
+          <div class="col fs-3 fw-bold">Origem</div>
+          <div class="col fs-3 fw-bold">Nota</div>
+          <div class="col fs-3 fw-bold">Responsável</div>
+          <div class="col fs-3 fw-bold"></div>
         </div>
       <?php
       $sql = 
@@ -50,7 +51,8 @@
         e.origem,
         e.quantidade,
         e.nota,
-        e.responsavel 
+        e.responsavel,
+        e.criado
       from 
         entradas e
       left join
@@ -70,16 +72,17 @@
         foreach ($entradas as $entrada) {
 
           echo '
-          <div class="row row-cols-8 mt-2 d-flex justify-content-center align-items-center p-1 rounded">
-            <div class="col fw-semibold text-center border-end border-1 border-white"> ' . $entrada['obra'] . ' </div>
-            <div class="col fw-semibold text-center border-start border-end border-1 border-white"> ' . $entrada['perfil'] . ' </div>
-            <div class="col fw-semibold text-center border-start border-end border-1 border-white"> ' . $entrada['tamanho'] . ' </div>
-            <div class="col fw-semibold text-center border-start border-end border-1 border-white"> ' . $entrada['cor'] . ' </div>
-            <div class="col fw-semibold text-center border-start border-end border-1 border-white"> ' . $entrada['quantidade'] . ' </div>
-            <div class="col fw-semibold text-center border-start border-end border-1 border-white"> ' . $entrada['origem'] . ' </div>
-            <div class="col fw-semibold text-center border-start border-end border-1 border-white"> ' . $entrada['nota'] . ' </div>
-            <div class="col fw-semibold text-center border-start border-end border-1 border-white"> ' . $entrada['responsavel'] . ' </div>
-            <div class="col fw-semibold text-center">
+          <div class="row row-cols-10 mt-2 d-flex justify-content-center align-items-center p-1 rounded">
+            <div class="col fw-semibold"> ' . $entrada['obra'] . ' </div>
+            <div class="col fw-semibold"> ' . $entrada['perfil'] . ' </div>
+            <div class="col fw-semibold"> ' . $entrada['tamanho'] . ' </div>
+            <div class="col fw-semibold"> ' . $entrada['cor'] . ' </div>
+            <div class="col fw-semibold"> ' . $entrada['quantidade'] . ' </div>
+            <div class="col fw-semibold"> ' . date("d/m/Y", strtotime($entrada['criado'])) . ' </div>
+            <div class="col fw-semibold"> ' . $entrada['origem'] . ' </div>
+            <div class="col fw-semibold"> ' . $entrada['nota'] . ' </div>
+            <div class="col fw-semibold"> ' . $entrada['responsavel'] . ' </div>
+            <div class="col fw-semibold">
               <a href="./update.php?id=' . $entrada['id'] . '" class="btn btn-primary">
                 <i class="bi bi-pencil-fill"></i>
               </a>

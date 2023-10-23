@@ -23,10 +23,13 @@
   ?>
   <main class="container-fluid d-flex justify-content-center align-items-center my-3 w-100 flex-column">
     <div>
-      <a href="./pages/Entradas/create.php" class="btn btn-success">
+      <a href="./pages/Entradas/create.php" class="btn btn-success mx-3 text-white fs-6 fw-bold">
         <i class="bi bi-clipboard2-plus-fill"></i> Cadastrar Entrada
       </a>
-      <a href="./pages/Saidas/create.php" class="btn btn-danger">
+      <a href="./pages/Listas/" class="btn btn-info mx-3 text-white fs-6 fw-bold">
+        <i class="bi bi-card-checklist"></i> Buscar Lista
+      </a>
+      <a href="./pages/Saidas/create.php" class="btn btn-danger mx-3 text-white fs-6 fw-bold">
         <i class="bi bi-clipboard2-minus-fill"></i> Cadastrar Saída
       </a>
     </div>
@@ -75,34 +78,40 @@
   <script>
     function filtrar(event) {
       event.preventDefault();
-      var div = document.getElementById("Items");
+      let div = document.getElementById("Items");
       
       while (div.children.length > 1) {
         div.removeChild(div.lastChild);
       }
 
-      var obra = document.getElementById("filtroObra").value;
-      var perfil = document.getElementById("filtroPerfil").value;
-      var tamanho = document.getElementById("filtroTamanho").value;
-      var cor = document.getElementById("filtroCor").value;
+      let obra = document.getElementById("filtroObra").value;
+      let perfil = document.getElementById("filtroPerfil").value;
+      let tamanho = document.getElementById("filtroTamanho").value;
+      let cor = document.getElementById("filtroCor").value;
+      let erros = [];
       
-      var URL = `/estoque/pages/lista_estoque.php?obra=${obra}&perfil=${perfil}&tamanho=${tamanho}&cor=${cor}`
+      let URL = `/estoque/pages/lista_estoque.php?obra=${obra}&perfil=${perfil}&tamanho=${tamanho}&cor=${cor}`
       
       fetch(URL)
         .then(response => response.json())
         .then(data => {
           console.log(data);
           data.forEach(row => {
-            if(row.saldo > 0){
+            if(row.saldo != 0){
               newRow(row);
+            }
+            if(row.saldo < 0){
+              erros.push(row);
             }
           });
         })
         .catch(error => console.error('Erro ao buscar os perfis: ' + error));
+
+      console.log("Saldos menores que zero: ", erros);
     }
 
     function newRow(data) {
-      var row = document.createElement("div");
+      let row = document.createElement("div");
       row.className = "row rounded mt-2 py-2 d-flex justify-content-center align-items-center";
       row.style.backgroundColor = "rgba(3, 3, 3, 0.3)";
 
@@ -120,7 +129,7 @@
         </div>
       `;
 
-      var container = document.getElementById("Items");
+      let container = document.getElementById("Items");
       container.appendChild(row);
     }
   </script>

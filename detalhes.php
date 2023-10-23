@@ -13,7 +13,7 @@
   <link rel="shortcut icon" href="/estoque/img/logo.svg" type="image/x-icon">
   <link rel="stylesheet" href="/estoque/css/estilo.css">
 
-  <title>Bootstrap Example</title>
+  <title>Detalhes</title>
 </head>
 
 <body>

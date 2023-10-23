@@ -29,16 +29,17 @@
       </a>
     </div>
     <div class="wrapper w-100 p-4">
-        <div class="row row-cols-8 d-flex justify-content-center align-items-center p-1 rounded">
-          <div class="col fs-3 fw-bold text-center border-end border-1 border-white">Obra</div>
-          <div class="col fs-3 fw-bold text-center border-start border-end border-1 border-white">Perfil</div>
-          <div class="col fs-3 fw-bold text-center border-start border-end border-1 border-white">Tamanho</div>
-          <div class="col fs-3 fw-bold text-center border-start border-end border-1 border-white">Cor</div>
-          <div class="col fs-3 fw-bold text-center border-start border-end border-1 border-white">Quantidade</div>
-          <div class="col fs-3 fw-bold text-center border-start border-end border-1 border-white">Destino</div>
-          <div class="col fs-3 fw-bold text-center border-start border-end border-1 border-white">Romaneio</div>
-          <div class="col fs-3 fw-bold text-center border-start border-end border-1 border-white">Responsável</div>
-          <div class="col fs-3 fw-bold text-center border-start border-1 border-white"></div>
+        <div class="row row-cols-10 d-flex justify-content-center align-items-center p-1 border-bottom border-2 border-white">
+          <div class="col fs-3 fw-bold">Obra</div>
+          <div class="col fs-3 fw-bold">Perfil</div>
+          <div class="col fs-3 fw-bold">Tamanho</div>
+          <div class="col fs-3 fw-bold">Cor</div>
+          <div class="col fs-3 fw-bold">Quantidade</div>
+          <div class="col fs-3 fw-bold">Data</div>
+          <div class="col fs-3 fw-bold">Destino</div>
+          <div class="col fs-3 fw-bold">Romaneio</div>
+          <div class="col fs-3 fw-bold">Responsável</div>
+          <div class="col fs-3 fw-bold"></div>
         </div>
       <?php
       $sql = 
@@ -51,7 +52,8 @@
         s.destino,
         s.quantidade,
         s.romaneio,
-        s.responsavel 
+        s.responsavel,
+        s.criado
       from 
         saidas s
       left join
@@ -66,24 +68,25 @@
       $res = $conn->query($sql);
 
       if ($res->num_rows > 0) {
-        $entradas = $res->fetch_all(MYSQLI_ASSOC);
+        $saidas = $res->fetch_all(MYSQLI_ASSOC);
         
-        foreach ($entradas as $entrada) {
+        foreach ($saidas as $saida) {
           echo '
-          <div class="row row-cols-8 mt-2 d-flex justify-content-center align-items-center p-1 rounded">
-            <div class="col fw-semibold text-center border-end border-1 border-white"> ' . $entrada['obra'] . '</div>
-            <div class="col fw-semibold text-center border-start border-end border-1 border-white"> ' . $entrada['perfil'] . ' </div>
-            <div class="col fw-semibold text-center border-start border-end border-1 border-white"> ' . $entrada['tamanho'] . ' </div>
-            <div class="col fw-semibold text-center border-start border-end border-1 border-white"> ' . $entrada['cor'] . ' </div>
-            <div class="col fw-semibold text-center border-start border-end border-1 border-white"> ' . $entrada['quantidade'] . ' </div>
-            <div class="col fw-semibold text-center border-start border-end border-1 border-white"> ' . $entrada['destino'] . ' </div>
-            <div class="col fw-semibold text-center border-start border-end border-1 border-white"> ' . $entrada['romaneio'] . ' </div>
-            <div class="col fw-semibold text-center border-start border-end border-1 border-white"> ' . $entrada['responsavel'] . ' </div>
-            <div class="col fw-semibold text-center border-start border-1 border-white">
-              <a href="./update.php?id=' . $entrada['id'] . '" class="btn btn-primary">
+          <div class="row row-cols-10 mt-2 d-flex justify-content-center align-items-center p-1 rounded">
+            <div class="col fw-semibold"> ' . $saida['obra'] . '</div>
+            <div class="col fw-semibold"> ' . $saida['perfil'] . ' </div>
+            <div class="col fw-semibold"> ' . $saida['tamanho'] . ' </div>
+            <div class="col fw-semibold"> ' . $saida['cor'] . ' </div>
+            <div class="col fw-semibold"> ' . $saida['quantidade'] . ' </div>
+            <div class="col fw-semibold"> ' . date("d/m/Y", strtotime($saida['criado'])) . ' </div>
+            <div class="col fw-semibold"> ' . $saida['destino'] . ' </div>
+            <div class="col fw-semibold"> ' . $saida['romaneio'] . ' </div>
+            <div class="col fw-semibold"> ' . $saida['responsavel'] . ' </div>
+            <div class="col fw-semibold">
+              <a href="./update.php?id=' . $saida['id'] . '" class="btn btn-primary">
                 <i class="bi bi-pencil-fill"></i>
               </a>
-              <a href="./controller.php?id=' . $entrada['id'] . '&acao=deletar" class="btn btn-danger" onclick="return confirm(\'Tem certeza que deseja excluir essa saída?\');">
+              <a href="./controller.php?id=' . $saida['id'] . '&acao=deletar" class="btn btn-danger" onclick="return confirm(\'Tem certeza que deseja excluir essa saída?\');">
                 <i class="bi bi-trash-fill"></i>
               </a>
             </div>

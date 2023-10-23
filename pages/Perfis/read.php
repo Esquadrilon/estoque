@@ -28,14 +28,14 @@
       </a>
     </div>
     <div class="wrapper w-100 p-4">
-      <div class="row d-flex justify-content-center align-items-center p-1 rounded">
-        <div class="col-2 fs-3 fw-bold text-center border-end border-1 border-white">Código</div>
-        <div class="col-3 fs-3 fw-bold text-center border-start border-end border-1 border-white">Descrição</div>
-        <div class="col-1 fs-3 fw-bold text-center border-start border-end border-1 border-white">Peso</div>
-        <div class="col-2 fs-3 fw-bold text-center border-start border-end border-1 border-white">Pré-Nativo</div>
-        <div class="col fs-3 fw-bold text-center border-start border-end border-1 border-white">Linha</div>
-        <div class="col-2 fs-3 fw-bold text-center border-start border-end border-1 border-white">Referência</div>
-        <div class="col fs-3 fw-bold text-center border-start border-1 border-white"></div>
+      <div class="row d-flex justify-content-center align-items-center p-1 border-bottom border-2 border-white">
+        <div class="col-2 fs-3 fw-bold">Código</div>
+        <div class="col-3 fs-3 fw-bold">Descrição</div>
+        <div class="col-1 fs-3 fw-bold">Peso</div>
+        <div class="col-2 fs-3 fw-bold">Pré-Nativo</div>
+        <div class="col   fs-3 fw-bold">Linha</div>
+        <div class="col-2 fs-3 fw-bold">Referência</div>
+        <div class="col   fs-3 fw-bold"></div>
       </div>
       
       <?php
@@ -48,13 +48,13 @@
         foreach ($perfis as $perfil) {
           echo '
           <div class="row mt-2 d-flex justify-content-center align-items-center p-1 rounded">
-            <div class="col-2 text-center border-end border-1 border-white"> ' . $perfil['codigo'] . ' </div>
-            <div class="col-3 text-center border-start border-end border-1 border-white"> ' . $perfil['descricao'] . ' </div>
-            <div class="col-1 text-center border-start border-end border-1 border-white"> ' . $perfil['peso'] . ' </div>
-            <div class="col-2 text-center border-start border-end border-1 border-white"> ' . $perfil['nativo'] . ' </div>
-            <div class="col text-center border-start border-end border-1 border-white"> ' . $perfil['linha'] . ' </div>
-            <div class="col-2 text-center border-start border-end border-1 border-white"> ' . $perfil['referencia'] . ' </div>
-            <div class="col text-center border-start border-1 border-white">
+            <div class="col-2 fw-semibold"> ' . $perfil['codigo'] . ' </div>
+            <div class="col-3 fw-semibold"> ' . $perfil['descricao'] . ' </div>
+            <div class="col-1 fw-semibold"> ' . $perfil['peso'] . ' </div>
+            <div class="col-2 fw-semibold"> ' . $perfil['nativo'] . ' </div>
+            <div class="col   fw-semibold"> ' . $perfil['linha'] . ' </div>
+            <div class="col-2 fw-semibold"> ' . $perfil['referencia'] . ' </div>
+            <div class="col   fw-semibold">
               <a href="./update.php?perfil=' . $perfil['codigo'] . '" class="btn btn-primary">
                 <i class="bi bi-pencil-fill"></i>
               </a>
