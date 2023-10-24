@@ -200,7 +200,7 @@
       console.log(perfil.value, "   -  ", cor);
 
       btn.innerHTML = `
-      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-${perfil.value}-${cor.replace(" ", "-")}">
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-${perfil.value}-${cor.replace(/ /g, "-")}">
         <i class="bi bi-binoculars-fill"></i>
       </button>
       `;
@@ -211,7 +211,7 @@
     function createModal(perfil, cor){
       const modal = document.createElement("div");
       modal.className = "modal fade";
-      modal.id = `modal-${perfil}-${cor.replace(" ", "-")}`;
+      modal.id = `modal-${perfil}-${cor.replace(/ /g, "-")}`;
       modal.tabIndex = -1;
       modal.innerHTML = `
       <div class="modal-dialog">
@@ -241,7 +241,7 @@
         .then(response => response.json())
         .then(data => {
           console.log(data);
-          document.querySelector(`#modal-${perfil}-${cor.replace(" ", "-")} #content`).innerHTML = "";
+          document.querySelector(`#modal-${perfil}-${cor.replace(/ /g, "-")} #content`).innerHTML = "";
           data.forEach(res => {
             if(res.saldo != 0){
               const row = document.createElement("div");
@@ -253,7 +253,7 @@
                 <div class="col">${res.tamanho}</div>
                 <div class="col">${res.saldo}</div>
               `;
-              document.querySelector(`#modal-${perfil}-${cor.replace(" ", "-")} #content`).appendChild(row);
+              document.querySelector(`#modal-${perfil}-${cor.replace(/ /g, "-")} #content`).appendChild(row);
             }
           });
         })
