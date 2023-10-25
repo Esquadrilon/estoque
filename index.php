@@ -83,17 +83,16 @@
     </div>
   </main>
   <footer>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script>
-      let pesoTotal = 0;
-      document.querySelector("form").addEventListener("keydown", function (event) {
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script>
+    document.querySelector("form").addEventListener("keydown", function (event) {
       event.keyCode === 13
-        ?filtrar(event)
-        : null;
+      ?filtrar(event)
+      : null;
       
     });
-
+    
     function filtrar(event) {
       event.preventDefault();
       let div = document.getElementById("Items");
@@ -101,15 +100,16 @@
       while (div.children.length > 1) {
         div.removeChild(div.lastChild);
       }
-
+      
       let obra = document.getElementById("filtroObra").value;
       let perfil = document.getElementById("filtroPerfil").value;
       let tamanho = document.getElementById("filtroTamanho").value;
       let cor = document.getElementById("filtroCor").value;
+      let pesoTotal = 0;
       let erros = [];
-      
+    
       let URL = `/estoque/pages/lista_estoque.php?obra=${obra}&perfil=${perfil}&tamanho=${tamanho}&cor=${cor}`
-      
+    
       fetch(URL)
         .then(response => response.json())
         .then(data => {
@@ -130,7 +130,7 @@
         .catch(error => console.error('Erro ao buscar os perfis: ' + error));
         
         console.log("Saldos menores que zero: ", erros);
-      }
+    }
 
     function newRow(data) {
       let row = document.createElement("div");
