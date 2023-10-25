@@ -54,10 +54,20 @@
             <input type="text" class="form-control" id="filtroCor" name="filtroCor" placeholder="Nome da Cor">
           </div>
         </div>
-        <a class="btn btn-primary" onclick="filtrar(event)">
-          <i class="bi bi-filter"></i>
-          Aplicar Filtros
-        </a>
+        <div class="row d-flex justify-content-center align-items-center">
+          <div class="col">
+            <a class="btn btn-primary" onclick="filtrar(event)">
+              <i class="bi bi-filter"></i>
+              Aplicar Filtros
+            </a>
+          </div>
+          <div class="col">
+            <p class="fs-4 d-flex justify-content-end align-items-center">
+              Peso Total: <span id="pesoTotal">0</span>
+            </p>
+          </div>
+        </div>
+        
       </form>
     </div>
     <div class="wrapper w-75 my-4 p-4" id="Items">
@@ -73,10 +83,11 @@
     </div>
   </main>
   <footer>
-  </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  <script>
-    document.querySelector("form").addEventListener("keydown", function (event) {
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script>
+      let pesoTotal = 0;
+      document.querySelector("form").addEventListener("keydown", function (event) {
       event.keyCode === 13
         ?filtrar(event)
         : null;
@@ -106,16 +117,20 @@
           data.forEach(row => {
             if(row.saldo != 0){
               newRow(row);
+              pesoTotal = pesoTotal + parseFloat(row.peso);
             }
             if(row.saldo < 0){
               erros.push(row);
             }
           });
+
+          console.log('Peso Total: ',pesoTotal.toFixed(2))
+          document.getElementById('pesoTotal').innerHTML = pesoTotal.toFixed(2);
         })
         .catch(error => console.error('Erro ao buscar os perfis: ' + error));
-
-      console.log("Saldos menores que zero: ", erros);
-    }
+        
+        console.log("Saldos menores que zero: ", erros);
+      }
 
     function newRow(data) {
       let row = document.createElement("div");

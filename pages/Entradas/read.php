@@ -62,7 +62,9 @@
       left join
         cores c 
       on
-      e.cor_id  = c.id";
+      e.cor_id  = c.id
+      order by
+      e.criado";
 
       $res = $conn->query($sql);
 

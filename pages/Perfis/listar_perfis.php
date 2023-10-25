@@ -2,7 +2,7 @@
 
 include_once('../../db/connection.php');
 
-$result = $conn->query("SELECT * FROM perfis");
+$result = $conn->query("SELECT codigo FROM perfis");
 
 if ($result) {
     $perfis = [];
