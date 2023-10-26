@@ -243,7 +243,7 @@
           console.log(data);
           document.querySelector(`#modal-${perfil}-${cor.replace(/ /g, "-")} #content`).innerHTML = "";
           data.forEach(res => {
-            if(res.saldo != 0){
+            if(res.saldo != 0 && res.perfil == perfil){
               const row = document.createElement("div");
               row.className = "row rounded mt-2 py-2";
               row.style.backgroundColor = "rgba(3, 3, 3, 0.3)";

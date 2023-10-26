@@ -47,13 +47,13 @@
     let perfis = <?php echo json_encode($perfis); ?>;
     perfils = perfis.sort();
 
-    perfis.forEach(function(nome) {
+    perfis.forEach(function(perfil) {
       let div = document.createElement('div');
       div.className = "mb-4 mx-auto"
-      div.id = nome;
+      div.id = perfil;
 
       let titulo = document.createElement('h3');
-      titulo.innerHTML = nome;
+      titulo.innerHTML = perfil;
 
       let wrapper = document.createElement('div');
       wrapper.className = 'wrapper px-4 py-2';
@@ -67,14 +67,14 @@
         </div>
       `;
 
-      let URL = `/estoque/pages/lista_estoque.php?perfil=${nome}`;
+      let URL = `/estoque/pages/lista_estoque.php?perfil=${perfil}`;
       
       fetch(URL)
         .then(response => response.json())
         .then(data => {
           console.log(data);
           data.forEach(row => {
-            if(row.saldo > 0) {
+            if(row.saldo > 0 && row.perfil == perfil) {
               createRow(row, wrapper);
             }
           });
