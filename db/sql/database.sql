@@ -135,6 +135,7 @@ CREATE TABLE reservas
 CREATE TABLE itens_reserva
 (
     id INT NOT NULL AUTO_INCREMENT,
+    obra_id INT NOT NULL,
     perfil_codigo VARCHAR(20) NOT NULL,
     cor_id INT NOT NULL,
     tamanho INT NOT NULL,
