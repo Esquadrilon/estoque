@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="/estoque/node_modules/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="/estoque/node_modules/bootstrap-icons/font/bootstrap-icons.css">
 
-  <link rel="shortcut icon" href="/estoque/img/logo.svg" type="image/x-icon">
   <link rel="stylesheet" href="/estoque/css/estilo.css">
 
   <title>Estoque</title>
@@ -23,13 +22,13 @@
   ?>
   <main class="container-fluid d-flex justify-content-center align-items-center my-3 w-100 flex-column">
     <div>
-      <a href="./pages/Entradas/create.php" class="btn btn-success mx-3 text-white fs-6 fw-bold">
+      <a href="./pages/Entradas/create.php" class="btn btn-success mx-3 text-white fw-bold">
         <i class="bi bi-clipboard2-plus-fill"></i> Cadastrar Entrada
       </a>
-      <a href="./pages/Listas/" class="btn btn-info mx-3 text-white fs-6 fw-bold">
+      <a href="./pages/Listas/" class="btn btn-info mx-3 text-white fw-bold">
         <i class="bi bi-card-checklist"></i> Buscar Lista
       </a>
-      <a href="./pages/Saidas/create.php" class="btn btn-danger mx-3 text-white fs-6 fw-bold">
+      <a href="./pages/Saidas/create.php" class="btn btn-danger mx-3 text-white fw-bold">
         <i class="bi bi-clipboard2-minus-fill"></i> Cadastrar Saída
       </a>
     </div>
@@ -70,7 +69,7 @@
         
       </form>
     </div>
-    <div class="wrapper w-75 my-4 p-4" id="Items">
+    <div class="d-none" id="Items">
         <div class="row d-flex justify-content-center align-items-center">
           <div class="col fs-3 fw-bold">Obra</div>
           <div class="col fs-3 fw-bold">Perfil</div>
@@ -83,6 +82,21 @@
     </div>
   </main>
   <footer>
+    <div class="modal fade" id="modal">
+      <div class="modal-dialog">
+        <div class="modal-content text-dark">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="modal_label">Erro</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="d-flex justify-content-center align-items-center" id="modal_content">
+              <p class='alert alert-danger'>Ainda não esta pronto essa funcionalidade</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   <script>
@@ -96,6 +110,7 @@
     function filtrar(event) {
       event.preventDefault();
       let div = document.getElementById("Items");
+      div.className = " wrapper w-75 my-4 px-4 py-2";
       
       while (div.children.length > 1) {
         div.removeChild(div.lastChild);
@@ -134,25 +149,40 @@
 
     function newRow(data) {
       let row = document.createElement("div");
-      row.className = "row rounded mt-2 py-2 d-flex justify-content-center align-items-center";
+      row.className = "row fw-semibold d-flex justify-content-center align-items-center mt-2 py-2 rounded";
       row.style.backgroundColor = "rgba(3, 3, 3, 0.3)";
 
       row.innerHTML = `
-        <div class="col fw-semibold">${data.obra}</div>
-        <div class="col fw-semibold">${data.perfil}</div>
-        <div class="col fw-semibold">${data.tamanho}</div>
-        <div class="col fw-semibold">${data.cor}</div>
-        <div class="col fw-semibold">${data.saldo}</div>
-        <div class="col fw-semibold">${data.peso}</div>
-        <div class="col-1 fw-semibold">
+        <div class="col">${data.obra}</div>
+        <div class="col">${data.perfil}</div>
+        <div class="col">${data.tamanho}</div>
+        <div class="col">${data.cor}</div>
+        <div class="col">${data.saldo}</div>
+        <div class="col">${data.peso}</div>
+        <div class="col-1">
           <a href="detalhes.php?obra=${data.obra}&perfil=${data.perfil}&tamanho=${data.tamanho}&cor=${data.cor}" class="btn btn-primary">
             <i class="bi bi-eye-fill"></i>
           </a>
+          <button type="button" class="btn btn-secondary" data-bs-toggle="modal" onclick="updateModal(${data.perfil.toString()})" data-bs-target="#modal">
+            <i class="bi bi-camera-fill"></i>
+          </button>
         </div>
       `;
 
       let container = document.getElementById("Items");
       container.appendChild(row);
+    }
+
+    function updateModal(perfil) {
+      let modal_label = document.getElementById('modal_label');
+      modal_label.innerHTML = perfil;
+      let modal_content = document.getElementById('modal_content');
+
+      let img = document.createElement('img')
+      img.src = `http://192.168.0.111:3001/_next/image?url=%2Fapi%2FprofileImage%2F${perfil}.bmp&w=128&q=100`;
+      img.alt = `Imagem do perfil ${perfil}`;
+
+      modal_content.innerHTML = img;
     }
   </script>
 </body>

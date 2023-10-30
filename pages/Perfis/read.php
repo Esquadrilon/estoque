@@ -8,8 +8,7 @@
 
   <link rel="stylesheet" href="/estoque/node_modules/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="/estoque/node_modules/bootstrap-icons/font/bootstrap-icons.css">
-
-  <link rel="shortcut icon" href="/estoque/img/logo.svg" type="image/x-icon">
+  
   <link rel="stylesheet" href="/estoque/css/estilo.css">
 
   <title>Lista de Perfis</title>
@@ -21,21 +20,21 @@
   include_once('../../db/connection.php');
   include_once('../../includes/toast.php');
   ?>
-  <main class="container-fluid d-flex justify-content-center align-items-center my-3 w-100 flex-column">
+  <main class="container-fluid px-5 my-3 w-100">
     <div class="text-center mb-4">
       <a href="./create.php" class="btn btn-success">
         <i class="bi bi-code"></i> Cadastrar Perfil
       </a>
     </div>
-    <div class="wrapper w-100 p-4">
-      <div class="row d-flex justify-content-center align-items-center p-1 border-bottom border-2 border-white">
-        <div class="col-2 fs-3 fw-bold">Código</div>
-        <div class="col-3 fs-3 fw-bold">Descrição</div>
-        <div class="col-1 fs-3 fw-bold">Peso</div>
-        <div class="col-2 fs-3 fw-bold">Pré-Nativo</div>
-        <div class="col   fs-3 fw-bold">Linha</div>
-        <div class="col-2 fs-3 fw-bold">Referência</div>
-        <div class="col   fs-3 fw-bold"></div>
+    <div class="wrapper px-4 py-1">
+      <div class="row fs-3 fw-bold d-flex align-items-center p-1 border-bottom border-2 border-white">
+        <div class="col">Código</div>
+        <div class="col-3">Descrição</div>
+        <div class="col">Peso</div>
+        <div class="col">Pré-Nativo</div>
+        <div class="col">Linha</div>
+        <div class="col">Referência</div>
+        <div class="col-1"></div>
       </div>
       
       <?php
@@ -47,18 +46,18 @@
 
         foreach ($perfis as $perfil) {
           echo '
-          <div class="row mt-2 d-flex justify-content-center align-items-center p-1 rounded">
-            <div class="col-2 fw-semibold"> ' . $perfil['codigo'] . ' </div>
-            <div class="col-3 fw-semibold"> ' . $perfil['descricao'] . ' </div>
-            <div class="col-1 fw-semibold"> ' . $perfil['peso'] . ' </div>
-            <div class="col-2 fw-semibold"> ' . $perfil['nativo'] . ' </div>
-            <div class="col   fw-semibold"> ' . $perfil['linha'] . ' </div>
-            <div class="col-2 fw-semibold"> ' . $perfil['referencia'] . ' </div>
-            <div class="col   fw-semibold">
-              <a href="./update.php?perfil=' . $perfil['codigo'] . '" class="btn btn-primary">
+          <div class="row fs-5 fw-medium my-2 d-flex align-items-center p-1 rounded" style="background-color: rgba(3, 3, 3, 0.25)">
+            <div class="col"> ' . $perfil['codigo'] . ' </div>
+            <div class="col-3"> ' . $perfil['descricao'] . ' </div>
+            <div class="col"> ' . $perfil['peso'] . ' </div>
+            <div class="col"> ' . $perfil['nativo'] . ' </div>
+            <div class="col"> ' . $perfil['linha'] . ' </div>
+            <div class="col"> ' . $perfil['referencia'] . ' </div>
+            <div class="col-1 text-end">
+              <a href="./update.php?perfil=' . $perfil['codigo'] . '" class="btn btn-primary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem">
                 <i class="bi bi-pencil-fill"></i>
               </a>
-              <a href="./controller.php?perfil=' . $perfil['codigo'] . '&acao=deletar" class="btn btn-danger" onclick="return confirm(\'Tem certeza que deseja excluir esse perfil?\');">
+              <a href="./controller.php?perfil=' . $perfil['codigo'] . '&acao=deletar" class="btn btn-danger" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem" onclick="return confirm(\'Tem certeza que deseja excluir esse perfil?\');">
                 <i class="bi bi-trash-fill"></i>
               </a>
             </div>

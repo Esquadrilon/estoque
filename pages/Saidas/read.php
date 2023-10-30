@@ -9,8 +9,7 @@
   <link rel="stylesheet" href="/estoque/node_modules/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="/estoque/node_modules/bootstrap-icons/font/bootstrap-icons.css">
   <script src="/estoque/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-
-  <link rel="shortcut icon" href="/estoque/img/logo.svg" type="image/x-icon">
+  
   <link rel="stylesheet" href="/estoque/css/estilo.css">
 
   <title>Lista Saídas</title>
@@ -22,24 +21,24 @@
   include_once('../../db/connection.php');
   include_once('../../includes/toast.php');
   ?>
-  <main class="container-fluid d-flex justify-content-center align-items-center my-3 w-100 flex-column">
+  <main class="container-fluid px-5 my-3 w-100">
     <div class="text-center mb-4">
       <a href="./create.php" class="btn btn-danger">
         <i class="bi bi-clipboard2-minus-fill"></i> Cadastrar Saída
       </a>
     </div>
-    <div class="wrapper w-100 p-4">
-        <div class="row row-cols-10 d-flex justify-content-center align-items-center p-1 border-bottom border-2 border-white">
-          <div class="col fs-3 fw-bold">Obra</div>
-          <div class="col fs-3 fw-bold">Perfil</div>
-          <div class="col fs-3 fw-bold">Tamanho</div>
-          <div class="col fs-3 fw-bold">Cor</div>
-          <div class="col fs-3 fw-bold">Quantidade</div>
-          <div class="col fs-3 fw-bold">Data</div>
-          <div class="col fs-3 fw-bold">Destino</div>
-          <div class="col fs-3 fw-bold">Romaneio</div>
-          <div class="col fs-3 fw-bold">Responsável</div>
-          <div class="col fs-3 fw-bold"></div>
+    <div class="wrapper px-4 py-1">
+        <div class="row row-cols-10 fs-3 fw-bold d-flex align-items-center p-1 border-bottom border-2 border-white">
+          <div class="col">Obra</div>
+          <div class="col">Perfil</div>
+          <div class="col">Tamanho</div>
+          <div class="col">Cor</div>
+          <div class="col">Quantidade</div>
+          <div class="col">Data</div>
+          <div class="col">Destino</div>
+          <div class="col">Romaneio</div>
+          <div class="col">Responsável</div>
+          <div class="col-1"></div>
         </div>
       <?php
       $sql = 
@@ -74,21 +73,21 @@
         
         foreach ($saidas as $saida) {
           echo '
-          <div class="row row-cols-10 mt-2 d-flex justify-content-center align-items-center p-1 rounded">
-            <div class="col fw-semibold"> ' . $saida['obra'] . '</div>
-            <div class="col fw-semibold"> ' . $saida['perfil'] . ' </div>
-            <div class="col fw-semibold"> ' . $saida['tamanho'] . ' </div>
-            <div class="col fw-semibold"> ' . $saida['cor'] . ' </div>
-            <div class="col fw-semibold"> ' . $saida['quantidade'] . ' </div>
-            <div class="col fw-semibold"> ' . date("d/m/Y", strtotime($saida['criado'])) . ' </div>
-            <div class="col fw-semibold"> ' . $saida['destino'] . ' </div>
-            <div class="col fw-semibold"> ' . $saida['romaneio'] . ' </div>
-            <div class="col fw-semibold"> ' . $saida['responsavel'] . ' </div>
-            <div class="col fw-semibold">
-              <a href="./update.php?id=' . $saida['id'] . '" class="btn btn-primary">
+          <div class="row row-cols-10 fs-5 fw-medium my-2 d-flex align-items-center p-1 rounded" style="background-color: rgba(3, 3, 3, 0.25)">
+            <div class="col">' . $saida['obra'] . '</div>
+            <div class="col">' . $saida['perfil'] . '</div>
+            <div class="col">' . $saida['tamanho'] . '</div>
+            <div class="col">' . $saida['cor'] . '</div>
+            <div class="col">' . $saida['quantidade'] . '</div>
+            <div class="col">' . date("d/m/Y", strtotime($saida['criado'])) . '</div>
+            <div class="col">' . $saida['destino'] . '</div>
+            <div class="col">' . $saida['romaneio'] . '</div>
+            <div class="col">' . $saida['responsavel'] . '</div>
+            <div class="col-1 text-end">
+              <a href="./update.php?id=' . $saida['id'] . '" class="btn btn-primary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem">
                 <i class="bi bi-pencil-fill"></i>
               </a>
-              <a href="./controller.php?id=' . $saida['id'] . '&acao=deletar" class="btn btn-danger" onclick="return confirm(\'Tem certeza que deseja excluir essa saída?\');">
+              <a href="./controller.php?id=' . $saida['id'] . '&acao=deletar" class="btn btn-danger" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem" onclick="return confirm(\'Tem certeza que deseja excluir essa saída?\');">
                 <i class="bi bi-trash-fill"></i>
               </a>
             </div>

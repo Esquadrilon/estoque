@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="/estoque/node_modules/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="/estoque/node_modules/bootstrap-icons/font/bootstrap-icons.css">
 
-  <link rel="shortcut icon" href="/estoque/img/logo.svg" type="image/x-icon">
   <link rel="stylesheet" href="/estoque/css/estilo.css">
 
   <title>Cadastro Cor</title>
@@ -20,7 +19,7 @@
   include_once('../../includes/navbar.php');
   include_once('../../includes/toast.php');
   ?>
-  <main class="container d-flex justify-content-center align-items-center my-5">
+  <main class="container-fluid px-5 my-3 w-100">
     <div class="wrapper p-4 my-1 w-75 fs-4">
       <h1 class="text-center fs-1">Cor</h1>
       <form action="./controller.php" method="post">

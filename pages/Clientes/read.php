@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="/estoque/node_modules/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="/estoque/node_modules/bootstrap-icons/font/bootstrap-icons.css">
 
-  <link rel="shortcut icon" href="/estoque/img/logo.svg" type="image/x-icon">
   <link rel="stylesheet" href="/estoque/css/estilo.css">
 
   <title>Lista Clientes</title>
@@ -21,21 +20,21 @@
   include_once('../../db/connection.php');
   include_once('../../includes/toast.php');
   ?>
-  <main class="container-fluid d-flex justify-content-center align-items-center my-3 w-100 flex-column">
+  <main class="container-fluid px-5 my-3 w-100">
     <div class="text-center mb-4">
       <a href="./create.php" class="btn btn-success">
         <i class="bi bi-person-fill-add"></i> Cadastrar Cliente
       </a>
     </div>
-    <div class="wrapper w-100 p-4">
-      <div class="row d-flex justify-content-center align-items-center p-1 border-bottom border-2 border-white">
-        <div class="col-2 fs-3 fw-bold">Nome</div>
-        <div class="col-2 fs-3 fw-bold">E-mail</div>
-        <div class="col-1 fs-3 fw-bold">Telefone</div>
-        <div class="col-2 fs-3 fw-bold">Endereço</div>
-        <div class="col   fs-3 fw-bold">Cidade</div>
-        <div class="col-2 fs-3 fw-bold">Observações</div>
-        <div class="col   fs-3 fw-bold"></div>
+    <div class="wrapper px-4 py-1">
+      <div class="row fs-3 fw-bold d-flex align-items-center p-1 border-bottom border-2 border-white">
+        <div class="col-2">Nome</div>
+        <div class="col-2">E-mail</div>
+        <div class="col-1">Telefone</div>
+        <div class="col-2">Endereço</div>
+        <div class="col">Cidade</div>
+        <div class="col-2">Observações</div>
+        <div class="col-1"></div>
       </div>
 
       <?php
@@ -61,18 +60,18 @@
 
         foreach ($clientes as $cliente) {
           echo '
-          <div class="row mt-2 d-flex justify-content-center align-items-center p-1 rounded">
-            <div class="col-2 fw-semibold"> ' . $cliente['nome'] . ' </div>
-            <div class="col-2 fw-semibold"> ' . $cliente['email'] . ' </div>
-            <div class="col-1 fw-semibold"> ' . $cliente['telefone'] . ' </div>
-            <div class="col-2 fw-semibold"> ' . $cliente['endereco'] . ' </div>
-            <div class="col   fw-semibold"> ' . $cliente['cidade'] . ' </div>
-            <div class="col-2 fw-semibold"> ' . $cliente['observacoes'] . ' </div>
-            <div class="col   fw-semibold">
-              <a href="./update.php?id=' . $cliente['id'] . '" class="btn btn-primary">
+          <div class="row fs-5 fw-medium my-2 d-flex align-items-center p-1 rounded" style="background-color: rgba(3, 3, 3, 0.25)">
+            <div class="col-2"> ' . $cliente['nome'] . ' </div>
+            <div class="col-2"> ' . $cliente['email'] . ' </div>
+            <div class="col-1"> ' . $cliente['telefone'] . ' </div>
+            <div class="col-2"> ' . $cliente['endereco'] . ' </div>
+            <div class="col"> ' . $cliente['cidade'] . ' </div>
+            <div class="col-2"> ' . $cliente['observacoes'] . ' </div>
+            <div class="col-1 text-end">
+              <a href="./update.php?id=' . $cliente['id'] . '" class="btn btn-primary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem">
                 <i class="bi bi-pencil-fill"></i>
               </a>
-              <a href="./controller.php?id=' . $cliente['id'] . '&acao=deletar" class="btn btn-danger" onclick="return confirm(\'Tem certeza que deseja excluir esse cliente?\');">
+              <a href="./controller.php?id=' . $cliente['id'] . '&acao=deletar" class="btn btn-danger" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem" onclick="return confirm(\'Tem certeza que deseja excluir esse cliente?\');">
                 <i class="bi bi-trash-fill"></i>
               </a>
             </div>

@@ -20,8 +20,8 @@ $sql =
   e.perfil_codigo as perfil,
   c.nome AS cor,
   e.tamanho,
-  SUM(e.quantidade) - COALESCE(SUM(s.quantidade), 0) AS saldo,
-  ROUND(p.peso * (e.tamanho / 1000) * (SUM(e.quantidade) - COALESCE(SUM(s.quantidade), 0)), 3) AS peso
+  SUM(e.total_entrada) - COALESCE(SUM(s.total_saida), 0) AS saldo,
+  ROUND(p.peso * (e.tamanho / 1000) * (SUM(e.total_entrada) - COALESCE(SUM(s.total_saida), 0)), 3) AS peso
 FROM 
   obras o
 LEFT JOIN (
@@ -30,7 +30,7 @@ SELECT
   perfil_codigo,
   cor_id,
   tamanho,
-  COALESCE(SUM(quantidade), 0) AS quantidade
+  COALESCE(SUM(quantidade), 0) AS total_entrada
 FROM
   entradas
 GROUP BY
@@ -45,7 +45,7 @@ SELECT
   perfil_codigo,
   cor_id,
   tamanho,
-  COALESCE(SUM(quantidade), 0) AS quantidade
+  COALESCE(SUM(quantidade), 0) AS total_saida
 FROM
   saidas
 GROUP BY

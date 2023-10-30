@@ -122,3 +122,25 @@ CREATE TABLE saidas
 );
 
 CREATE INDEX idx_codigo ON perfis (codigo);
+
+CREATE TABLE reservas
+(
+    id INT NOT NULL AUTO_INCREMENT,
+    observacoes TEXT NULL,
+    criado TIMESTAMP(2) DEFAULT CURRENT_TIMESTAMP(2),
+    atualizado TIMESTAMP(2) DEFAULT CURRENT_TIMESTAMP(2) ON UPDATE CURRENT_TIMESTAMP(2),
+    PRIMARY KEY (id)
+)
+
+CREATE TABLE itens_reserva
+(
+    id INT NOT NULL AUTO_INCREMENT,
+    perfil_codigo VARCHAR(20) NOT NULL,
+    cor_id INT NOT NULL,
+    tamanho INT NOT NULL,
+    quantidade INT NOT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (obra_id) REFERENCES obras (id) ON DELETE RESTRICT ON UPDATE CASCADE,
+    FOREIGN KEY (perfil_codigo) REFERENCES perfis (codigo) ON DELETE RESTRICT ON UPDATE CASCADE,
+    FOREIGN KEY (cor_id) REFERENCES cores (id) ON DELETE RESTRICT ON UPDATE CASCADE
+)
