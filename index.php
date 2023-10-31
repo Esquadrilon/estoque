@@ -158,7 +158,7 @@
         <div class="col">${data.tamanho}</div>
         <div class="col">${data.cor}</div>
         <div class="col">${data.saldo}</div>
-        <div class="col">${data.peso}</div>
+        <div class="col">${data.peso} Kg</div>
         <div class="col-1">
           <a href="detalhes.php?obra=${data.obra}&perfil=${data.perfil}&tamanho=${data.tamanho}&cor=${data.cor}" class="btn btn-primary">
             <i class="bi bi-eye-fill"></i>

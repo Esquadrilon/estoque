@@ -45,6 +45,7 @@
   <script>
     let perfis = <?php echo json_encode($perfis); ?>;
     perfils = perfis.sort();
+    let pesquisas = [];
 
     perfis.forEach(function(perfil) {
       let div = document.createElement('div');
@@ -71,7 +72,7 @@
       fetch(URL)
         .then(response => response.json())
         .then(data => {
-          console.log(data);
+          pesquisas.push(data);
           data.forEach(row => {
             if(row.saldo > 0 && row.perfil == perfil) {
               createRow(row, wrapper);
@@ -84,12 +85,12 @@
       div.appendChild(wrapper);
       document.querySelector('#lista').appendChild(div);
     })
-    console.log(perfis);
+    console.log("Pesquisas", pesquisas)
 
     function createRow(data, wrapper) {
       let row = document.createElement("div");
       row.className = "row rounded mt-2 py-2 d-flex justify-content-center align-items-center";
-      row.style.backgroundColor = "rgba(3, 3, 3, 0.3)";
+      row.style.backgroundColor = "rgba(3, 3, 3, 0.25)";
 
       row.innerHTML = `
         <div class="col fw-semibold">${data.obra}</div>
@@ -131,26 +132,31 @@
       wrapper.className = "wrapper px-4 py-3";
 
       wrapper.innerHTML = `
-        <div class="row row-cols-10 d-flex justify-content-center align-items-center p-1 border-bottom border-2 border-white">
-          <div class="col fs-3 fw-bold">Obra</div>
-          <div class="col fs-3 fw-bold">Perfil</div>
-          <div class="col fs-3 fw-bold">Tamanho</div>
-          <div class="col fs-3 fw-bold">Cor</div>
-          <div class="col fs-3 fw-bold">Saldo</div>
+        <div class="row fs-3 fw-bold d-flex justify-content-center align-items-center p-1 border-bottom border-2 border-white">
+          <div class="col">Obra</div>
+          <div class="col">Perfil</div>
+          <div class="col">Tamanho</div>
+          <div class="col">Cor</div>
+          <div class="col">Saldo</div>
+          <div class="col"> </div>
         </div>
       `;
       
       itens.forEach(function (data) {
         let div = document.createElement('div');
-        div.className = "row rounded mt-2 py-2 d-flex justify-content-center align-items-center";
+        div.className = "row fs-5 fw-semibold d-flex justify-content-center align-items-center rounded mt-2 py-2";
         div.style.backgroundColor = "rgba(3, 3, 3, 0.3)";
   
         div.innerHTML = `
-          <div class="col fs-5 fw-semibold">${data[0]}</div>
-          <div class="col fs-5 fw-semibold">${data[1]}</div>
-          <div class="col fs-5 fw-semibold">${data[2]}</div>
-          <div class="col fs-5 fw-semibold">${data[3]}</div>
-          <div class="col fs-5 fw-semibold">${data[4]}</div>`;
+          <div class="col">${data[0]}</div>
+          <div class="col">${data[1]}</div>
+          <div class="col">${data[2]}</div>
+          <div class="col">${data[3]}</div>
+          <div class="col">${data[4]}</div>
+          <div class="col">
+            <label for="quantidade">Separar</label>
+            <input type="number" name="quantidade" min="1" max="${parseInt(data[4])}" class="form-control" placeholder="1" onfocus="newRow()">
+          </div>`;
   
         wrapper.appendChild(div);
       })

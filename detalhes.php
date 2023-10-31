@@ -99,6 +99,73 @@
         ?>
       </div>
     </div>
+
+    <div class="mt-3">
+      <h2 class="text-center">Reservas</h2>
+      <div class="wrapper p-3">
+        <div class="row d-flex justify-content-center align-items-center p-1 rounded w-100">
+          <div class="col fs-4 fw-bold">Obra</div>
+          <div class="col fs-4 fw-bold">Perfil</div>
+          <div class="col fs-4 fw-bold">Tamanho</div>
+          <div class="col fs-4 fw-bold">Cor</div>
+          <div class="col fs-4 fw-bold">Quantidade</div>
+          <div class="col fs-4 fw-bold">Romaneio</div>
+          <div class="col-1 fs-4 fw-bold"></div>
+        </div>
+        <?php
+          $sql = 
+          "SELECT 
+            r.id,
+            o.nome as obra,
+            r.perfil_codigo as perfil,
+            r.tamanho,
+            c.nome as cor,
+            r.quantidade,
+            r.reserva_id as romaneio
+          from 
+            itens_reserva r
+          left join
+            obras o 
+          on
+          r.obra_id = o.id
+          left join
+            cores c 
+          on
+          r.cor_id  = c.id
+          WHERE 
+          o.nome like '%$obra%'
+          AND (r.perfil_codigo like '%$perfil%')
+          AND (c.nome like '%$cor%')
+          AND (r.tamanho like '%$tamanho%') ";
+
+          $res = $conn->query($sql);
+
+          if ($res->num_rows > 0) {
+            $reservas = $res->fetch_all(MYSQLI_ASSOC);
+            
+            foreach ($reservas as $reserva) {
+              echo '
+              <div class="row mt-2 d-flex justify-content-center align-items-center p-1 rounded w-100">
+                <div class="col fw-semibold"> ' . $reserva['obra'] . '</div>
+                <div class="col fw-semibold"> ' . $reserva['perfil'] . ' </div>
+                <div class="col fw-semibold"> ' . $reserva['tamanho'] . ' </div>
+                <div class="col fw-semibold"> ' . $reserva['cor'] . ' </div>
+                <div class="col fw-semibold"> ' . $reserva['quantidade'] . ' </div>
+                <div class="col fw-semibold"> ' . $reserva['romaneio'] . ' </div>
+                <div class="col-1 fw-semibold d-flex justify-content-center align-items-center">
+                  <a href="#" class="btn btn-primary">
+                    <i class="bi bi-eye-fill"></i>
+                  </a>
+                </div>
+              </div>';
+            };
+          } else {
+            echo "<p class='alert alert-danger'>Nenhum resultado foi encontrado!</p>";
+          }
+        ?>
+      </div>
+    </div>
+
     <div class="mt-3">
       <h2 class="text-center">Saída</h2>
       <div class="wrapper p-3">
