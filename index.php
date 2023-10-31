@@ -163,26 +163,30 @@
           <a href="detalhes.php?obra=${data.obra}&perfil=${data.perfil}&tamanho=${data.tamanho}&cor=${data.cor}" class="btn btn-primary">
             <i class="bi bi-eye-fill"></i>
           </a>
-          <button type="button" class="btn btn-secondary" data-bs-toggle="modal" onclick="updateModal(${data.perfil.toString()})" data-bs-target="#modal">
+          <button type="button" class="btn btn-secondary" data-bs-toggle="modal" onclick="updateModal('${data.perfil}')" data-bs-target="#modal">
             <i class="bi bi-camera-fill"></i>
           </button>
         </div>
       `;
-
+      
       let container = document.getElementById("Items");
       container.appendChild(row);
     }
 
     function updateModal(perfil) {
-      let modal_label = document.getElementById('modal_label');
-      modal_label.innerHTML = perfil;
+      document.getElementById('modal_label').innerHTML = perfil.toString();
       let modal_content = document.getElementById('modal_content');
 
       let img = document.createElement('img')
+      img.className = 'card-img-top w-50 h-50';
       img.src = `http://192.168.0.111:3001/_next/image?url=%2Fapi%2FprofileImage%2F${perfil}.bmp&w=128&q=100`;
       img.alt = `Imagem do perfil ${perfil}`;
 
-      modal_content.innerHTML = img;
+      while (modal_content.children.length > 0) {
+        modal_content.removeChild(modal_content.lastChild);
+      }
+
+      modal_content.appendChild(img);
     }
   </script>
 </body>
