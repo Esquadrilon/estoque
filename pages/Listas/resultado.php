@@ -27,7 +27,7 @@
   }
   ?>
   <main class="container my-3 w-75">
-    <form action="lista.php" method="post">
+    <form action="#" method="post">
       <div class="mt-4" id="lista">
 
       </div>
@@ -49,7 +49,7 @@
 
     perfis.forEach(function(perfil) {
       let div = document.createElement('div');
-      div.className = "mb-4 mx-auto"
+      div.className = "mb-4 mx-auto";
       div.id = perfil;
 
       let titulo = document.createElement('h3');
