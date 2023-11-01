@@ -27,26 +27,28 @@
   }
   ?>
   <main class="container my-3 w-75">
-    <form action="#" method="post">
-      <div class="mt-4" id="lista">
-
-      </div>
-      <div class="d-flex justify-content-end mt-4">
-        <button type="button" class="btn btn-primary text-white w-25 fs-5 fw-bold" onclick="test(event)">
-          <i class="bi bi-card-list"></i> Gerar Lista
-        </button>
-      </div>
-    </form>
+    <div class="mt-4" id="lista">
+    </div>
+    <div class="d-flex justify-content-end mt-4">
+      <button type="button" class="btn btn-primary text-white w-25 fs-5 fw-bold" onclick="listar(event)">
+        <i class="bi bi-card-list"></i> Exibir 
+      </button>
+    </div>
   </main>
   <footer>
 
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   <script>
+    let wrapper = document.createElement('div');
+    wrapper.className = "wrapper px-4 py-3";
+
     let perfis = <?php echo json_encode($perfis); ?>;
     perfils = perfis.sort();
+    
     let pesquisas = [];
 
+    // parte 1.1
     perfis.forEach(function(perfil) {
       let div = document.createElement('div');
       div.className = "mb-4 mx-auto";
@@ -55,10 +57,8 @@
       let titulo = document.createElement('h3');
       titulo.innerHTML = perfil;
 
-      let wrapper = document.createElement('div');
-      wrapper.className = 'wrapper px-4 py-2';
       wrapper.innerHTML = `
-        <div class="row row-cols-10 d-flex justify-content-center align-items-center p-1 border-bottom border-2 border-white">
+        <div class="row d-flex justify-content-center align-items-center p-1 border-bottom border-2 border-white">
           <div class="col fs-3 fw-bold">Obra</div>
           <div class="col fs-3 fw-bold">Tamanho</div>
           <div class="col fs-3 fw-bold">Cor</div>
@@ -87,6 +87,7 @@
     })
     console.log("Pesquisas", pesquisas)
 
+    // parte 1.2
     function createRow(data, wrapper) {
       let row = document.createElement("div");
       row.className = "row rounded mt-2 py-2 d-flex justify-content-center align-items-center";
@@ -103,14 +104,15 @@
             id="${data.obra.replace(/ /g, "-")}_${data.perfil}_${data.tamanho}_${data.cor.replace(/ /g, "-")}"
             class="form-check-input" 
             role="switch" 
-            value="${data.obra}, ${data.perfil}, ${data.tamanho}, ${data.cor}, ${data.saldo}">
+            value="${data.obra},${data.perfil},${data.tamanho},${data.cor},${data.saldo}">
         </div>
       `;
 
       wrapper.appendChild(row);
     }
 
-    function test(e){
+    // parte 2
+    function listar(e){
       e.preventDefault()
       
       let data = document.querySelectorAll("input[type=checkbox]:checked");
@@ -122,14 +124,14 @@
       }
       console.log(itens)
 
-
       let main = document.querySelector("main");
-      
       while (main.children.length >= 1) {
         main.removeChild(main.lastChild);
       }
-      let wrapper = document.createElement('div');
-      wrapper.className = "wrapper px-4 py-3";
+
+      let form = document.createElement('form');
+      form.action = './controller.php';
+      form.method = "POST";
 
       wrapper.innerHTML = `
         <div class="row fs-3 fw-bold d-flex justify-content-center align-items-center p-1 border-bottom border-2 border-white">
@@ -138,28 +140,49 @@
           <div class="col">Tamanho</div>
           <div class="col">Cor</div>
           <div class="col">Saldo</div>
-          <div class="col"> </div>
+          <div class="col">Separar</div>
         </div>
       `;
       
       itens.forEach(function (data) {
         let div = document.createElement('div');
-        div.className = "row fs-5 fw-semibold d-flex justify-content-center align-items-center rounded mt-2 py-2";
+        div.className = "row d-flex justify-content-center align-items-center rounded mt-2 py-2";
         div.style.backgroundColor = "rgba(3, 3, 3, 0.3)";
   
         div.innerHTML = `
-          <div class="col">${data[0]}</div>
-          <div class="col">${data[1]}</div>
-          <div class="col">${data[2]}</div>
-          <div class="col">${data[3]}</div>
-          <div class="col">${data[4]}</div>
           <div class="col">
-            <label for="quantidade">Separar</label>
-            <input type="number" name="quantidade" min="1" max="${parseInt(data[4])}" class="form-control" placeholder="1" onfocus="newRow()">
+            <input type="text" class="form-control p-1 fs-5 fw-semibold text-white shadow-none bg-transparent border-0" name="obra[]" value="${data[0]}" disabled readonly>
+          </div>
+
+          <div class="col">
+            <input type="text" class="form-control p-1 fs-5 fw-semibold text-white shadow-none bg-transparent border-0" name="perfil[]" value="${data[1]}" disabled readonly>
+          </div>
+
+          <div class="col">
+            <input type="text" class="form-control p-1 fs-5 fw-semibold text-white shadow-none bg-transparent border-0" name="tamanho[]" value="${data[2]}" disabled readonly>
+          </div>
+
+          <div class="col">
+            <input type="text" class="form-control p-1 fs-5 fw-semibold text-white shadow-none bg-transparent border-0" name="cor[]" value="${data[3]}" disabled readonly>
+          </div>
+
+          <div class="col fs-5 fw-semibold">${data[4]}</div>
+
+          <div class="col">
+            <input type="number" class="form-control fs-5 fw-semibold w-75" name="quantidade" max="${parseInt(data[4])}" min="1" placeholder="1" onfocus="newRow()">
           </div>`;
   
-        wrapper.appendChild(div);
+        form.appendChild(div);
       })
+      let btn = document.createElement('div');
+      btn.className = "d-flex justify-content-end mt-4";
+      btn.innerHTML = `
+        <button type="submit" class="btn btn-primary text-white w-25 fs-5 fw-bold">
+          <i class="bi bi-box-seam"></i> Reservar 
+        </button>
+      `;
+      form.appendChild(btn);
+      wrapper.appendChild(form);
       main.appendChild(wrapper);
     }
   </script>

@@ -133,7 +133,7 @@
       newRow.innerHTML = `
         <div class="col">
           <label for="perfil[]">Perfil</label>
-          <select name="perfil[]" class="form-select" onchange="test(this)">
+          <select name="perfil[]" class="form-select" onchange="updateModal(this)">
             <option value="" selected>Selecione...</option>
           </select>
         </div>
@@ -145,7 +145,7 @@
 
         <div class="col">
           <label for="cor[]">Cor</label>
-          <select name="cor[]" class="form-select" onchange="test(this)">
+          <select name="cor[]" class="form-select" onchange="updateModal(this)">
           </select>
         </div>
 
@@ -188,15 +188,13 @@
       }
     }
 
-    function test(e){
+    function updateModal(e){
       const div = e.parentElement.parentElement;
       const btn = div.querySelector(".myButton");
 
       var perfil = div.querySelector('select[name="perfil[]"]');
       var cor = div.querySelector('select[name="cor[]"]');
       cor = cor.options[cor.selectedIndex].text;
-
-      console.log(perfil.value, "   -  ", cor);
 
       btn.innerHTML = `
       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-${perfil.value}-${cor.replace(/ /g, "-")}">
