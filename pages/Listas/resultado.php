@@ -172,7 +172,7 @@
           <div class="col fs-5 fw-semibold">${data[4]}</div>
 
           <div class="col">
-            <input type="number" class="form-control fs-5 fw-semibold w-75" name="quantidade" max="${parseInt(data[4])}" min="1" placeholder="1" onfocus="newRow()">
+            <input type="number" class="form-control fs-5 fw-semibold w-75" name="quantidade[]" max="${parseInt(data[4])}" min="1" placeholder="1" onfocus="newRow()">
           </div>`;
   
         form.appendChild(div);
@@ -184,8 +184,9 @@
           <i class="bi bi-box-seam"></i> Reservar 
         </button>
       `;
-      form.appendChild(btn);
+
       wrapper.appendChild(form);
+      form.appendChild(btn);
       main.appendChild(wrapper);
     }
   </script>
