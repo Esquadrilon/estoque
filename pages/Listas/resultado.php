@@ -50,6 +50,9 @@
 
     // parte 1.1
     perfis.forEach(function(perfil) {
+      let wrapper = document.createElement('div');
+      wrapper.className = "wrapper px-4 py-3";
+
       let div = document.createElement('div');
       div.className = "mb-4 mx-auto";
       div.id = perfil;
