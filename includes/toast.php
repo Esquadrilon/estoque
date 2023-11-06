@@ -9,7 +9,7 @@ if (isset($_REQUEST['success_message']) || isset($_REQUEST['error_message'])) {
         <div class="toast-header ' . $toastClass . '">
             <svg class="bd-placeholder-img rounded me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg"
                 aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                <image href="\estoque\img\logo.svg" width="20" height="20" />
+                <image href="\estoque\img\logo-branca.svg" width="20" height="20" />
             </svg>
             <strong class="me-auto">' . $toastTitle . '</strong>
             <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
