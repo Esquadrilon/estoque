@@ -133,7 +133,7 @@
       }
 
       let form = document.createElement('form');
-      form.action = './controller.php';
+      form.action = './controller.php?acao=cadastrar';
       form.method = "POST";
 
       wrapper.innerHTML = `
@@ -154,22 +154,22 @@
   
         div.innerHTML = `
           <div class="col">
-            <input type="text" class="form-control p-1 fs-5 fw-semibold text-white shadow-none bg-transparent border-0" name="obra[]" value="${data[0]}" disabled readonly>
+            <input type="text" class="form-control p-1 fs-5 fw-semibold text-white shadow-none bg-transparent border-0" name="obra[]" value="${data[0]}" readonly>
           </div>
 
           <div class="col">
-            <input type="text" class="form-control p-1 fs-5 fw-semibold text-white shadow-none bg-transparent border-0" name="perfil[]" value="${data[1]}" disabled readonly>
+            <input type="text" class="form-control p-1 fs-5 fw-semibold text-white shadow-none bg-transparent border-0" name="perfil[]" value="${data[1]}" readonly>
           </div>
 
           <div class="col">
-            <input type="text" class="form-control p-1 fs-5 fw-semibold text-white shadow-none bg-transparent border-0" name="tamanho[]" value="${data[2]}" disabled readonly>
+            <input type="text" class="form-control p-1 fs-5 fw-semibold text-white shadow-none bg-transparent border-0" name="tamanho[]" value="${data[2]}" readonly>
           </div>
 
           <div class="col">
-            <input type="text" class="form-control p-1 fs-5 fw-semibold text-white shadow-none bg-transparent border-0" name="cor[]" value="${data[3]}" disabled readonly>
+            <input type="text" class="form-control p-1 fs-5 fw-semibold text-white shadow-none bg-transparent border-0" name="cor[]" value="${data[3]}" readonly>
           </div>
 
-          <div class="col fs-5 fw-semibold">${data[4]}</div>
+          <div class="col fs-5 fw-semibold" readonly>${data[4]}</div>
 
           <div class="col">
             <input type="number" class="form-control fs-5 fw-semibold w-75" name="quantidade[]" max="${parseInt(data[4])}" min="1" placeholder="1" onfocus="newRow()">
@@ -177,6 +177,20 @@
   
         form.appendChild(div);
       })
+
+      let reserva = document.createElement('div');
+      reserva.className = "row fs-3 fw-bold my-4 p-1 border-top border-2 border-white";
+      reserva.innerHTML = `
+        <div class="col">
+          <label for="romaneio">Romaneio</label>
+          <input type="text" name="romaneio" id="romaneio" class="form-control" placeholder="Informe o romaneio" required>
+        </div>
+        <div class="col">
+          <label for="observacoes">Observacoes</label>
+          <input type="text" name="observacoes" id="observacoes" class="form-control" placeholder="Se necessário">
+        </div>
+      `;
+
       let btn = document.createElement('div');
       btn.className = "d-flex justify-content-end mt-4";
       btn.innerHTML = `
@@ -186,6 +200,7 @@
       `;
 
       wrapper.appendChild(form);
+      form.appendChild(reserva);
       form.appendChild(btn);
       main.appendChild(wrapper);
     }
