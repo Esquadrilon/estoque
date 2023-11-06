@@ -15,6 +15,9 @@
         <a class="nav-link text-white-50" href="\estoque\pages\Saidas\read.php"><i class="bi bi-clipboard2-minus-fill"></i> Saídas</a>
       </li>
       <li class="nav-item">
+        <a class="nav-link text-white-50" href="\estoque\pages\Saidas\read.php"><i class="bi bi-card-checklist"></i> Reservas</a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link text-white-50" href="\estoque\pages\Obras\read.php"><i class="bi bi-building-fill"></i> Obras</a>
       </li>
       <li class="nav-item">
