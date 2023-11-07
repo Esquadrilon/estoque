@@ -26,7 +26,7 @@
         <i class="bi bi-clipboard2-plus-fill"></i> Cadastrar Entrada
       </a>
       <a href="./pages/Reservas/" class="btn btn-info mx-3 text-white fw-bold">
-        <i class="bi bi-card-checklist"></i> Buscar Lista
+        <i class="bi bi-card-checklist"></i> Reservar Lista
       </a>
       <a href="./pages/Saidas/create.php" class="btn btn-danger mx-3 text-white fw-bold">
         <i class="bi bi-clipboard2-minus-fill"></i> Cadastrar Saída

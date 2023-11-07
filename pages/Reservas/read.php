@@ -22,7 +22,7 @@
   ?>
   <main class="container-fluid px-5 my-3 w-50">
     <div class="text-center mb-4">
-      <a href="./create.php" class="btn btn-success">
+      <a href="./index.php" class="btn btn-success">
         <i class="bi bi-card-checklist"></i> Cadastrar reserva
       </a>
     </div>

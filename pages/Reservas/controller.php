@@ -89,8 +89,8 @@
 
         case 'editar':
         
-          $success_message = "Entrada editada com sucesso!";
-          $error_message = "Erro ao tentar editar entrada!";
+          $success_message = "Reserva editada com sucesso!";
+          $error_message = "Erro ao tentar editar reserva!";
           break;
   
         case 'deletar':
@@ -99,15 +99,21 @@
             $res = $conn->query("DELETE FROM reservas WHERE id = $_REQUEST[id]");
             
           }
-          $success_message = "Entrada deletada com sucesso!";
-          $error_message = "Erro ao tentar deletar entrada!";
+          $success_message = "Reserva deletada com sucesso!";
+          $error_message = "Erro ao tentar deletar reserva!";
           break;
         case 'deletar_item':
           $res = (isset($_REQUEST['id']))
             ? $conn->query("DELETE FROM itens_reserva WHERE id = $_REQUEST[id]")
             : false;
-          $success_message = "Entrada deletada com sucesso!";
-          $error_message = "Erro ao tentar deletar entrada!";
+          $success_message = "Reserva deletada com sucesso!";
+          $error_message = "Erro ao tentar deletar reserva!";
+          break;
+        case 'deletar_item':
+          $success_message = "Reserva separada com sucesso!";
+          $error_message = "Erro ao tentar separar reserva!";
+          
+          $res = false;
           break;
     }
 
@@ -123,53 +129,3 @@
   }
   
 ?>
-
-<!-- <?php  
-  
-
-  try {
-    switch ($_REQUEST["acao"]) {
-      case 'cadastrar':
-        
-        
-        for ($i = 0; $i < count($perfil); $i++) {
-          if($perfil[$i] != null && $tamanho[$i] != null && $cor[$i] != null && $quantidade[$i] != null){
-            $sql = 
-            "INSERT INTO entradas 
-              (obra_id, perfil_codigo, cor_id, tamanho, quantidade, nota, origem, destino, caminhao, motorista, responsavel, observacoes)
-            VALUES
-              ('$obra_id', '{$perfil[$i]}', '{$cor[$i]}', '{$tamanho[$i]}', '{$quantidade[$i]}', '$nota', '$origem', '$destino', '$caminhao', '$motorista', '$responsavel', '$observacoes')";
-
-            $res = $conn->query($sql);
-          }
-        };
-
-        $success_message = "Entrada cadastrada com sucesso!";
-        $error_message = "Erro ao tentar cadastrar entrada!";
-        break;
-
-      case 'editar':
-        
-        $success_message = "Entrada editada com sucesso!";
-        $error_message = "Erro ao tentar editar entrada!";
-        break;
-
-      case 'deletar':
-        if (isset($_REQUEST['id'])) {
-          $res = $conn->query("DELETE FROM entradas WHERE id = $_REQUEST[id]");
-          
-        }
-        $success_message = "Entrada deletada com sucesso!";
-        $error_message = "Erro ao tentar deletar entrada!";
-        break;
-    }
-
-  $res === true
-    ? print "<script>location.href = '$redirect_success?success_message=$success_message'</script>"
-    : throw new Exception("Erro na consulta SQL: " . $conn->error);
-    
-  } catch (Exception $e) {
-    print "<script>alert('Erro: " . $e->getMessage() . "')</script>";
-    print "<script>location.href = '$redirect_error?error_message=$error_message '</script>";
-  }
-?> -->
