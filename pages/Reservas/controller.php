@@ -87,34 +87,60 @@
         }
         break;
 
-        case 'editar':
-        
-          $success_message = "Reserva editada com sucesso!";
-          $error_message = "Erro ao tentar editar reserva!";
-          break;
-  
-        case 'deletar':
-          if (isset($_REQUEST['id'])) {
-            $conn->query("DELETE FROM itens_reserva WHERE reserva_id = $_REQUEST[id]");
-            $res = $conn->query("DELETE FROM reservas WHERE id = $_REQUEST[id]");
-            
-          }
-          $success_message = "Reserva deletada com sucesso!";
-          $error_message = "Erro ao tentar deletar reserva!";
-          break;
-        case 'deletar_item':
-          $res = (isset($_REQUEST['id']))
-            ? $conn->query("DELETE FROM itens_reserva WHERE id = $_REQUEST[id]")
-            : false;
-          $success_message = "Reserva deletada com sucesso!";
-          $error_message = "Erro ao tentar deletar reserva!";
-          break;
-        case 'deletar_item':
-          $success_message = "Reserva separada com sucesso!";
-          $error_message = "Erro ao tentar separar reserva!";
+      case 'editar':
+      
+        $success_message = "Reserva editada com sucesso!";
+        $error_message = "Erro ao tentar editar reserva!";
+        break;
+
+      case 'deletar':
+        if (isset($_REQUEST['id'])) {
+          $conn->query("DELETE FROM itens_reserva WHERE reserva_id = $_REQUEST[id]");
+          $res = $conn->query("DELETE FROM reservas WHERE id = $_REQUEST[id]");
           
-          $res = false;
-          break;
+        }
+
+        $success_message = "Reserva deletada com sucesso!";
+        $error_message = "Erro ao tentar deletar reserva!";
+        break;
+      case 'deletar_item':
+        $res = (isset($_REQUEST['id']))
+          ? $conn->query("DELETE FROM itens_reserva WHERE id = $_REQUEST[id]")
+          : false;
+
+        $success_message = "Item da reserva deletado com sucesso!";
+        $error_message = "Erro ao tentar deletar item da reserva!";
+        break;
+      case 'separar': 
+        $reserva = $_REQUEST['reserva'];
+        $destino = isset($_POST['destino']) ? $_POST['destino'] : "";
+        $caminhao = isset($_POST['caminhao']) ? $_POST['caminhao'] : "";
+        $motorista = isset($_POST['motorista']) ? $_POST['motorista'] : "";
+        $responsavel = isset($_POST['responsavel']) ? $_POST['responsavel'] : "";
+        $observacoes = isset($_POST['observacoes']) ? $_POST['observacoes'] : "";
+
+        $data = $conn->query("SELECT * FROM itens_reserva WHERE reserva_id = $reserva")->fetch_all(MYSQLI_ASSOC);
+
+        foreach($data as $item){
+          $sql = 
+          "INSERT INTO saidas 
+            (obra_id, perfil_codigo, cor_id, tamanho, quantidade, romaneio, destino, caminhao, motorista, responsavel, observacoes)
+          VALUES
+            ('{$item["obra_id"]}', '{$item["perfil_codigo"]}', '{$item["cor_id"]}', '{$item["tamanho"]}', '{$item["quantidade"]}', '$reserva', '$destino', '$caminhao', '$motorista', '$responsavel', '$observacoes')";
+
+          echo json_encode($item) . "<br>" . $sql . "<br><br><br>";
+
+          $conn->query($sql);
+        }
+
+        $conn->query("DELETE FROM itens_reserva WHERE reserva_id = $reserva");
+        $conn->query("DELETE FROM reservas WHERE id = $reserva");
+
+        $res = true;
+        
+        $success_message = "Reserva separada com sucesso!";
+        $error_message = "Erro ao tentar separar reserva!";
+        break;
     }
 
     $res === true
@@ -124,8 +150,5 @@
   } catch (Exception $e) {
     print "<script>alert('Erro: " . $e->getMessage() . "')</script>";
     print "<script>location.href = '$redirect_error?error_message=$error_message '</script>";
-  } finally {
-    echo "Romaneio: $romaneio <br> Observações: $observacoes <br> Dados: " . json_encode($data);
   }
-  
 ?>

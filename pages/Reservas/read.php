@@ -46,7 +46,7 @@
               <div class="col"> ' . $reserva['observacoes'] . ' </div>
               <div class="col-2 text-end">
                 <a href="./update.php?id=' . $reserva['id'] . '" class="btn btn-primary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem">
-                  <i class="bi bi-pencil-fill"></i>
+                  <i class="bi bi-eye-fill"></i>
                 </a>
                 <a href="./controller.php?id=' . $reserva['id'] . '&acao=deletar" class="btn btn-danger" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem" onclick="return confirm(\'Tem certeza que deseja excluir esse reserva?\');">
                   <i class="bi bi-trash-fill"></i>
