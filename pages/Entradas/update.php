@@ -78,18 +78,18 @@
         <div class="row mt-2">
           <div class="col">
             <label for="caminhao">Placa do Caminhão</label>
-            <input type="text" name="caminhao" id="caminhao" value="<?php $row->caminhao?>" class="form-control" placeholder="BCP3B29">
+            <input type="text" name="caminhao" id="caminhao" value="<?php echo $row->caminhao?>" class="form-control" placeholder="BCP3B29">
           </div>
 
           <div class="col">
             <label for="motorista">Motorista</label>
-            <input type="text" name="motorista" id="motorista" value="<?php $row->motorista?>" class="form-control" placeholder="Fábio">
+            <input type="text" name="motorista" id="motorista" value="<?php echo $row->motorista?>" class="form-control" placeholder="Fábio">
           </div>
         </div>
 
         <div class="col mt-2">
           <label for="observacoes">Observações</label>
-          <textarea class="form-control" name="observacoes" id="observacoes" cols="50" rows="3" placeholder="Se necessário"><?php $row->observacoes?></textarea>
+          <textarea class="form-control" name="observacoes" id="observacoes" cols="50" rows="3" placeholder="Se necessário"><?php echo $row->observacoes?></textarea>
         </div>
 
         <div class="row mt-2">
